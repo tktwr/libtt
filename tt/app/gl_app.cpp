@@ -55,7 +55,8 @@ GLApp::~GLApp() {
 
 void GLApp::setIcon(const std::string& fname) {
     tt::Image4uc image;
-    f_load_image(fname, image);
+    bool b = f_load_image(fname, image);
+    if (!b) return;
 
     GLFWimage glfw_image;
     glfw_image.width  = image.w();

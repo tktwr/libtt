@@ -6,7 +6,7 @@
 #include <tt/gl/gl.h>
 #include "image.h"
 
-void   f_load_image(const std::string& fname, tt::Image4uc& image);
+bool   f_load_image(const std::string& fname, tt::Image4uc& image);
 void   f_save_image(const std::string& fname, const tt::Image4uc& image);
 void   f_draw_rect(tt::Image4uc& image, const tt::Vec2i& o, const tt::Vec2i& size, const tt::Color4uc& color);
 void   f_fill_rect(tt::Image4uc& image, const tt::Vec2i& o, const tt::Vec2i& size, const tt::Color4uc& color);

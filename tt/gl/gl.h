@@ -1,7 +1,7 @@
 #ifndef gl_h
 #define gl_h
 
-#define NOMINMAX
+#define NOMINMAX 1
 
 #include <GL/gl3w.h>
 #include <GLFW/glfw3.h>

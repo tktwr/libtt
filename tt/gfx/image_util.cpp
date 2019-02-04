@@ -6,17 +6,17 @@
 #include <iostream>
 #include "image_util.h"
 
-void f_load_image(const std::string& fname, tt::Image4uc& image) {
+bool f_load_image(const std::string& fname, tt::Image4uc& image) {
     int w, h, n;
     unsigned char *data = stbi_load(fname.c_str(), &w, &h, &n, 4);
     if (!data) {
         std::cerr << "fail to load image" << std::endl;
+        return false;
     }
-
     image.alloc(w, h);
     memcpy(image.data(), data, w*h*4);
-
     stbi_image_free(data);
+    return true;
 }
 
 void f_save_image(const std::string& fname, const tt::Image4uc& image) {

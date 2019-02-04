@@ -22,7 +22,7 @@ public:
 
 private:
     GLTexture2D m_tex;
-    tt::Vec2i m_image_size  = {0, 0};
+    tt::Vec2i m_image_size = {0, 0};
 
     float m_scale = 1.0f;
     bool m_fit = true;

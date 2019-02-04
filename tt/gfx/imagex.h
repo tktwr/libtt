@@ -33,18 +33,25 @@ public:
     const ImageBase* getImageBase() const { return m_image; }
           ImageBase* getImageBase()       { return m_image; }
 
-    std::string getType(const tt::FileName& fname) const;
-    std::string getType(int cv_type) const;
-    bool isType(const std::string& type) const;
     void create(const std::string& type, int w, int h);
     void load(const std::string& fname);
     void save(const std::string& fname) const;
 
+    std::string getType() const { return m_type; }
+    std::string getFileName() const { return m_fname; }
+
 private:
+    std::string getExt(const tt::FileName& fname) const;
+    std::string getType(const std::string& ext) const;
+    std::string getType(int cv_type) const;
+    bool isType(const std::string& ext) const;
+
     void destroy() {
         if (m_image) {
             delete m_image;
             m_image = 0;
+            m_type = "";
+            m_fname = "";
         }
     }
     void load_bin(const std::string& fname);
@@ -54,6 +61,7 @@ private:
 
     ImageBase* m_image = 0;
     std::string m_type;
+    std::string m_fname;
 };
 
 inline tt::Image1uc* toImage1ucPtr(tt::ImageX& img) { return dynamic_cast<tt::Image1uc*>(img.getImageBase()); }

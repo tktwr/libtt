@@ -7,8 +7,20 @@
 
 namespace tt {
 
-std::string ImageX::getType(const tt::FileName& fname) const {
+std::string ImageX::getExt(const tt::FileName& fname) const {
     return fname.ext().substr(1);
+}
+
+std::string ImageX::getType(const std::string& ext) const {
+    std::string type;
+    if (ext == "jpg") {
+        type = "i4uc";
+    } else if (ext == "png") {
+        type = "i4uc";
+    } else {
+        type = ext;
+    }
+    return type;
 }
 
 std::string ImageX::getType(int cv_type) const {
@@ -30,11 +42,11 @@ std::string ImageX::getType(int cv_type) const {
     return type;
 }
 
-bool ImageX::isType(const std::string& type) const {
-    if (type == "i1uc" ||
-        type == "i1us" ||
-        type == "i3uc" ||
-        type == "i4uc") {
+bool ImageX::isType(const std::string& ext) const {
+    if (ext == "i1uc" ||
+        ext == "i1us" ||
+        ext == "i3uc" ||
+        ext == "i4uc") {
         return true;
     }
     return false;
@@ -52,20 +64,27 @@ void ImageX::create(const std::string& type, int w, int h) {
     } else if (type == "i4uc") {
         m_image = new Image4uc(w, h);
     }
+    m_type = type;
+    m_fname = "";
 }
 
 void ImageX::load(const std::string& fname) {
-    if (isType(getType(fname))) {
+    std::string ext = getExt(fname);
+    if (isType(ext)) {
         load_bin(fname);
+        m_type = ext;
     } else {
         tt::Image4uc& img = tt::toImage4ucRef(*this);
         f_load_image(fname, img);
         //load_mat(fname);
+        m_type = "i4uc";
     }
+    m_fname = fname;
 }
 
 void ImageX::save(const std::string& fname) const {
-    if (isType(getType(fname))) {
+    std::string ext = getExt(fname);
+    if (isType(ext)) {
         save_bin(fname);
     } else {
         save_mat(fname);
@@ -79,7 +98,7 @@ void ImageX::load_bin(const std::string& fname) {
     ifs.read(reinterpret_cast<char*>(&w), sizeof(int));
     ifs.read(reinterpret_cast<char*>(&h), sizeof(int));
 
-    m_type = getType(fname);
+    m_type = getType(getExt(fname));
     create(m_type, w, h);
 
     char* data = (char*)(m_image->void_ptr());

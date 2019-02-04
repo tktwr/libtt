@@ -11,6 +11,8 @@ void GLTexture2D::setImage(GLsizei w, GLsizei h, const GLvoid* data) {
     if (!m_id) {
         glGenTextures(1, &m_id);
     }
+    m_w = w;
+    m_h = h;
     glBindTexture(GL_TEXTURE_2D, m_id);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
@@ -23,6 +25,8 @@ void GLTexture2D::release() {
     if (m_id) {
         glDeleteTextures(1, &m_id);
         m_id = 0;
+        m_w = 0;
+        m_h = 0;
     }
 }
 

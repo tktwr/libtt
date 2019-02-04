@@ -40,7 +40,7 @@ inline void ShowHelpTip(const char* desc) {
     ImGui::SameLine();
     ImGui::TextDisabled("[?]");
     if (ImGui::IsItemHovered()) {
-        ImGui::SetTooltip(desc);
+        ImGui::SetTooltip("%s", desc);
     }
 }
 
