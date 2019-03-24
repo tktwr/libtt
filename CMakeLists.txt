@@ -2,8 +2,7 @@ cmake_minimum_required(VERSION 3.8)
 
 project(libtt CXX)
 
-set(LIBTT .)
-include(${LIBTT}/config/config.cmake)
+include(config/config.cmake)
 
 add_library(tt STATIC ${LIBTT_SRCS})
 install(TARGETS tt ARCHIVE DESTINATION lib)
