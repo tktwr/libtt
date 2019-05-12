@@ -1,0 +1,475 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/5728abe4/
+Array	tt\\util\\array.h	/^    Array() : m_data_char(0), m_data(0), m_size(0) {}$/;"	f	class:tt::Array
+Array	tt\\util\\array.h	/^    Array(std::size_t size) : m_data_char(0), m_data(0), m_size(0) { resize(size); }$/;"	f	class:tt::Array
+Array	tt\\util\\array.h	/^class Array {$/;"	c	namespace:tt
+ArrayOfString	tt\\imgui\\imgui_util.h	/^    ArrayOfString(const std::vector<std::string>& vec) { setVector(vec); }$/;"	f	class:ArrayOfString
+ArrayOfString	tt\\imgui\\imgui_util.h	/^class ArrayOfString {$/;"	c
+BytesToGB	tt\\util\\util.h	/^inline float BytesToGB(std::size_t bytes) {$/;"	f	namespace:tt	typeref:typename:float
+BytesToKB	tt\\util\\util.h	/^inline float BytesToKB(std::size_t bytes) {$/;"	f	namespace:tt	typeref:typename:float
+BytesToMB	tt\\util\\util.h	/^inline float BytesToMB(std::size_t bytes) {$/;"	f	namespace:tt	typeref:typename:float
+Color1f	tt\\util\\type.h	/^    typedef std::array<float,  1> Color1f;$/;"	t	namespace:tt	typeref:typename:std::array<float,1>
+Color1uc	tt\\util\\type.h	/^    typedef std::array<uchar,  1> Color1uc;$/;"	t	namespace:tt	typeref:typename:std::array<uchar,1>
+Color1us	tt\\util\\type.h	/^    typedef std::array<ushort, 1> Color1us;$/;"	t	namespace:tt	typeref:typename:std::array<ushort,1>
+Color2f	tt\\util\\type.h	/^    typedef std::array<float,  2> Color2f;$/;"	t	namespace:tt	typeref:typename:std::array<float,2>
+Color2uc	tt\\util\\type.h	/^    typedef std::array<uchar,  2> Color2uc;$/;"	t	namespace:tt	typeref:typename:std::array<uchar,2>
+Color2us	tt\\util\\type.h	/^    typedef std::array<ushort, 2> Color2us;$/;"	t	namespace:tt	typeref:typename:std::array<ushort,2>
+Color3f	tt\\util\\type.h	/^    typedef std::array<float,  3> Color3f;$/;"	t	namespace:tt	typeref:typename:std::array<float,3>
+Color3uc	tt\\util\\type.h	/^    typedef std::array<uchar,  3> Color3uc;$/;"	t	namespace:tt	typeref:typename:std::array<uchar,3>
+Color3us	tt\\util\\type.h	/^    typedef std::array<ushort, 3> Color3us;$/;"	t	namespace:tt	typeref:typename:std::array<ushort,3>
+Color4f	tt\\util\\type.h	/^    typedef std::array<float,  4> Color4f;$/;"	t	namespace:tt	typeref:typename:std::array<float,4>
+Color4uc	tt\\util\\type.h	/^    typedef std::array<uchar,  4> Color4uc;$/;"	t	namespace:tt	typeref:typename:std::array<uchar,4>
+Color4us	tt\\util\\type.h	/^    typedef std::array<ushort, 4> Color4us;$/;"	t	namespace:tt	typeref:typename:std::array<ushort,4>
+Command	tt\\app\\gl_app.h	/^    struct Command {$/;"	s	class:GLApp
+Console	tt\\imgui\\imgui_console.h	/^    Console() {$/;"	f	class:Console
+Console	tt\\imgui\\imgui_console.h	/^class Console {$/;"	c
+DataType	tt\\gfx\\imagex.h	/^    enum DataType {$/;"	g	class:tt::ImageX
+E	tt\\util\\log.h	/^    static void E(const char* fmt, ...) {$/;"	f	class:tt::Log	typeref:typename:void
+FileName	tt\\util\\filename.h	/^    FileName() {}$/;"	f	class:tt::FileName
+FileName	tt\\util\\filename.h	/^    FileName(const char* _path) { path(_path); }$/;"	f	class:tt::FileName
+FileName	tt\\util\\filename.h	/^    FileName(const std::string& _path) { path(_path); }$/;"	f	class:tt::FileName
+FileName	tt\\util\\filename.h	/^class FileName {$/;"	c	namespace:tt
+FrameName	tt\\util\\filename.cpp	/^FrameName::FrameName(const std::string& fname)$/;"	f	class:tt::FrameName
+FrameName	tt\\util\\filename.h	/^class FrameName : public FileName {$/;"	c	namespace:tt
+GLApp	tt\\app\\gl_app.cpp	/^GLApp::GLApp() {$/;"	f	class:GLApp
+GLApp	tt\\app\\gl_app.h	/^class GLApp {$/;"	c
+GLFBO	tt\\gl\\gl_fbo.h	/^	GLFBO() {}$/;"	f	class:GLFBO
+GLFBO	tt\\gl\\gl_fbo.h	/^class GLFBO {$/;"	c
+GLFrame	tt\\gl\\gl_frame.h	/^    GLFrame() {}$/;"	f	class:GLFrame
+GLFrame	tt\\gl\\gl_frame.h	/^class GLFrame {$/;"	c
+GLFrameDisplay	tt\\gl\\gl_frame_display.h	/^class GLFrameDisplay : public GLFrame {$/;"	c
+GLProgram	tt\\gl\\gl_program.h	/^    GLProgram() {}$/;"	f	class:GLProgram
+GLProgram	tt\\gl\\gl_program.h	/^class GLProgram {$/;"	c
+GLTexture2D	tt\\gl\\gl_texture.h	/^    GLTexture2D() {}$/;"	f	class:GLTexture2D
+GLTexture2D	tt\\gl\\gl_texture.h	/^class GLTexture2D {$/;"	c
+GLVAO	tt\\gl\\gl_vao.h	/^    GLVAO() {}$/;"	f	class:GLVAO
+GLVAO	tt\\gl\\gl_vao.h	/^class GLVAO {$/;"	c
+I	tt\\util\\log.h	/^    static void I(const char* fmt, ...) {$/;"	f	class:tt::Log	typeref:typename:void
+I_16UC1	tt\\gfx\\imagex.h	/^        I_16UC1,$/;"	e	enum:tt::ImageX::DataType
+I_16UC2	tt\\gfx\\imagex.h	/^        I_16UC2,$/;"	e	enum:tt::ImageX::DataType
+I_16UC3	tt\\gfx\\imagex.h	/^        I_16UC3,$/;"	e	enum:tt::ImageX::DataType
+I_16UC4	tt\\gfx\\imagex.h	/^        I_16UC4,$/;"	e	enum:tt::ImageX::DataType
+I_32FC1	tt\\gfx\\imagex.h	/^        I_32FC1,$/;"	e	enum:tt::ImageX::DataType
+I_32FC2	tt\\gfx\\imagex.h	/^        I_32FC2,$/;"	e	enum:tt::ImageX::DataType
+I_32FC3	tt\\gfx\\imagex.h	/^        I_32FC3,$/;"	e	enum:tt::ImageX::DataType
+I_32FC4	tt\\gfx\\imagex.h	/^        I_32FC4,$/;"	e	enum:tt::ImageX::DataType
+I_8UC1	tt\\gfx\\imagex.h	/^        I_8UC1 = 0,$/;"	e	enum:tt::ImageX::DataType
+I_8UC2	tt\\gfx\\imagex.h	/^        I_8UC2,$/;"	e	enum:tt::ImageX::DataType
+I_8UC3	tt\\gfx\\imagex.h	/^        I_8UC3,$/;"	e	enum:tt::ImageX::DataType
+I_8UC4	tt\\gfx\\imagex.h	/^        I_8UC4,$/;"	e	enum:tt::ImageX::DataType
+I_NONE	tt\\gfx\\imagex.h	/^        I_NONE$/;"	e	enum:tt::ImageX::DataType
+Image	tt\\gfx\\image.h	/^    Image() : m_w(0), m_h(0) {}$/;"	f	class:tt::Image
+Image	tt\\gfx\\image.h	/^    Image(int w, int h) { resize(w, h); }$/;"	f	class:tt::Image
+Image	tt\\gfx\\image.h	/^class Image : public ImageBase {$/;"	c	namespace:tt
+Image1f	tt\\gfx\\image.h	/^typedef Image<Color1f>  Image1f;$/;"	t	namespace:tt	typeref:typename:Image<Color1f>
+Image1uc	tt\\gfx\\image.h	/^typedef Image<Color1uc> Image1uc;$/;"	t	namespace:tt	typeref:typename:Image<Color1uc>
+Image1us	tt\\gfx\\image.h	/^typedef Image<Color1us> Image1us;$/;"	t	namespace:tt	typeref:typename:Image<Color1us>
+Image2f	tt\\gfx\\image.h	/^typedef Image<Color2f>  Image2f;$/;"	t	namespace:tt	typeref:typename:Image<Color2f>
+Image2uc	tt\\gfx\\image.h	/^typedef Image<Color2uc> Image2uc;$/;"	t	namespace:tt	typeref:typename:Image<Color2uc>
+Image2us	tt\\gfx\\image.h	/^typedef Image<Color2us> Image2us;$/;"	t	namespace:tt	typeref:typename:Image<Color2us>
+Image3f	tt\\gfx\\image.h	/^typedef Image<Color3f>  Image3f;$/;"	t	namespace:tt	typeref:typename:Image<Color3f>
+Image3uc	tt\\gfx\\image.h	/^typedef Image<Color3uc> Image3uc;$/;"	t	namespace:tt	typeref:typename:Image<Color3uc>
+Image3us	tt\\gfx\\image.h	/^typedef Image<Color3us> Image3us;$/;"	t	namespace:tt	typeref:typename:Image<Color3us>
+Image4f	tt\\gfx\\image.h	/^typedef Image<Color4f>  Image4f;$/;"	t	namespace:tt	typeref:typename:Image<Color4f>
+Image4uc	tt\\gfx\\image.h	/^typedef Image<Color4uc> Image4uc;$/;"	t	namespace:tt	typeref:typename:Image<Color4uc>
+Image4us	tt\\gfx\\image.h	/^typedef Image<Color4us> Image4us;$/;"	t	namespace:tt	typeref:typename:Image<Color4us>
+ImageBase	tt\\gfx\\image.h	/^class ImageBase {$/;"	c	namespace:tt
+ImageX	tt\\gfx\\imagex.h	/^    ImageX() {$/;"	f	class:tt::ImageX
+ImageX	tt\\gfx\\imagex.h	/^class ImageX {$/;"	c	namespace:tt
+Log	tt\\util\\log.h	/^    Log() {}$/;"	f	class:tt::Log
+Log	tt\\util\\log.h	/^class Log {$/;"	c	namespace:tt
+NOMINMAX	tt\\gl\\gl.h	/^#define NOMINMAX /;"	d
+STB_IMAGE_IMPLEMENTATION	tt\\gfx\\image_util.cpp	/^#define STB_IMAGE_IMPLEMENTATION$/;"	d	file:
+STB_IMAGE_WRITE_IMPLEMENTATION	tt\\gfx\\image_util.cpp	/^#define STB_IMAGE_WRITE_IMPLEMENTATION$/;"	d	file:
+ShowHelpTip	tt\\imgui\\imgui_util.h	/^inline void ShowHelpTip(const char* desc) {$/;"	f	typeref:typename:void
+Statistics	tt\\util\\stat.h	/^    Statistics() : m_max_size(0) {}$/;"	f	class:tt::Statistics
+Statistics	tt\\util\\stat.h	/^    Statistics(size_t max_size) : m_max_size(max_size) {}$/;"	f	class:tt::Statistics
+Statistics	tt\\util\\stat.h	/^class Statistics {$/;"	c	namespace:tt
+Strdup	tt\\imgui\\imgui_console.h	/^inline char* Strdup(const char *str)                             { size_t len = strlen(str) + 1;/;"	f	typeref:typename:char *
+Stricmp	tt\\imgui\\imgui_console.h	/^inline int   Stricmp(const char* str1, const char* str2)         { int d; while ((d = toupper(*s/;"	f	typeref:typename:int
+Strnicmp	tt\\imgui\\imgui_console.h	/^inline int   Strnicmp(const char* str1, const char* str2, int n) { int d = 0; while (n > 0 && (d/;"	f	typeref:typename:int
+Strtrim	tt\\imgui\\imgui_console.h	/^inline void  Strtrim(char* str)                                  { char* str_end = str + strlen(/;"	f	typeref:typename:void
+TextEditCallback	tt\\imgui\\imgui_console.h	/^inline int Console::TextEditCallback(ImGuiTextEditCallbackData* data) {$/;"	f	class:Console	typeref:typename:int
+TextEditCallbackStub	tt\\imgui\\imgui_console.h	/^inline int TextEditCallbackStub(ImGuiTextEditCallbackData* data) {$/;"	f	typeref:typename:int
+Time	tt\\util\\time.h	/^    Time() {}$/;"	f	class:tt::Time
+Time	tt\\util\\time.h	/^class Time {$/;"	c	namespace:tt
+TimeCollection	tt\\util\\time.h	/^class TimeCollection {$/;"	c	namespace:tt
+UI_CUI	tt\\app\\gl_app.h	/^        UI_CUI = 0,$/;"	e	enum:GLApp::UiType
+UI_GUI	tt\\app\\gl_app.h	/^        UI_GUI,$/;"	e	enum:GLApp::UiType
+USE_DEPTH_TEXTURE	tt\\gl\\gl_fbo.cpp	/^#define USE_DEPTH_TEXTURE /;"	d	file:
+UiType	tt\\app\\gl_app.h	/^    enum UiType {$/;"	g	class:GLApp
+Vec1f	tt\\util\\type.h	/^    typedef std::array<float,  1> Vec1f;$/;"	t	namespace:tt	typeref:typename:std::array<float,1>
+Vec1i	tt\\util\\type.h	/^    typedef std::array<int,    1> Vec1i;$/;"	t	namespace:tt	typeref:typename:std::array<int,1>
+Vec2f	tt\\util\\type.h	/^    typedef std::array<float,  2> Vec2f;$/;"	t	namespace:tt	typeref:typename:std::array<float,2>
+Vec2i	tt\\util\\type.h	/^    typedef std::array<int,    2> Vec2i;$/;"	t	namespace:tt	typeref:typename:std::array<int,2>
+Vec3f	tt\\util\\type.h	/^    typedef std::array<float,  3> Vec3f;$/;"	t	namespace:tt	typeref:typename:std::array<float,3>
+Vec3i	tt\\util\\type.h	/^    typedef std::array<int,    3> Vec3i;$/;"	t	namespace:tt	typeref:typename:std::array<int,3>
+Vec4f	tt\\util\\type.h	/^    typedef std::array<float,  4> Vec4f;$/;"	t	namespace:tt	typeref:typename:std::array<float,4>
+Vec4i	tt\\util\\type.h	/^    typedef std::array<int,    4> Vec4i;$/;"	t	namespace:tt	typeref:typename:std::array<int,4>
+__anon65b0e14a0102	tt\\app\\gl_app.cpp	/^    m_console.setFunc([&](const std::string& line) {$/;"	f	function:GLApp::registerCommands	file:
+__anond280dd430102	tt\\gfx\\image.h	/^            th.push_back(std::thread([&]() {$/;"	f	function:tt::Image::foreach	file:
+__anond280dd430202	tt\\gfx\\image.h	/^    image.foreach([&](T& val, int x, int y) {$/;"	f	function:tt::f_image_print	file:
+__anond5b8d9db0102	tt\\gfx\\image_util.cpp	/^    image.foreach([&](tt::Color4uc& val, int x, int y) {$/;"	f	function:f_draw_rect	file:
+__anond5b8d9db0202	tt\\gfx\\image_util.cpp	/^    image.foreach([&](tt::Color4uc& val, int x, int y) {$/;"	f	function:f_fill_rect	file:
+__anond5b8d9db0302	tt\\gfx\\image_util.cpp	/^    image.foreach([&](tt::Color4uc& val, int x, int y) {$/;"	f	function:f_create_vstripe_image	file:
+__anond5b8d9db0402	tt\\gfx\\image_util.cpp	/^    image.foreach([&](tt::Color4uc& val, int x, int y) {$/;"	f	function:f_create_hstripe_image	file:
+__anond5b8d9db0502	tt\\gfx\\image_util.cpp	/^    image.foreach([&](tt::Color4uc& val, int x, int y) {$/;"	f	function:f_create_checker_image	file:
+add	tt\\util\\stat.h	/^    void add(float val) {$/;"	f	class:tt::Statistics	typeref:typename:void
+add	tt\\util\\type.h	/^    inline T      add(const T& v1, const T& v2) { return v1 + v2; }$/;"	f	namespace:tt	typeref:typename:T
+add	tt\\util\\type.h	/^    inline uchar  add(const uchar& v1, const uchar& v2) { return uint2uchar(v1 + v2); }$/;"	f	namespace:tt	typeref:typename:uchar
+add	tt\\util\\type.h	/^    inline ushort add(const ushort& v1, const ushort& v2) { return uint2ushort(v1 + v2); }$/;"	f	namespace:tt	typeref:typename:ushort
+addCommand	tt\\imgui\\imgui_console.h	/^    void addCommand(const std::string& cmd) {$/;"	f	class:Console	typeref:typename:void
+alloc	tt\\gfx\\image.h	/^    void alloc(int w, int h) {$/;"	f	class:tt::Image	typeref:typename:void
+alloc	tt\\gfx\\imagex.h	/^    void alloc(int w, int h) { return m_image->alloc(w, h); }$/;"	f	class:tt::ImageX	typeref:typename:void
+alloc	tt\\util\\array.h	/^    void alloc(std::size_t size) {$/;"	f	class:tt::Array	typeref:typename:void
+args	tt\\app\\gl_app.h	/^        std::string args;$/;"	m	struct:GLApp::Command	typeref:typename:std::string
+bind	tt\\gl\\gl_fbo.cpp	/^void GLFBO::bind() {$/;"	f	class:GLFBO	typeref:typename:void
+bind	tt\\gl\\gl_program.cpp	/^void GLProgram::bind() {$/;"	f	class:GLProgram	typeref:typename:void
+bind	tt\\gl\\gl_texture.cpp	/^void GLTexture2D::bind() {$/;"	f	class:GLTexture2D	typeref:typename:void
+buf_size	tt\\util\\log.h	/^    static const int buf_size = 1024;$/;"	m	class:tt::Log	typeref:typename:const int
+c_str	tt\\util\\filename.h	/^    const char* c_str()           const { return m_path.c_str(); }$/;"	f	class:tt::FileName	typeref:typename:const char *
+check	tt\\gl\\gl_fbo.cpp	/^void GLFBO::check() {$/;"	f	class:GLFBO	typeref:typename:void
+clamp	tt\\util\\type.h	/^    inline T clamp(T v, T l, T h) {$/;"	f	namespace:tt	typeref:typename:T
+clear	tt\\gfx\\image.h	/^    void clear() {$/;"	f	class:tt::Image	typeref:typename:void
+clear	tt\\gfx\\imagex.h	/^    void clear() { return m_image->clear(); }$/;"	f	class:tt::ImageX	typeref:typename:void
+clear	tt\\imgui\\imgui_console.h	/^    void clear() {$/;"	f	class:Console	typeref:typename:void
+clear	tt\\util\\array.h	/^    void clear() { destroy(); }$/;"	f	class:tt::Array	typeref:typename:void
+close	tt\\gl\\gl_fbo.cpp	/^void GLFBO::close() {$/;"	f	class:GLFBO	typeref:typename:void
+cmd_clear	tt\\app\\gl_app.cpp	/^void GLApp::cmd_clear() {$/;"	f	class:GLApp	typeref:typename:void
+cmd_help	tt\\app\\gl_app.cpp	/^void GLApp::cmd_help() {$/;"	f	class:GLApp	typeref:typename:void
+cmd_quit	tt\\app\\gl_app.cpp	/^void GLApp::cmd_quit() {$/;"	f	class:GLApp	typeref:typename:void
+create	tt\\gfx\\imagex.cpp	/^void ImageX::create(const std::string& type, int w, int h) {$/;"	f	class:tt::ImageX	typeref:typename:void
+data	tt\\gfx\\image.h	/^          T* data()       { return m_data.data(); }$/;"	f	class:tt::Image	typeref:typename:T *
+data	tt\\gfx\\image.h	/^    const T* data() const { return m_data.data(); }$/;"	f	class:tt::Image	typeref:typename:const T *
+data	tt\\util\\array.h	/^          T* data()       { return m_data; }$/;"	f	class:tt::Array	typeref:typename:T *
+data	tt\\util\\array.h	/^    const T* data() const { return m_data; }$/;"	f	class:tt::Array	typeref:typename:const T *
+data_type	tt\\util\\array.h	/^    typedef T data_type;$/;"	t	class:tt::Array	typeref:typename:T
+desc	tt\\app\\gl_app.h	/^        std::string desc;$/;"	m	struct:GLApp::Command	typeref:typename:std::string
+destroy	tt\\gfx\\imagex.h	/^    void destroy() {$/;"	f	class:tt::ImageX	typeref:typename:void
+destroy	tt\\imgui\\imgui_util.h	/^    void destroy() {$/;"	f	class:ArrayOfString	typeref:typename:void
+destroy	tt\\util\\array.h	/^    void destroy() {$/;"	f	class:tt::Array	typeref:typename:void
+dirname	tt\\util\\filename.cpp	/^std::string FileName::dirname() const {$/;"	f	class:tt::FileName	typeref:typename:std::string
+div	tt\\util\\type.h	/^    inline T      div(const T& v1, const T& v2) { return v1 \/ v2; }$/;"	f	namespace:tt	typeref:typename:T
+div	tt\\util\\type.h	/^    inline uchar  div(const uchar& v1, const uchar& v2) { return uint2uchar(v1 \/ v2); }$/;"	f	namespace:tt	typeref:typename:uchar
+div	tt\\util\\type.h	/^    inline ushort div(const ushort& v1, const ushort& v2) { return uint2ushort(v1 \/ v2); }$/;"	f	namespace:tt	typeref:typename:ushort
+draw	tt\\app\\gl_app.h	/^    virtual void draw() {}$/;"	f	class:GLApp	typeref:typename:void
+draw	tt\\gl\\gl_frame.h	/^    virtual void draw() {}$/;"	f	class:GLFrame	typeref:typename:void
+draw	tt\\gl\\gl_frame_display.cpp	/^void GLFrameDisplay::draw() {$/;"	f	class:GLFrameDisplay	typeref:typename:void
+draw	tt\\gl\\gl_vao.cpp	/^void GLVAO::draw() {$/;"	f	class:GLVAO	typeref:typename:void
+draw	tt\\imgui\\imgui_console.h	/^inline void Console::draw() {$/;"	f	class:Console	typeref:typename:void
+drawGui	tt\\app\\gl_app.cpp	/^void GLApp::drawGui() {$/;"	f	class:GLApp	typeref:typename:void
+drawGuiConsolePanel	tt\\app\\gl_app.cpp	/^void GLApp::drawGuiConsolePanel() {$/;"	f	class:GLApp	typeref:typename:void
+drawToFBO	tt\\gl\\gl_frame.cpp	/^void GLFrame::drawToFBO() {$/;"	f	class:GLFrame	typeref:typename:void
+empty	tt\\gfx\\image.h	/^    bool empty() const { return m_data.empty(); }$/;"	f	class:tt::Image	typeref:typename:bool
+empty	tt\\gfx\\imagex.h	/^    bool empty() const { return m_image->empty(); }$/;"	f	class:tt::ImageX	typeref:typename:bool
+empty	tt\\util\\array.h	/^    bool empty() const { return m_size == 0; }$/;"	f	class:tt::Array	typeref:typename:bool
+end	tt\\util\\time.h	/^    void end() { m_end = std::chrono::system_clock::now(); }$/;"	f	class:tt::Time	typeref:typename:void
+exec	tt\\app\\gl_app.cpp	/^void GLApp::exec(const std::string& line) {$/;"	f	class:GLApp	typeref:typename:void
+ext	tt\\util\\filename.cpp	/^std::string FileName::ext() const {$/;"	f	class:tt::FileName	typeref:typename:std::string
+f_create_checker_image	tt\\gfx\\image_util.cpp	/^void f_create_checker_image(tt::Image4uc& image, int nw, int nh, const tt::Color4uc& color0, con/;"	f	typeref:typename:void
+f_create_hstripe_image	tt\\gfx\\image_util.cpp	/^void f_create_hstripe_image(tt::Image4uc& image, int n, const tt::Color4uc& color0, const tt::Co/;"	f	typeref:typename:void
+f_create_texture	tt\\gfx\\image_util.cpp	/^GLuint f_create_texture(GLsizei width, GLsizei height, const GLvoid* data) {$/;"	f	typeref:typename:GLuint
+f_create_texture	tt\\gfx\\image_util.cpp	/^GLuint f_create_texture(const tt::Image4uc& image) {$/;"	f	typeref:typename:GLuint
+f_create_vstripe_image	tt\\gfx\\image_util.cpp	/^void f_create_vstripe_image(tt::Image4uc& image, int n, const tt::Color4uc& color0, const tt::Co/;"	f	typeref:typename:void
+f_cvmat_to_image	tt\\gfx\\image_util.cpp	/^void f_cvmat_to_image(const cv::Mat& mat, tt::Image4uc& image) {$/;"	f	typeref:typename:void
+f_draw_rect	tt\\gfx\\image_util.cpp	/^void f_draw_rect(tt::Image4uc& image, const tt::Vec2i& o, const tt::Vec2i& size, const tt::Color/;"	f	typeref:typename:void
+f_fill_rect	tt\\gfx\\image_util.cpp	/^void f_fill_rect(tt::Image4uc& image, const tt::Vec2i& o, const tt::Vec2i& size, const tt::Color/;"	f	typeref:typename:void
+f_get_current_dir	tt\\util\\path.cpp	/^tstring f_get_current_dir()$/;"	f	namespace:tt::win	typeref:typename:tstring
+f_get_desktop_dir	tt\\util\\path.cpp	/^tstring f_get_desktop_dir()$/;"	f	namespace:tt::win	typeref:typename:tstring
+f_get_exe_dir	tt\\util\\path.cpp	/^tstring f_get_exe_dir()$/;"	f	namespace:tt::win	typeref:typename:tstring
+f_get_home_dir	tt\\util\\path.cpp	/^tstring f_get_home_dir()$/;"	f	namespace:tt::win	typeref:typename:tstring
+f_get_local_appdata_dir	tt\\util\\path.cpp	/^tstring f_get_local_appdata_dir()$/;"	f	namespace:tt::win	typeref:typename:tstring
+f_image_copy	tt\\gfx\\image.h	/^void f_image_copy(Image<T>& dst, const Image<T>& src) {$/;"	f	namespace:tt	typeref:typename:void
+f_image_flip	tt\\gfx\\image_util.h	/^void f_image_flip(Image<T>& img) {$/;"	f	namespace:tt	typeref:typename:void
+f_image_flop	tt\\gfx\\image_util.h	/^void f_image_flop(Image<T>& img) {$/;"	f	namespace:tt	typeref:typename:void
+f_image_hgrad	tt\\gfx\\image_util.h	/^void f_image_hgrad(Image<T>& img, const tt::Color4uc& co1, const tt::Color4uc& co2) {$/;"	f	namespace:tt	typeref:typename:void
+f_image_print	tt\\gfx\\image.h	/^void f_image_print(Image<T>& image) {$/;"	f	namespace:tt	typeref:typename:void
+f_image_same_size	tt\\gfx\\image.h	/^void f_image_same_size(const Image<T>& img0, const Image<T>& img1) {$/;"	f	namespace:tt	typeref:typename:void
+f_image_to_cvmat	tt\\gfx\\image_util.cpp	/^void f_image_to_cvmat(const tt::Image4uc& image, cv::Mat& mat) {$/;"	f	typeref:typename:void
+f_image_vgrad	tt\\gfx\\image_util.h	/^void f_image_vgrad(Image<T>& img, const tt::Color4uc& co1, const tt::Color4uc& co2) {$/;"	f	namespace:tt	typeref:typename:void
+f_load_image	tt\\gfx\\image_util.cpp	/^bool f_load_image(const std::string& fname, tt::Image4uc& image) {$/;"	f	typeref:typename:bool
+f_open_file	tt\\app\\gl_app.cpp	/^std::string f_open_file() {$/;"	f	typeref:typename:std::string
+f_replace	tt\\util\\util.h	/^inline void f_replace(std::string& str, const std::string& src, const std::string& dst) {$/;"	f	namespace:tt	typeref:typename:void
+f_save_file	tt\\app\\gl_app.cpp	/^std::string f_save_file() {$/;"	f	typeref:typename:std::string
+f_save_image	tt\\gfx\\image_util.cpp	/^void f_save_image(const std::string& fname, const tt::Image4uc& image) {$/;"	f	typeref:typename:void
+filename_erase_redundant_slash	tt\\util\\filename.cpp	/^std::string filename_erase_redundant_slash(std::string path) {$/;"	f	namespace:tt	typeref:typename:std::string
+filename_expand_env	tt\\util\\filename.cpp	/^std::string filename_expand_env(std::string path) {$/;"	f	namespace:tt	typeref:typename:std::string
+filename_expand_homedir	tt\\util\\filename.cpp	/^std::string filename_expand_homedir(std::string path) {$/;"	f	namespace:tt	typeref:typename:std::string
+filename_expand_path	tt\\util\\filename.cpp	/^std::string filename_expand_path(std::string path) {$/;"	f	namespace:tt	typeref:typename:std::string
+filename_find_ext	tt\\util\\filename.cpp	/^std::string::size_type filename_find_ext(const std::string& path) {$/;"	f	namespace:tt	typeref:typename:std::string::size_type
+filename_find_fname	tt\\util\\filename.cpp	/^std::string::size_type filename_find_fname(const std::string& path) {$/;"	f	namespace:tt	typeref:typename:std::string::size_type
+fill	tt\\gfx\\image.h	/^    void fill(const T& v = T()) { m_data.fill(v); }$/;"	f	class:tt::Image	typeref:typename:void
+fill	tt\\util\\array.h	/^    void fill(const T& v = T()) { for (std::size_t i=0; i<m_size; i++) m_data[i] = v; }$/;"	f	class:tt::Array	typeref:typename:void
+float2uchar	tt\\util\\type.h	/^    inline std::array<uchar, N> float2uchar(const std::array<float, N>& ar) {$/;"	f	namespace:tt	typeref:typename:std::array<uchar,N>
+float2uchar	tt\\util\\type.h	/^    inline uchar float2uchar(float f) {$/;"	f	namespace:tt	typeref:typename:uchar
+float2ushort	tt\\util\\type.h	/^    inline std::array<ushort, N> float2ushort(const std::array<float, N>& ar) {$/;"	f	namespace:tt	typeref:typename:std::array<ushort,N>
+float2ushort	tt\\util\\type.h	/^    inline ushort float2ushort(float f) {$/;"	f	namespace:tt	typeref:typename:ushort
+fname	tt\\util\\filename.cpp	/^std::string FileName::fname() const {$/;"	f	class:tt::FileName	typeref:typename:std::string
+fname	tt\\util\\filename.cpp	/^std::string FrameName::fname(int nr) const {$/;"	f	class:tt::FrameName	typeref:typename:std::string
+foreach	tt\\gfx\\image.h	/^    void foreach(const std::function<void(T&, int, int)>& func, int nth = -1) {$/;"	f	class:tt::Image	typeref:typename:void
+foreach_nothread	tt\\gfx\\image.h	/^    void foreach_nothread(const std::function<void(T&, int, int)>& func) {$/;"	f	class:tt::Image	typeref:typename:void
+getArray	tt\\imgui\\imgui_util.h	/^    char** getArray() { return m_array; }$/;"	f	class:ArrayOfString	typeref:typename:char **
+getAverage	tt\\util\\stat.h	/^    float getAverage() const {$/;"	f	class:tt::Statistics	typeref:typename:float
+getColorTexId	tt\\gl\\gl_fbo.h	/^    GLuint getColorTexId() const { return m_tex_color0; }$/;"	f	class:GLFBO	typeref:typename:GLuint
+getColorTexId	tt\\gl\\gl_frame.h	/^    GLuint getColorTexId() const { return m_fbo.getColorTexId(); }$/;"	f	class:GLFrame	typeref:typename:GLuint
+getDataDir	tt\\app\\gl_app.h	/^    std::string getDataDir() const { return m_data_dir; }$/;"	f	class:GLApp	typeref:typename:std::string
+getDepthTexId	tt\\gl\\gl_fbo.h	/^    GLuint getDepthTexId() const { return m_tex_depth; }$/;"	f	class:GLFBO	typeref:typename:GLuint
+getDepthTexId	tt\\gl\\gl_frame.h	/^    GLuint getDepthTexId() const { return m_fbo.getDepthTexId(); }$/;"	f	class:GLFrame	typeref:typename:GLuint
+getElapsedMSec	tt\\util\\time.h	/^    float getElapsedMSec() const {$/;"	f	class:tt::Time	typeref:typename:float
+getExt	tt\\gfx\\imagex.cpp	/^std::string ImageX::getExt(const tt::FileName& fname) const {$/;"	f	class:tt::ImageX	typeref:typename:std::string
+getFileName	tt\\gfx\\imagex.h	/^    std::string getFileName() const { return m_fname; }$/;"	f	class:tt::ImageX	typeref:typename:std::string
+getFit	tt\\gl\\gl_frame_display.h	/^    bool getFit() const { return m_fit; }$/;"	f	class:GLFrameDisplay	typeref:typename:bool
+getImageBase	tt\\gfx\\imagex.h	/^          ImageBase* getImageBase()       { return m_image; }$/;"	f	class:tt::ImageX	typeref:typename:ImageBase *
+getImageBase	tt\\gfx\\imagex.h	/^    const ImageBase* getImageBase() const { return m_image; }$/;"	f	class:tt::ImageX	typeref:typename:const ImageBase *
+getImageSize	tt\\gl\\gl_frame_display.h	/^    const tt::Vec2i& getImageSize() const { return m_image_size; }$/;"	f	class:GLFrameDisplay	typeref:typename:const tt::Vec2i &
+getMessage	tt\\util\\time.h	/^    std::string getMessage() const { return m_message; }$/;"	f	class:tt::Time	typeref:typename:std::string
+getScale	tt\\gl\\gl_frame_display.h	/^    float getScale() const { return m_scale; }$/;"	f	class:GLFrameDisplay	typeref:typename:float
+getScreenSize	tt\\gl\\gl_frame.h	/^    const tt::Vec2i& getScreenSize() const { return m_screen_size; }$/;"	f	class:GLFrame	typeref:typename:const tt::Vec2i &
+getTexId	tt\\gl\\gl_frame_display.h	/^    GLuint getTexId() const { return m_tex.id(); }$/;"	f	class:GLFrameDisplay	typeref:typename:GLuint
+getType	tt\\gfx\\imagex.cpp	/^std::string ImageX::getType(const std::string& ext) const {$/;"	f	class:tt::ImageX	typeref:typename:std::string
+getType	tt\\gfx\\imagex.cpp	/^std::string ImageX::getType(int cv_type) const {$/;"	f	class:tt::ImageX	typeref:typename:std::string
+getType	tt\\gfx\\imagex.h	/^    std::string getType() const { return m_type; }$/;"	f	class:tt::ImageX	typeref:typename:std::string
+getValue	tt\\gfx\\image.h	/^    T    getValue(int x, int y) const { return m_data[y * m_w + x]; }$/;"	f	class:tt::Image	typeref:typename:T
+glClearColor4f	tt\\gl\\gl.h	/^inline void glClearColor4f(const float v[4]) {$/;"	f	typeref:typename:void
+gl_app_h	tt\\app\\gl_app.h	/^#define gl_app_h$/;"	d
+gl_fbo_h	tt\\gl\\gl_fbo.h	/^#define gl_fbo_h$/;"	d
+gl_frame_display_h	tt\\gl\\gl_frame_display.h	/^#define gl_frame_display_h$/;"	d
+gl_frame_h	tt\\gl\\gl_frame.h	/^#define gl_frame_h$/;"	d
+gl_h	tt\\gl\\gl.h	/^#define gl_h$/;"	d
+gl_program_h	tt\\gl\\gl_program.h	/^#define gl_program_h$/;"	d
+gl_texture_h	tt\\gl\\gl_texture.h	/^#define gl_texture_h$/;"	d
+gl_vao_h	tt\\gl\\gl_vao.h	/^#define gl_vao_h$/;"	d
+glapp_h	tt\\glapp.h	/^#define glapp_h$/;"	d
+glfw_error_callback	tt\\app\\gl_app.cpp	/^static void glfw_error_callback(int error, const char* description) {$/;"	f	typeref:typename:void	file:
+glm_util_h	tt\\gl\\glm_util.h	/^#define glm_util_h$/;"	d
+h	tt\\app\\gl_app.h	/^    int h() const { return m_window_size[1]; }$/;"	f	class:GLApp	typeref:typename:int
+h	tt\\gfx\\image.h	/^    int h() const { return m_h; }$/;"	f	class:tt::Image	typeref:typename:int
+h	tt\\gfx\\imagex.h	/^    int h() const { return m_image->h(); }$/;"	f	class:tt::ImageX	typeref:typename:int
+h	tt\\gl\\gl_texture.h	/^    int h() const { return m_h; }$/;"	f	class:GLTexture2D	typeref:typename:int
+id	tt\\gl\\gl_texture.h	/^    GLuint id() const { return m_id; }$/;"	f	class:GLTexture2D	typeref:typename:GLuint
+image_util_h	tt\\gfx\\image_util.h	/^#define image_util_h$/;"	d
+imagex_h	tt\\gfx\\imagex.h	/^#define imagex_h$/;"	d
+imgui_console_h	tt\\imgui\\imgui_console.h	/^#define imgui_console_h$/;"	d
+imgui_util_h	tt\\imgui\\imgui_util.h	/^#define imgui_util_h$/;"	d
+init	tt\\app\\gl_app.h	/^    virtual void init() {}$/;"	f	class:GLApp	typeref:typename:void
+init	tt\\gl\\gl_frame.h	/^    virtual void init() {}$/;"	f	class:GLFrame	typeref:typename:void
+init	tt\\gl\\gl_frame_display.cpp	/^void GLFrameDisplay::init() {$/;"	f	class:GLFrameDisplay	typeref:typename:void
+init	tt\\gl\\gl_vao.cpp	/^void GLVAO::init() {$/;"	f	class:GLVAO	typeref:typename:void
+isAbsPath	tt\\util\\filename.cpp	/^bool FileName::isAbsPath() const {$/;"	f	class:tt::FileName	typeref:typename:bool
+isType	tt\\gfx\\imagex.cpp	/^bool ImageX::isType(const std::string& ext) const {$/;"	f	class:tt::ImageX	typeref:typename:bool
+len	tt\\util\\type.h	/^    inline T      len(const T& v1, const T& v2) { return (v1 > v2) ? v1 - v2 : v2 - v1; }$/;"	f	namespace:tt	typeref:typename:T
+link	tt\\gl\\gl_program.cpp	/^void GLProgram::link() {$/;"	f	class:GLProgram	typeref:typename:void
+load	tt\\gfx\\imagex.cpp	/^void ImageX::load(const std::string& fname) {$/;"	f	class:tt::ImageX	typeref:typename:void
+load_bin	tt\\gfx\\imagex.cpp	/^void ImageX::load_bin(const std::string& fname) {$/;"	f	class:tt::ImageX	typeref:typename:void
+load_mat	tt\\gfx\\imagex.cpp	/^void ImageX::load_mat(const std::string& fname) {$/;"	f	class:tt::ImageX	typeref:typename:void
+m_array	tt\\imgui\\imgui_util.h	/^    char** m_array = 0;$/;"	m	class:ArrayOfString	typeref:typename:char **
+m_collect	tt\\util\\time.h	/^    std::map<std::string, Time> m_collect;$/;"	m	class:tt::TimeCollection	typeref:typename:std::map<std::string,Time>
+m_commands	tt\\app\\gl_app.h	/^    std::vector<Command> m_commands;$/;"	m	class:GLApp	typeref:typename:std::vector<Command>
+m_commands	tt\\imgui\\imgui_console.h	/^    std::vector<std::string> m_commands;$/;"	m	class:Console	typeref:typename:std::vector<std::string>
+m_console	tt\\app\\gl_app.h	/^    Console m_console;$/;"	m	class:GLApp	typeref:typename:Console
+m_data	tt\\gfx\\image.h	/^    Array<T> m_data;$/;"	m	class:tt::Image	typeref:typename:Array<T>
+m_data	tt\\util\\array.h	/^    T* m_data;$/;"	m	class:tt::Array	typeref:typename:T *
+m_data	tt\\util\\stat.h	/^    std::deque<float> m_data;$/;"	m	class:tt::Statistics	typeref:typename:std::deque<float>
+m_data_char	tt\\util\\array.h	/^    char* m_data_char;$/;"	m	class:tt::Array	typeref:typename:char *
+m_data_dir	tt\\app\\gl_app.h	/^    std::string m_data_dir;$/;"	m	class:GLApp	typeref:typename:std::string
+m_ebo	tt\\gl\\gl_vao.h	/^    GLuint m_ebo;$/;"	m	class:GLVAO	typeref:typename:GLuint
+m_end	tt\\util\\time.h	/^    std::chrono::system_clock::time_point m_start, m_end;$/;"	m	class:tt::Time	typeref:typename:std::chrono::system_clock::time_point
+m_fbo	tt\\gl\\gl_frame.h	/^    GLFBO m_fbo;$/;"	m	class:GLFrame	typeref:typename:GLFBO
+m_fit	tt\\gl\\gl_frame_display.h	/^    bool m_fit = true;$/;"	m	class:GLFrameDisplay	typeref:typename:bool
+m_fname	tt\\gfx\\imagex.h	/^    std::string m_fname;$/;"	m	class:tt::ImageX	typeref:typename:std::string
+m_fragment_shader	tt\\gl\\gl_program.h	/^    std::string m_fragment_shader;$/;"	m	class:GLProgram	typeref:typename:std::string
+m_func	tt\\imgui\\imgui_console.h	/^    std::function<void(const std::string& line)> m_func;$/;"	m	class:Console	typeref:typename:std::function<void (const std::string & line)>
+m_h	tt\\gfx\\image.h	/^    int m_w, m_h;$/;"	m	class:tt::Image	typeref:typename:int
+m_h	tt\\gl\\gl_fbo.h	/^	int m_h = 0;$/;"	m	class:GLFBO	typeref:typename:int
+m_h	tt\\gl\\gl_texture.h	/^    int m_h = 0;$/;"	m	class:GLTexture2D	typeref:typename:int
+m_history	tt\\imgui\\imgui_console.h	/^    std::vector<std::string> m_history;$/;"	m	class:Console	typeref:typename:std::vector<std::string>
+m_history_pos	tt\\imgui\\imgui_console.h	/^    int m_history_pos;$/;"	m	class:Console	typeref:typename:int
+m_icon_file	tt\\app\\gl_app.h	/^    std::string m_icon_file;$/;"	m	class:GLApp	typeref:typename:std::string
+m_id	tt\\gl\\gl_fbo.h	/^	GLuint m_id = 0;$/;"	m	class:GLFBO	typeref:typename:GLuint
+m_id	tt\\gl\\gl_texture.h	/^    GLuint m_id = 0;$/;"	m	class:GLTexture2D	typeref:typename:GLuint
+m_idx_ext	tt\\util\\filename.h	/^    std::string::size_type m_idx_fname, m_idx_ext;$/;"	m	class:tt::FileName	typeref:typename:std::string::size_type
+m_idx_fname	tt\\util\\filename.h	/^    std::string::size_type m_idx_fname, m_idx_ext;$/;"	m	class:tt::FileName	typeref:typename:std::string::size_type
+m_image	tt\\gfx\\imagex.h	/^    ImageBase* m_image = 0;$/;"	m	class:tt::ImageX	typeref:typename:ImageBase *
+m_max_size	tt\\util\\stat.h	/^    size_t m_max_size;$/;"	m	class:tt::Statistics	typeref:typename:size_t
+m_message	tt\\util\\time.h	/^    std::string m_message;$/;"	m	class:tt::Time	typeref:typename:std::string
+m_orig	tt\\util\\filename.h	/^    std::string m_orig, m_path;$/;"	m	class:tt::FileName	typeref:typename:std::string
+m_path	tt\\util\\filename.h	/^    std::string m_orig, m_path;$/;"	m	class:tt::FileName	typeref:typename:std::string
+m_prog	tt\\gl\\gl_frame.h	/^    GLProgram m_prog;$/;"	m	class:GLFrame	typeref:typename:GLProgram
+m_prog_id	tt\\gl\\gl_program.h	/^    GLuint m_prog_id = 0;$/;"	m	class:GLProgram	typeref:typename:GLuint
+m_scale	tt\\gl\\gl_frame_display.h	/^    float m_scale = 1.0f;$/;"	m	class:GLFrameDisplay	typeref:typename:float
+m_scroll_to_bottom	tt\\imgui\\imgui_console.h	/^    bool m_scroll_to_bottom;$/;"	m	class:Console	typeref:typename:bool
+m_show_console_panel	tt\\app\\gl_app.h	/^    bool m_show_console_panel = true;$/;"	m	class:GLApp	typeref:typename:bool
+m_size	tt\\imgui\\imgui_util.h	/^    int m_size = 0;$/;"	m	class:ArrayOfString	typeref:typename:int
+m_size	tt\\util\\array.h	/^    std::size_t m_size;$/;"	m	class:tt::Array	typeref:typename:std::size_t
+m_start	tt\\util\\time.h	/^    std::chrono::system_clock::time_point m_start, m_end;$/;"	m	class:tt::Time	typeref:typename:std::chrono::system_clock::time_point
+m_tex	tt\\gl\\gl_frame_display.h	/^    GLTexture2D m_tex;$/;"	m	class:GLFrameDisplay	typeref:typename:GLTexture2D
+m_tex_color0	tt\\gl\\gl_fbo.h	/^	GLuint m_tex_color0 = 0;$/;"	m	class:GLFBO	typeref:typename:GLuint
+m_tex_depth	tt\\gl\\gl_fbo.h	/^	GLuint m_tex_depth = 0;$/;"	m	class:GLFBO	typeref:typename:GLuint
+m_text	tt\\imgui\\imgui_console.h	/^    std::vector<std::string> m_text;$/;"	m	class:Console	typeref:typename:std::vector<std::string>
+m_type	tt\\gfx\\imagex.h	/^    std::string m_type;$/;"	m	class:tt::ImageX	typeref:typename:std::string
+m_ui	tt\\app\\gl_app.h	/^    UiType m_ui = UI_GUI;$/;"	m	class:GLApp	typeref:typename:UiType
+m_vao	tt\\gl\\gl_frame.h	/^    GLVAO m_vao;$/;"	m	class:GLFrame	typeref:typename:GLVAO
+m_vao	tt\\gl\\gl_vao.h	/^    GLuint m_vao;$/;"	m	class:GLVAO	typeref:typename:GLuint
+m_vbo_color	tt\\gl\\gl_vao.h	/^    GLuint m_vbo_color;$/;"	m	class:GLVAO	typeref:typename:GLuint
+m_vbo_pos	tt\\gl\\gl_vao.h	/^    GLuint m_vbo_pos;$/;"	m	class:GLVAO	typeref:typename:GLuint
+m_vbo_uv	tt\\gl\\gl_vao.h	/^    GLuint m_vbo_uv;$/;"	m	class:GLVAO	typeref:typename:GLuint
+m_vertex_shader	tt\\gl\\gl_program.h	/^    std::string m_vertex_shader;$/;"	m	class:GLProgram	typeref:typename:std::string
+m_w	tt\\gfx\\image.h	/^    int m_w, m_h;$/;"	m	class:tt::Image	typeref:typename:int
+m_w	tt\\gl\\gl_fbo.h	/^	int m_w = 0;$/;"	m	class:GLFBO	typeref:typename:int
+m_w	tt\\gl\\gl_texture.h	/^    int m_w = 0;$/;"	m	class:GLTexture2D	typeref:typename:int
+m_window	tt\\app\\gl_app.h	/^    GLFWwindow* m_window;$/;"	m	class:GLApp	typeref:typename:GLFWwindow *
+m_window_title	tt\\app\\gl_app.h	/^    std::string m_window_title;$/;"	m	class:GLApp	typeref:typename:std::string
+mainLoop	tt\\app\\gl_app.cpp	/^void GLApp::mainLoop() {$/;"	f	class:GLApp	typeref:typename:void
+make_mat	tt\\gl\\glm_util.h	/^inline glm::mat4 make_mat(glm::vec2 src_size, glm::vec2 dst_size, float& scale, bool fit) {$/;"	f	typeref:typename:glm::mat4
+matchExt	tt\\util\\filename.h	/^    bool matchExt(const std::string& str) {$/;"	f	class:tt::FileName	typeref:typename:bool
+mul	tt\\util\\type.h	/^    inline T      mul(const T& v1, const T& v2) { return v1 * v2; }$/;"	f	namespace:tt	typeref:typename:T
+mul	tt\\util\\type.h	/^    inline uchar  mul(const uchar& v1, const uchar& v2) { return uint2uchar(v1 * v2); }$/;"	f	namespace:tt	typeref:typename:uchar
+mul	tt\\util\\type.h	/^    inline ushort mul(const ushort& v1, const ushort& v2) { return uint2ushort(v1 * v2); }$/;"	f	namespace:tt	typeref:typename:ushort
+name	tt\\app\\gl_app.h	/^        std::string name;$/;"	m	struct:GLApp::Command	typeref:typename:std::string
+name	tt\\util\\filename.cpp	/^std::string FileName::name() const {$/;"	f	class:tt::FileName	typeref:typename:std::string
+name	tt\\util\\filename.cpp	/^std::string FrameName::name(int nr) const {$/;"	f	class:tt::FrameName	typeref:typename:std::string
+open	tt\\gl\\gl_fbo.cpp	/^void GLFBO::open(int w, int h) {$/;"	f	class:GLFBO	typeref:typename:void
+operator *	tt\\util\\type.h	/^inline std::array<T, N> operator*(const std::array<T, N>& a1, const std::array<T, N>& a2) {$/;"	f	typeref:typename:std::array<T,N>
+operator *	tt\\util\\type.h	/^inline std::array<T, N> operator*(const std::array<T, N>& a1, float s) {$/;"	f	typeref:typename:std::array<T,N>
+operator *	tt\\util\\type.h	/^inline std::array<T, N> operator*(float s, const std::array<T, N>& a1) {$/;"	f	typeref:typename:std::array<T,N>
+operator +	tt\\util\\type.h	/^inline std::array<T, N> operator+(const std::array<T, N>& a1, const std::array<T, N>& a2) {$/;"	f	typeref:typename:std::array<T,N>
+operator -	tt\\util\\type.h	/^inline std::array<T, N> operator-(const std::array<T, N>& a1, const std::array<T, N>& a2) {$/;"	f	typeref:typename:std::array<T,N>
+operator /	tt\\util\\type.h	/^inline std::array<T, N> operator\/(const std::array<T, N>& a1, const std::array<T, N>& a2) {$/;"	f	typeref:typename:std::array<T,N>
+operator <<	tt\\util\\filename.cpp	/^std::ostream& operator <<(std::ostream& os, const FileName& fname) {$/;"	f	namespace:tt	typeref:typename:std::ostream &
+operator <<	tt\\util\\type.h	/^inline std::ostream& operator<<(std::ostream& os, const std::array<T, N>& ar) {$/;"	f	typeref:typename:std::ostream &
+operator >>	tt\\util\\filename.cpp	/^std::istream& operator >>(std::istream& is, FileName& fname) {$/;"	f	namespace:tt	typeref:typename:std::istream &
+operator >>	tt\\util\\type.h	/^inline std::istream& operator>>(std::istream& is, std::array<T, N>& ar) {$/;"	f	typeref:typename:std::istream &
+operator []	tt\\util\\array.h	/^          T& operator[](std::size_t i)       { return m_data[i]; }$/;"	f	class:tt::Array	typeref:typename:T &
+operator []	tt\\util\\array.h	/^    const T& operator[](std::size_t i) const { return m_data[i]; }$/;"	f	class:tt::Array	typeref:typename:const T &
+operator []	tt\\util\\time.h	/^    Time& operator[](const std::string& key) { return m_collect[key]; }$/;"	f	class:tt::TimeCollection	typeref:typename:Time &
+orig	tt\\util\\filename.h	/^    std::string orig()            const { return m_orig; }$/;"	f	class:tt::FileName	typeref:typename:std::string
+output	tt\\imgui\\imgui_console.h	/^inline void Console::output(const char* fmt, ...) {$/;"	f	class:Console	typeref:typename:void
+path	tt\\util\\filename.cpp	/^std::string FrameName::path(int nr) const {$/;"	f	class:tt::FrameName	typeref:typename:std::string
+path	tt\\util\\filename.cpp	/^void FileName::path(const std::string& path) {$/;"	f	class:tt::FileName	typeref:typename:void
+path	tt\\util\\filename.h	/^    std::string path()            const { return m_path; }$/;"	f	class:tt::FileName	typeref:typename:std::string
+pclose	tt\\imgui\\imgui_console.h	/^#define pclose /;"	d
+popen	tt\\imgui\\imgui_console.h	/^#define popen /;"	d
+prefix	tt\\util\\filename.cpp	/^std::string FileName::prefix(int n) const {$/;"	f	class:tt::FileName	typeref:typename:std::string
+read	tt\\util\\type.h	/^    inline std::istream& read(std::istream& is, T& v) { return is >> v; }$/;"	f	namespace:tt	typeref:typename:std::istream &
+read	tt\\util\\type.h	/^    inline std::istream& read(std::istream& is, uchar& v) {$/;"	f	namespace:tt	typeref:typename:std::istream &
+registerCommands	tt\\app\\gl_app.cpp	/^void GLApp::registerCommands() {$/;"	f	class:GLApp	typeref:typename:void
+release	tt\\gl\\gl_texture.cpp	/^void GLTexture2D::release() {$/;"	f	class:GLTexture2D	typeref:typename:void
+resize	tt\\gfx\\image.h	/^    void resize(int w, int h) {$/;"	f	class:tt::Image	typeref:typename:void
+resize	tt\\gfx\\imagex.h	/^    void resize(int w, int h) { return m_image->resize(w, h); }$/;"	f	class:tt::ImageX	typeref:typename:void
+resize	tt\\util\\array.h	/^    void resize(std::size_t size) {$/;"	f	class:tt::Array	typeref:typename:void
+resize	tt\\util\\stat.h	/^    void resize(size_t max_size) {$/;"	f	class:tt::Statistics	typeref:typename:void
+run	tt\\app\\gl_app.cpp	/^void GLApp::run() {$/;"	f	class:GLApp	typeref:typename:void
+runCui	tt\\app\\gl_app.cpp	/^void GLApp::runCui() {$/;"	f	class:GLApp	typeref:typename:void
+runGui	tt\\app\\gl_app.cpp	/^void GLApp::runGui() {$/;"	f	class:GLApp	typeref:typename:void
+s_fshader	tt\\gl\\gl_frame_display.cpp	/^static const std::string s_fshader = R"#($/;"	v	typeref:typename:const std::string	file:
+s_vshader	tt\\gl\\gl_frame_display.cpp	/^static const std::string s_vshader = R"#($/;"	v	typeref:typename:const std::string	file:
+save	tt\\gfx\\imagex.cpp	/^void ImageX::save(const std::string& fname) const {$/;"	f	class:tt::ImageX	typeref:typename:void
+save_bin	tt\\gfx\\imagex.cpp	/^void ImageX::save_bin(const std::string& fname) const {$/;"	f	class:tt::ImageX	typeref:typename:void
+save_mat	tt\\gfx\\imagex.cpp	/^void ImageX::save_mat(const std::string& fname) const {$/;"	f	class:tt::ImageX	typeref:typename:void
+setDataDir	tt\\app\\gl_app.h	/^    void setDataDir(const std::string& dir) { m_data_dir = dir; }$/;"	f	class:GLApp	typeref:typename:void
+setFit	tt\\gl\\gl_frame_display.h	/^    void setFit(bool b) { m_fit = b; }$/;"	f	class:GLFrameDisplay	typeref:typename:void
+setFragmentShader	tt\\gl\\gl_program.h	/^    void setFragmentShader(const std::string& shader) { m_fragment_shader = shader; }$/;"	f	class:GLProgram	typeref:typename:void
+setFunc	tt\\imgui\\imgui_console.h	/^    void setFunc(const std::function<void(const std::string& line)>& func) {$/;"	f	class:Console	typeref:typename:void
+setIcon	tt\\app\\gl_app.cpp	/^void GLApp::setIcon(const std::string& fname) {$/;"	f	class:GLApp	typeref:typename:void
+setIconFile	tt\\app\\gl_app.h	/^    void setIconFile(const std::string& fname) { m_icon_file = fname; }$/;"	f	class:GLApp	typeref:typename:void
+setImage	tt\\gl\\gl_frame_display.cpp	/^void GLFrameDisplay::setImage(const tt::Image4uc& image) {$/;"	f	class:GLFrameDisplay	typeref:typename:void
+setImage	tt\\gl\\gl_texture.cpp	/^void GLTexture2D::setImage(GLsizei w, GLsizei h, const GLvoid* data) {$/;"	f	class:GLTexture2D	typeref:typename:void
+setImage	tt\\gl\\gl_texture.cpp	/^void GLTexture2D::setImage(const tt::Image4uc& image) {$/;"	f	class:GLTexture2D	typeref:typename:void
+setMessage	tt\\util\\time.h	/^    void setMessage(const std::string& msg) { m_message = msg; }$/;"	f	class:tt::Time	typeref:typename:void
+setScale	tt\\gl\\gl_frame_display.h	/^    void setScale(float f) { m_scale = f; }$/;"	f	class:GLFrameDisplay	typeref:typename:void
+setScreenSize	tt\\gl\\gl_frame.cpp	/^void GLFrame::setScreenSize(int w, int h) {$/;"	f	class:GLFrame	typeref:typename:void
+setUiType	tt\\app\\gl_app.h	/^    void setUiType(UiType ui) { m_ui = ui; }$/;"	f	class:GLApp	typeref:typename:void
+setUniform	tt\\gl\\gl_program.cpp	/^void GLProgram::setUniform(const std::string& str, GLfloat val) {$/;"	f	class:GLProgram	typeref:typename:void
+setUniform	tt\\gl\\gl_program.cpp	/^void GLProgram::setUniform(const std::string& str, GLint val) {$/;"	f	class:GLProgram	typeref:typename:void
+setUniformMatrix4	tt\\gl\\gl_program.cpp	/^void GLProgram::setUniformMatrix4(const std::string& str, const GLfloat* val) {$/;"	f	class:GLProgram	typeref:typename:void
+setValue	tt\\gfx\\image.h	/^    void setValue(int x, int y, const T& val) { m_data[y * m_w + x] = val; }$/;"	f	class:tt::Image	typeref:typename:void
+setVector	tt\\imgui\\imgui_util.h	/^    void setVector(const std::vector<std::string>& vec) {$/;"	f	class:ArrayOfString	typeref:typename:void
+setVertexShader	tt\\gl\\gl_program.h	/^    void setVertexShader(const std::string& shader) { m_vertex_shader = shader; }$/;"	f	class:GLProgram	typeref:typename:void
+setWindowSize	tt\\app\\gl_app.h	/^    void setWindowSize(int w, int h) { m_window_size[0] = w; m_window_size[1] = h; }$/;"	f	class:GLApp	typeref:typename:void
+setWindowTitle	tt\\app\\gl_app.h	/^    void setWindowTitle(const std::string& s) { m_window_title = s; }$/;"	f	class:GLApp	typeref:typename:void
+setup	tt\\app\\gl_app.cpp	/^void GLApp::setup() {$/;"	f	class:GLApp	typeref:typename:void
+shell	tt\\imgui\\imgui_console.h	/^inline void Console::shell(std::string cmd) {$/;"	f	class:Console	typeref:typename:void
+shutdown	tt\\app\\gl_app.cpp	/^void GLApp::shutdown() {$/;"	f	class:GLApp	typeref:typename:void
+size	tt\\gfx\\image.h	/^    std::size_t size() const { return m_data.size(); }$/;"	f	class:tt::Image	typeref:typename:std::size_t
+size	tt\\gfx\\imagex.h	/^    std::size_t size() const { return m_image->size(); }$/;"	f	class:tt::ImageX	typeref:typename:std::size_t
+size	tt\\imgui\\imgui_util.h	/^    int size() { return m_size; }$/;"	f	class:ArrayOfString	typeref:typename:int
+size	tt\\util\\array.h	/^    std::size_t size() const { return m_size; }$/;"	f	class:tt::Array	typeref:typename:std::size_t
+sizeOfDataType	tt\\gfx\\image.h	/^    std::size_t sizeOfDataType() const { return m_data.sizeOfDataType(); }$/;"	f	class:tt::Image	typeref:typename:std::size_t
+sizeOfDataType	tt\\gfx\\imagex.h	/^    std::size_t sizeOfDataType() const { return m_image->sizeOfDataType(); }$/;"	f	class:tt::ImageX	typeref:typename:std::size_t
+sizeOfDataType	tt\\util\\array.h	/^    std::size_t sizeOfDataType() const { return sizeof(data_type); }$/;"	f	class:tt::Array	typeref:typename:std::size_t
+start	tt\\util\\time.h	/^    void start() { m_start = std::chrono::system_clock::now(); }$/;"	f	class:tt::Time	typeref:typename:void
+str	tt\\util\\filename.h	/^    std::string str()             const { return m_path; }$/;"	f	class:tt::FileName	typeref:typename:std::string
+sub	tt\\util\\type.h	/^    inline T      sub(const T& v1, const T& v2) { return v1 - v2; }$/;"	f	namespace:tt	typeref:typename:T
+sub	tt\\util\\type.h	/^    inline uchar  sub(const uchar& v1, const uchar& v2) { return uint2uchar(v1 - v2); }$/;"	f	namespace:tt	typeref:typename:uchar
+sub	tt\\util\\type.h	/^    inline ushort sub(const ushort& v1, const ushort& v2) { return uint2ushort(v1 - v2); }$/;"	f	namespace:tt	typeref:typename:ushort
+suffix	tt\\util\\filename.cpp	/^std::string FileName::suffix(int n) const {$/;"	f	class:tt::FileName	typeref:typename:std::string
+toColor4uc	tt\\util\\type.h	/^    inline Color4uc toColor4uc(const Color4f& c) {$/;"	f	namespace:tt	typeref:typename:Color4uc
+toGlmVec2	tt\\gl\\glm_util.h	/^inline glm::vec2 toGlmVec2(const tt::Vec2i& v) {$/;"	f	typeref:typename:glm::vec2
+toImVec2	tt\\imgui\\imgui_util.h	/^inline ImVec2 toImVec2(const tt::Vec2i& v) {$/;"	f	typeref:typename:ImVec2
+toImage1ucPtr	tt\\gfx\\imagex.h	/^inline tt::Image1uc* toImage1ucPtr(tt::ImageX& img) { return dynamic_cast<tt::Image1uc*>(img.get/;"	f	namespace:tt	typeref:typename:tt::Image1uc *
+toImage1ucRef	tt\\gfx\\imagex.h	/^inline tt::Image1uc& toImage1ucRef(tt::ImageX& img) { return dynamic_cast<tt::Image1uc&>(*(img.g/;"	f	namespace:tt	typeref:typename:tt::Image1uc &
+toImage1usPtr	tt\\gfx\\imagex.h	/^inline tt::Image1us* toImage1usPtr(tt::ImageX& img) { return dynamic_cast<tt::Image1us*>(img.get/;"	f	namespace:tt	typeref:typename:tt::Image1us *
+toImage1usRef	tt\\gfx\\imagex.h	/^inline tt::Image1us& toImage1usRef(tt::ImageX& img) { return dynamic_cast<tt::Image1us&>(*(img.g/;"	f	namespace:tt	typeref:typename:tt::Image1us &
+toImage3ucPtr	tt\\gfx\\imagex.h	/^inline tt::Image3uc* toImage3ucPtr(tt::ImageX& img) { return dynamic_cast<tt::Image3uc*>(img.get/;"	f	namespace:tt	typeref:typename:tt::Image3uc *
+toImage3ucRef	tt\\gfx\\imagex.h	/^inline tt::Image3uc& toImage3ucRef(tt::ImageX& img) { return dynamic_cast<tt::Image3uc&>(*(img.g/;"	f	namespace:tt	typeref:typename:tt::Image3uc &
+toImage4ucPtr	tt\\gfx\\imagex.h	/^inline tt::Image4uc* toImage4ucPtr(tt::ImageX& img) { return dynamic_cast<tt::Image4uc*>(img.get/;"	f	namespace:tt	typeref:typename:tt::Image4uc *
+toImage4ucRef	tt\\gfx\\imagex.h	/^inline tt::Image4uc& toImage4ucRef(tt::ImageX& img) { return dynamic_cast<tt::Image4uc&>(*(img.g/;"	f	namespace:tt	typeref:typename:tt::Image4uc &
+tstring	tt\\util\\path.h	/^typedef std::basic_string<TCHAR> tstring;$/;"	t	typeref:typename:std::basic_string<TCHAR>
+tt	tt\\gfx\\image.h	/^namespace tt {$/;"	n
+tt	tt\\gfx\\image_util.h	/^namespace tt {$/;"	n
+tt	tt\\gfx\\imagex.cpp	/^namespace tt {$/;"	n	file:
+tt	tt\\gfx\\imagex.h	/^namespace tt {$/;"	n
+tt	tt\\util\\array.h	/^namespace tt {$/;"	n
+tt	tt\\util\\filename.cpp	/^namespace tt {$/;"	n	file:
+tt	tt\\util\\filename.h	/^namespace tt {$/;"	n
+tt	tt\\util\\log.h	/^namespace tt {$/;"	n
+tt	tt\\util\\path.cpp	/^namespace tt { namespace win {$/;"	n	file:
+tt	tt\\util\\path.h	/^namespace tt { namespace win {$/;"	n
+tt	tt\\util\\stat.h	/^namespace tt {$/;"	n
+tt	tt\\util\\time.h	/^namespace tt {$/;"	n
+tt	tt\\util\\type.h	/^namespace tt {$/;"	n
+tt	tt\\util\\util.h	/^namespace tt {$/;"	n
+tt_array_h	tt\\util\\array.h	/^#define tt_array_h$/;"	d
+tt_filename_h	tt\\util\\filename.h	/^#define tt_filename_h$/;"	d
+tt_image_h	tt\\gfx\\image.h	/^#define tt_image_h$/;"	d
+tt_log_h	tt\\util\\log.h	/^#define tt_log_h$/;"	d
+tt_stat_h	tt\\util\\stat.h	/^#define tt_stat_h$/;"	d
+tt_time_h	tt\\util\\time.h	/^#define tt_time_h$/;"	d
+tt_type_h	tt\\util\\type.h	/^#define tt_type_h$/;"	d
+tt_util_h	tt\\util\\util.h	/^#define tt_util_h$/;"	d
+tt_win_path_h	tt\\util\\path.h	/^#define tt_win_path_h$/;"	d
+uchar	tt\\util\\type.h	/^typedef unsigned char  uchar;$/;"	t	typeref:typename:unsigned char
+uint	tt\\util\\type.h	/^typedef unsigned int   uint;$/;"	t	typeref:typename:unsigned int
+uint2uchar	tt\\util\\type.h	/^    inline uchar uint2uchar(uint v) {$/;"	f	namespace:tt	typeref:typename:uchar
+uint2ushort	tt\\util\\type.h	/^    inline ushort uint2ushort(uint v) {$/;"	f	namespace:tt	typeref:typename:ushort
+ulong	tt\\util\\type.h	/^typedef unsigned long  ulong;$/;"	t	typeref:typename:unsigned long
+unbind	tt\\gl\\gl_fbo.cpp	/^void GLFBO::unbind() {$/;"	f	class:GLFBO	typeref:typename:void
+unbind	tt\\gl\\gl_program.cpp	/^void GLProgram::unbind() {$/;"	f	class:GLProgram	typeref:typename:void
+unbind	tt\\gl\\gl_texture.cpp	/^void GLTexture2D::unbind() {$/;"	f	class:GLTexture2D	typeref:typename:void
+ushort	tt\\util\\type.h	/^typedef unsigned short ushort;$/;"	t	typeref:typename:unsigned short
+void_ptr	tt\\gfx\\image.h	/^          void* void_ptr()       { return m_data.data(); }$/;"	f	class:tt::Image	typeref:typename:void *
+void_ptr	tt\\gfx\\image.h	/^    const void* void_ptr() const { return m_data.data(); }$/;"	f	class:tt::Image	typeref:typename:const void *
+void_ptr	tt\\gfx\\imagex.h	/^          void* void_ptr()       { return m_image->void_ptr(); }$/;"	f	class:tt::ImageX	typeref:typename:void *
+void_ptr	tt\\gfx\\imagex.h	/^    const void* void_ptr() const { return m_image->void_ptr(); }$/;"	f	class:tt::ImageX	typeref:typename:const void *
+w	tt\\app\\gl_app.h	/^    int w() const { return m_window_size[0]; }$/;"	f	class:GLApp	typeref:typename:int
+w	tt\\gfx\\image.h	/^    int w() const { return m_w; }$/;"	f	class:tt::Image	typeref:typename:int
+w	tt\\gfx\\imagex.h	/^    int w() const { return m_image->w(); }$/;"	f	class:tt::ImageX	typeref:typename:int
+w	tt\\gl\\gl_texture.h	/^    int w() const { return m_w; }$/;"	f	class:GLTexture2D	typeref:typename:int
+win	tt\\util\\path.cpp	/^namespace tt { namespace win {$/;"	n	namespace:tt	file:
+win	tt\\util\\path.h	/^namespace tt { namespace win {$/;"	n	namespace:tt
+write	tt\\util\\type.h	/^    inline std::ostream& write(std::ostream& os, const T& v) { return os << v; }$/;"	f	namespace:tt	typeref:typename:std::ostream &
+write	tt\\util\\type.h	/^    inline std::ostream& write(std::ostream& os, const uchar& v) { return os << int(v); }$/;"	f	namespace:tt	typeref:typename:std::ostream &
+~Array	tt\\util\\array.h	/^    virtual ~Array() { destroy(); }$/;"	f	class:tt::Array
+~ArrayOfString	tt\\imgui\\imgui_util.h	/^    ~ArrayOfString() { destroy(); }$/;"	f	class:ArrayOfString
+~GLApp	tt\\app\\gl_app.cpp	/^GLApp::~GLApp() {$/;"	f	class:GLApp
+~GLFrame	tt\\gl\\gl_frame.h	/^    virtual ~GLFrame() {}$/;"	f	class:GLFrame
+~GLProgram	tt\\gl\\gl_program.h	/^    ~GLProgram() {}$/;"	f	class:GLProgram
+~GLTexture2D	tt\\gl\\gl_texture.h	/^    ~GLTexture2D() { release(); }$/;"	f	class:GLTexture2D
+~GLVAO	tt\\gl\\gl_vao.h	/^    ~GLVAO() {}$/;"	f	class:GLVAO
+~ImageBase	tt\\gfx\\image.h	/^    virtual ~ImageBase() {}$/;"	f	class:tt::ImageBase
+~ImageX	tt\\gfx\\imagex.h	/^    ~ImageX() {$/;"	f	class:tt::ImageX

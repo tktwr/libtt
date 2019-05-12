@@ -9,6 +9,22 @@ namespace tt {
 
 class ImageX {
 public:
+    enum DataType {
+        I_8UC1 = 0,
+        I_8UC2,
+        I_8UC3,
+        I_8UC4,
+        I_16UC1,
+        I_16UC2,
+        I_16UC3,
+        I_16UC4,
+        I_32FC1,
+        I_32FC2,
+        I_32FC3,
+        I_32FC4,
+        I_NONE
+    };
+
     ImageX() {
         create("i4uc", 1, 1);
     }

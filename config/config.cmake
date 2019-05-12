@@ -9,8 +9,10 @@ set(CMAKE_INSTALL_PREFIX ${PROJECT_SOURCE_DIR})
 #set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 if(MINGW)
-  set(CMAKE_C_FLAGS "-static -Wall")
-  set(CMAKE_CXX_FLAGS "-static -Wall")
+  #set(CMAKE_C_FLAGS "-static -Wall -Wl,--allow-multiple-definition")
+  #set(CMAKE_CXX_FLAGS "-static -Wall -Wl,--allow-multiple-definition")
+  set(CMAKE_C_FLAGS "-Wall")
+  set(CMAKE_CXX_FLAGS "-Wall")
 endif()
 
 #-------------------------------------------------
@@ -40,6 +42,7 @@ set(LIBTT_SRCS
 
 include(${LIBTT}/cmake/cereal.cmake)
 include(${LIBTT}/cmake/cmdline.cmake)
+include(${LIBTT}/cmake/eigen.cmake)
 include(${LIBTT}/cmake/gl3w.cmake)
 include(${LIBTT}/cmake/glad.cmake)
 include(${LIBTT}/cmake/glfw.cmake)
