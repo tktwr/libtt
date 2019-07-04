@@ -1,3 +1,21 @@
+DIRS="glfw \
+glad \
+glm \
+eigen \
+stb \
+imgui \
+nativefiledialog \
+json11"
+
+graph:
+	@for-dir.sh "git graph -1" $(DIRS)
+
+fetch:
+	@for-dir.sh "git fetch" $(DIRS)
+
+status:
+	@for-dir.sh "git status -s" $(DIRS)
+
 tags:
 	ctags -f tags.opencv2 -R opencv-3.4.3/build/include/opencv2
 	ctags -f tags.glm -R glm/glm
@@ -6,6 +24,7 @@ tags:
 	ctags -f tags.imgui -R imgui
 	ctags -f tags.nativefiledialog -R nativefiledialog/src
 	ctags -f tags.json11 -R json11
+	ctags -f - -R /c/msys64/mingw64/x86_64-w64-mingw32/include | sed 's+C:/msys64+/c/msys64+' > tags.win
 
 clone:
 	git clone https://github.com/glfw/glfw.git

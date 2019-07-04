@@ -80,6 +80,41 @@ install.vs2017.Release:
 	mycmake-build.sh vs2017 Release --target install
 
 #------------------------------------------------------
+# vs2019
+#------------------------------------------------------
+all.vs2019: all.vs2019.Debug all.vs2019.Release all.vs2019.RelWithDebInfo
+
+all.vs2019.Debug: cmake.vs2019 build.vs2019.Debug
+
+all.vs2019.Release: cmake.vs2019 build.vs2019.Release
+
+all.vs2019.RelWithDebInfo: cmake.vs2019 build.vs2019.RelWithDebInfo
+
+cmake.vs2019:
+	mycmake.sh vs2019
+
+build.vs2019.Debug:
+	mycmake-build.sh vs2019 Debug
+
+build.vs2019.Release:
+	mycmake-build.sh vs2019 Release
+
+build.vs2019.RelWithDebInfo:
+	mycmake-build.sh vs2019 RelWithDebInfo
+
+clean.vs2019.Debug:
+	mycmake-build.sh vs2019 Debug --target clean
+
+clean.vs2019.Release:
+	mycmake-build.sh vs2019 Release --target clean
+
+clean.vs2019.RelWithDebInfo:
+	mycmake-build.sh vs2019 RelWithDebInfo --target clean
+
+install.vs2019.Release:
+	mycmake-build.sh vs2019 Release --target install
+
+#------------------------------------------------------
 .PHONY: tags
 tags:
 	ctags -R .
@@ -117,6 +152,19 @@ help:
 	@echo "make clean.vs2017.Release"
 	@echo "make clean.vs2017.RelWithDebInfo"
 	@echo "make install.vs2017.Release"
+	@echo "--"
+	@echo "make all.vs2019"
+	@echo "make all.vs2019.Debug"
+	@echo "make all.vs2019.Release"
+	@echo "make all.vs2019.RelWithDebInfo"
+	@echo "make cmake.vs2019"
+	@echo "make build.vs2019.Debug"
+	@echo "make build.vs2019.Release"
+	@echo "make build.vs2019.RelWithDebInfo"
+	@echo "make clean.vs2019.Debug"
+	@echo "make clean.vs2019.Release"
+	@echo "make clean.vs2019.RelWithDebInfo"
+	@echo "make install.vs2019.Release"
 	@echo "--"
 	@echo "make tags"
 	@echo "make gtags"
