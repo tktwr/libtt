@@ -2,10 +2,7 @@
 # OpenCV
 #-------------------------------------------------
 
-set(OPENCV $ENV{MY_OPT}/opencv-3.4.3/build)
-
 if(MSVC)
-  set(OpenCV_DIR ${OPENCV})
   file(GLOB OpenCV_DLLS ${OpenCV_DIR}/x64/vc15/bin/*.dll)
 endif()
 

@@ -5,12 +5,14 @@ LANG=C
 -include local.mk
 
 #------------------------------------------------------
-build: build.ninja.Debug
+#build: build.ninja.Debug
+build: build.vs2019.RelWithDebInfo
 
-all: all.ninja.Debug all.vs2017.RelWithDebInfo
+#all: all.ninja.Debug
+all: all.vs2019.RelWithDebInfo
 
 all.clean:
-	rm -rf build.ninja build.vs2017
+	rm -rf build.ninja build.vs2017 build.vs2019
 	rm -rf tags GPATH GRTAGS GTAGS
 	rm -f _*.png
 
