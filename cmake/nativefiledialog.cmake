@@ -2,7 +2,7 @@
 # nativefiledialog
 #-------------------------------------------------
 
-set(NFD $ENV{MY_OPT}/nativefiledialog/src)
+set(NFD $ENV{MY_OPT_WIN}/nativefiledialog/src)
 
 include_directories(${NFD}/include)
 

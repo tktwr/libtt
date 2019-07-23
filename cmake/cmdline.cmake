@@ -2,7 +2,7 @@
 # cmdline
 #-------------------------------------------------
 
-set(CMDLINE $ENV{MY_OPT}/cmdline)
+set(CMDLINE $ENV{MY_OPT_WIN}/cmdline)
 
 include_directories(${CMDLINE})
 

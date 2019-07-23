@@ -19,7 +19,7 @@ endif()
 # libtt
 #-------------------------------------------------
 
-set(LIBTT $ENV{MY_LIBTT})
+set(LIBTT $ENV{MY_LIBTT_WIN})
 
 include_directories(${LIBTT})
 set(LIBTT_SRCS

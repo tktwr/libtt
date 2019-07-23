@@ -2,7 +2,7 @@
 # imgui
 #-------------------------------------------------
 
-set(IMGUI $ENV{MY_OPT}/imgui)
+set(IMGUI $ENV{MY_OPT_WIN}/imgui)
 
 include_directories(${IMGUI})
 include_directories(${IMGUI}/examples)
