@@ -2,9 +2,9 @@
 # glad
 #-------------------------------------------------
 
-set(GLAD $ENV{MY_LIBTT_WIN}/third_party/glad)
-set(GLAD_SRCS ${GLAD}/src/glad.c)
+set(GLAD $ENV{MY_OPT_WIN}/glfw/deps)
+set(GLAD_SRCS ${GLAD}/glad.c)
 
-include_directories(${GLAD}/include)
+include_directories(${GLAD})
 
 message(STATUS "GLAD=${GLAD}")

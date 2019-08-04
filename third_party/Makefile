@@ -17,7 +17,7 @@ status:
 	@for-dir.sh "git status -s" $(DIRS)
 
 tags:
-	ctags -f tags.opencv2 -R opencv-3.4.3/build/include/opencv2
+	ctags -f tags.opencv2 -R opencv-4.1.0/build/include/opencv2
 	ctags -f tags.glm -R glm/glm
 	ctags -f tags.eigen -R eigen
 	ctags -f tags.stb -R stb
