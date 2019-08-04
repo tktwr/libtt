@@ -6,6 +6,7 @@
 #include <thread>
 #include <atomic>
 #include <functional>
+#include <memory>
 #include <string.h>
 #include <tt/util/array.h>
 #include <tt/util/type.h>
@@ -147,6 +148,37 @@ typedef Image<Color3f>  Image3f;
 typedef Image<Color4uc> Image4uc;
 typedef Image<Color4us> Image4us;
 typedef Image<Color4f>  Image4f;
+
+using ImageBasePtr = std::shared_ptr<ImageBase>;
+using ImageBaseConstPtr = std::shared_ptr<const ImageBase>;
+
+using Image1ucPtr = std::shared_ptr<Image1uc>;
+using Image1ucConstPtr = std::shared_ptr<const Image1uc>;
+using Image1usPtr = std::shared_ptr<Image1us>;
+using Image1usConstPtr = std::shared_ptr<const Image1us>;
+using Image1fPtr = std::shared_ptr<Image1f>;
+using Image1fConstPtr = std::shared_ptr<const Image1f>;
+
+using Image2ucPtr = std::shared_ptr<Image2uc>;
+using Image2ucConstPtr = std::shared_ptr<const Image2uc>;
+using Image2usPtr = std::shared_ptr<Image2us>;
+using Image2usConstPtr = std::shared_ptr<const Image2us>;
+using Image2fPtr = std::shared_ptr<Image2f>;
+using Image2fConstPtr = std::shared_ptr<const Image2f>;
+
+using Image3ucPtr = std::shared_ptr<Image3uc>;
+using Image3ucConstPtr = std::shared_ptr<const Image3uc>;
+using Image3usPtr = std::shared_ptr<Image3us>;
+using Image3usConstPtr = std::shared_ptr<const Image3us>;
+using Image3fPtr = std::shared_ptr<Image3f>;
+using Image3fConstPtr = std::shared_ptr<const Image3f>;
+
+using Image4ucPtr = std::shared_ptr<Image4uc>;
+using Image4ucConstPtr = std::shared_ptr<const Image4uc>;
+using Image4usPtr = std::shared_ptr<Image4us>;
+using Image4usConstPtr = std::shared_ptr<const Image4us>;
+using Image4fPtr = std::shared_ptr<Image4f>;
+using Image4fConstPtr = std::shared_ptr<const Image4f>;
 
 }  // namespace tt
 

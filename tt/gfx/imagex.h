@@ -46,8 +46,8 @@ public:
     const void* void_ptr() const { return m_image->void_ptr(); }
           void* void_ptr()       { return m_image->void_ptr(); }
 
-    const ImageBase* getImageBase() const { return m_image; }
-          ImageBase* getImageBase()       { return m_image; }
+    ImageBaseConstPtr getImageBaseConstPtr() const { return m_image; }
+    ImageBasePtr      getImageBasePtr()            { return m_image; }
 
     void create(const std::string& type, int w, int h);
     void load(const std::string& fname);
@@ -64,8 +64,7 @@ private:
 
     void destroy() {
         if (m_image) {
-            delete m_image;
-            m_image = 0;
+            m_image = nullptr;
             m_type = "";
             m_fname = "";
         }
@@ -75,20 +74,20 @@ private:
     void load_mat(const std::string& fname);
     void save_mat(const std::string& fname) const;
 
-    ImageBase* m_image = 0;
+    ImageBasePtr m_image = nullptr;
     std::string m_type;
     std::string m_fname;
 };
 
-inline tt::Image1uc* toImage1ucPtr(tt::ImageX& img) { return dynamic_cast<tt::Image1uc*>(img.getImageBase()); }
-inline tt::Image1us* toImage1usPtr(tt::ImageX& img) { return dynamic_cast<tt::Image1us*>(img.getImageBase()); }
-inline tt::Image3uc* toImage3ucPtr(tt::ImageX& img) { return dynamic_cast<tt::Image3uc*>(img.getImageBase()); }
-inline tt::Image4uc* toImage4ucPtr(tt::ImageX& img) { return dynamic_cast<tt::Image4uc*>(img.getImageBase()); }
+inline tt::Image1ucPtr toImage1ucPtr(tt::ImageX& img) { return std::dynamic_pointer_cast<tt::Image1uc>(img.getImageBasePtr()); }
+inline tt::Image1usPtr toImage1usPtr(tt::ImageX& img) { return std::dynamic_pointer_cast<tt::Image1us>(img.getImageBasePtr()); }
+inline tt::Image3ucPtr toImage3ucPtr(tt::ImageX& img) { return std::dynamic_pointer_cast<tt::Image3uc>(img.getImageBasePtr()); }
+inline tt::Image4ucPtr toImage4ucPtr(tt::ImageX& img) { return std::dynamic_pointer_cast<tt::Image4uc>(img.getImageBasePtr()); }
 
-inline tt::Image1uc& toImage1ucRef(tt::ImageX& img) { return dynamic_cast<tt::Image1uc&>(*(img.getImageBase())); }
-inline tt::Image1us& toImage1usRef(tt::ImageX& img) { return dynamic_cast<tt::Image1us&>(*(img.getImageBase())); }
-inline tt::Image3uc& toImage3ucRef(tt::ImageX& img) { return dynamic_cast<tt::Image3uc&>(*(img.getImageBase())); }
-inline tt::Image4uc& toImage4ucRef(tt::ImageX& img) { return dynamic_cast<tt::Image4uc&>(*(img.getImageBase())); }
+inline tt::Image1uc& toImage1ucRef(tt::ImageX& img) { return dynamic_cast<tt::Image1uc&>(*(img.getImageBasePtr())); }
+inline tt::Image1us& toImage1usRef(tt::ImageX& img) { return dynamic_cast<tt::Image1us&>(*(img.getImageBasePtr())); }
+inline tt::Image3uc& toImage3ucRef(tt::ImageX& img) { return dynamic_cast<tt::Image3uc&>(*(img.getImageBasePtr())); }
+inline tt::Image4uc& toImage4ucRef(tt::ImageX& img) { return dynamic_cast<tt::Image4uc&>(*(img.getImageBasePtr())); }
 
 }  // namespace tt
 

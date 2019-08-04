@@ -56,13 +56,13 @@ void ImageX::create(const std::string& type, int w, int h) {
     destroy();
 
     if (type == "i1uc") {
-        m_image = new Image1uc(w, h);
+        m_image = std::make_shared<Image1uc>(w, h);
     } else if (type == "i1us") {
-        m_image = new Image1us(w, h);
+        m_image = std::make_shared<Image1us>(w, h);
     } else if (type == "i3uc") {
-        m_image = new Image3uc(w, h);
+        m_image = std::make_shared<Image3uc>(w, h);
     } else if (type == "i4uc") {
-        m_image = new Image4uc(w, h);
+        m_image = std::make_shared<Image4uc>(w, h);
     }
     m_type = type;
     m_fname = "";
