@@ -67,18 +67,44 @@ Image	tt\\gfx\\image.h	/^    Image() : m_w(0), m_h(0) {}$/;"	f	class:tt::Image
 Image	tt\\gfx\\image.h	/^    Image(int w, int h) { resize(w, h); }$/;"	f	class:tt::Image
 Image	tt\\gfx\\image.h	/^class Image : public ImageBase {$/;"	c	namespace:tt
 Image1f	tt\\gfx\\image.h	/^typedef Image<Color1f>  Image1f;$/;"	t	namespace:tt	typeref:typename:Image<Color1f>
+Image1fConstPtr	tt\\gfx\\image.h	/^using Image1fConstPtr = std::shared_ptr<const Image1f>;$/;"	t	namespace:tt	typeref:typename:std::shared_ptr<const Image1f>
+Image1fPtr	tt\\gfx\\image.h	/^using Image1fPtr = std::shared_ptr<Image1f>;$/;"	t	namespace:tt	typeref:typename:std::shared_ptr<Image1f>
 Image1uc	tt\\gfx\\image.h	/^typedef Image<Color1uc> Image1uc;$/;"	t	namespace:tt	typeref:typename:Image<Color1uc>
+Image1ucConstPtr	tt\\gfx\\image.h	/^using Image1ucConstPtr = std::shared_ptr<const Image1uc>;$/;"	t	namespace:tt	typeref:typename:std::shared_ptr<const Image1uc>
+Image1ucPtr	tt\\gfx\\image.h	/^using Image1ucPtr = std::shared_ptr<Image1uc>;$/;"	t	namespace:tt	typeref:typename:std::shared_ptr<Image1uc>
 Image1us	tt\\gfx\\image.h	/^typedef Image<Color1us> Image1us;$/;"	t	namespace:tt	typeref:typename:Image<Color1us>
+Image1usConstPtr	tt\\gfx\\image.h	/^using Image1usConstPtr = std::shared_ptr<const Image1us>;$/;"	t	namespace:tt	typeref:typename:std::shared_ptr<const Image1us>
+Image1usPtr	tt\\gfx\\image.h	/^using Image1usPtr = std::shared_ptr<Image1us>;$/;"	t	namespace:tt	typeref:typename:std::shared_ptr<Image1us>
 Image2f	tt\\gfx\\image.h	/^typedef Image<Color2f>  Image2f;$/;"	t	namespace:tt	typeref:typename:Image<Color2f>
+Image2fConstPtr	tt\\gfx\\image.h	/^using Image2fConstPtr = std::shared_ptr<const Image2f>;$/;"	t	namespace:tt	typeref:typename:std::shared_ptr<const Image2f>
+Image2fPtr	tt\\gfx\\image.h	/^using Image2fPtr = std::shared_ptr<Image2f>;$/;"	t	namespace:tt	typeref:typename:std::shared_ptr<Image2f>
 Image2uc	tt\\gfx\\image.h	/^typedef Image<Color2uc> Image2uc;$/;"	t	namespace:tt	typeref:typename:Image<Color2uc>
+Image2ucConstPtr	tt\\gfx\\image.h	/^using Image2ucConstPtr = std::shared_ptr<const Image2uc>;$/;"	t	namespace:tt	typeref:typename:std::shared_ptr<const Image2uc>
+Image2ucPtr	tt\\gfx\\image.h	/^using Image2ucPtr = std::shared_ptr<Image2uc>;$/;"	t	namespace:tt	typeref:typename:std::shared_ptr<Image2uc>
 Image2us	tt\\gfx\\image.h	/^typedef Image<Color2us> Image2us;$/;"	t	namespace:tt	typeref:typename:Image<Color2us>
+Image2usConstPtr	tt\\gfx\\image.h	/^using Image2usConstPtr = std::shared_ptr<const Image2us>;$/;"	t	namespace:tt	typeref:typename:std::shared_ptr<const Image2us>
+Image2usPtr	tt\\gfx\\image.h	/^using Image2usPtr = std::shared_ptr<Image2us>;$/;"	t	namespace:tt	typeref:typename:std::shared_ptr<Image2us>
 Image3f	tt\\gfx\\image.h	/^typedef Image<Color3f>  Image3f;$/;"	t	namespace:tt	typeref:typename:Image<Color3f>
+Image3fConstPtr	tt\\gfx\\image.h	/^using Image3fConstPtr = std::shared_ptr<const Image3f>;$/;"	t	namespace:tt	typeref:typename:std::shared_ptr<const Image3f>
+Image3fPtr	tt\\gfx\\image.h	/^using Image3fPtr = std::shared_ptr<Image3f>;$/;"	t	namespace:tt	typeref:typename:std::shared_ptr<Image3f>
 Image3uc	tt\\gfx\\image.h	/^typedef Image<Color3uc> Image3uc;$/;"	t	namespace:tt	typeref:typename:Image<Color3uc>
+Image3ucConstPtr	tt\\gfx\\image.h	/^using Image3ucConstPtr = std::shared_ptr<const Image3uc>;$/;"	t	namespace:tt	typeref:typename:std::shared_ptr<const Image3uc>
+Image3ucPtr	tt\\gfx\\image.h	/^using Image3ucPtr = std::shared_ptr<Image3uc>;$/;"	t	namespace:tt	typeref:typename:std::shared_ptr<Image3uc>
 Image3us	tt\\gfx\\image.h	/^typedef Image<Color3us> Image3us;$/;"	t	namespace:tt	typeref:typename:Image<Color3us>
+Image3usConstPtr	tt\\gfx\\image.h	/^using Image3usConstPtr = std::shared_ptr<const Image3us>;$/;"	t	namespace:tt	typeref:typename:std::shared_ptr<const Image3us>
+Image3usPtr	tt\\gfx\\image.h	/^using Image3usPtr = std::shared_ptr<Image3us>;$/;"	t	namespace:tt	typeref:typename:std::shared_ptr<Image3us>
 Image4f	tt\\gfx\\image.h	/^typedef Image<Color4f>  Image4f;$/;"	t	namespace:tt	typeref:typename:Image<Color4f>
+Image4fConstPtr	tt\\gfx\\image.h	/^using Image4fConstPtr = std::shared_ptr<const Image4f>;$/;"	t	namespace:tt	typeref:typename:std::shared_ptr<const Image4f>
+Image4fPtr	tt\\gfx\\image.h	/^using Image4fPtr = std::shared_ptr<Image4f>;$/;"	t	namespace:tt	typeref:typename:std::shared_ptr<Image4f>
 Image4uc	tt\\gfx\\image.h	/^typedef Image<Color4uc> Image4uc;$/;"	t	namespace:tt	typeref:typename:Image<Color4uc>
+Image4ucConstPtr	tt\\gfx\\image.h	/^using Image4ucConstPtr = std::shared_ptr<const Image4uc>;$/;"	t	namespace:tt	typeref:typename:std::shared_ptr<const Image4uc>
+Image4ucPtr	tt\\gfx\\image.h	/^using Image4ucPtr = std::shared_ptr<Image4uc>;$/;"	t	namespace:tt	typeref:typename:std::shared_ptr<Image4uc>
 Image4us	tt\\gfx\\image.h	/^typedef Image<Color4us> Image4us;$/;"	t	namespace:tt	typeref:typename:Image<Color4us>
+Image4usConstPtr	tt\\gfx\\image.h	/^using Image4usConstPtr = std::shared_ptr<const Image4us>;$/;"	t	namespace:tt	typeref:typename:std::shared_ptr<const Image4us>
+Image4usPtr	tt\\gfx\\image.h	/^using Image4usPtr = std::shared_ptr<Image4us>;$/;"	t	namespace:tt	typeref:typename:std::shared_ptr<Image4us>
 ImageBase	tt\\gfx\\image.h	/^class ImageBase {$/;"	c	namespace:tt
+ImageBaseConstPtr	tt\\gfx\\image.h	/^using ImageBaseConstPtr = std::shared_ptr<const ImageBase>;$/;"	t	namespace:tt	typeref:typename:std::shared_ptr<const ImageBase>
+ImageBasePtr	tt\\gfx\\image.h	/^using ImageBasePtr = std::shared_ptr<ImageBase>;$/;"	t	namespace:tt	typeref:typename:std::shared_ptr<ImageBase>
 ImageX	tt\\gfx\\imagex.h	/^    ImageX() {$/;"	f	class:tt::ImageX
 ImageX	tt\\gfx\\imagex.h	/^class ImageX {$/;"	c	namespace:tt
 Log	tt\\util\\log.h	/^    Log() {}$/;"	f	class:tt::Log
@@ -224,8 +250,8 @@ getElapsedMSec	tt\\util\\time.h	/^    float getElapsedMSec() const {$/;"	f	class
 getExt	tt\\gfx\\imagex.cpp	/^std::string ImageX::getExt(const tt::FileName& fname) const {$/;"	f	class:tt::ImageX	typeref:typename:std::string
 getFileName	tt\\gfx\\imagex.h	/^    std::string getFileName() const { return m_fname; }$/;"	f	class:tt::ImageX	typeref:typename:std::string
 getFit	tt\\gl\\gl_frame_display.h	/^    bool getFit() const { return m_fit; }$/;"	f	class:GLFrameDisplay	typeref:typename:bool
-getImageBase	tt\\gfx\\imagex.h	/^          ImageBase* getImageBase()       { return m_image; }$/;"	f	class:tt::ImageX	typeref:typename:ImageBase *
-getImageBase	tt\\gfx\\imagex.h	/^    const ImageBase* getImageBase() const { return m_image; }$/;"	f	class:tt::ImageX	typeref:typename:const ImageBase *
+getImageBaseConstPtr	tt\\gfx\\imagex.h	/^    ImageBaseConstPtr getImageBaseConstPtr() const { return m_image; }$/;"	f	class:tt::ImageX	typeref:typename:ImageBaseConstPtr
+getImageBasePtr	tt\\gfx\\imagex.h	/^    ImageBasePtr      getImageBasePtr()            { return m_image; }$/;"	f	class:tt::ImageX	typeref:typename:ImageBasePtr
 getImageSize	tt\\gl\\gl_frame_display.h	/^    const tt::Vec2i& getImageSize() const { return m_image_size; }$/;"	f	class:GLFrameDisplay	typeref:typename:const tt::Vec2i &
 getMessage	tt\\util\\time.h	/^    std::string getMessage() const { return m_message; }$/;"	f	class:tt::Time	typeref:typename:std::string
 getScale	tt\\gl\\gl_frame_display.h	/^    float getScale() const { return m_scale; }$/;"	f	class:GLFrameDisplay	typeref:typename:float
@@ -294,7 +320,7 @@ m_id	tt\\gl\\gl_fbo.h	/^	GLuint m_id = 0;$/;"	m	class:GLFBO	typeref:typename:GLu
 m_id	tt\\gl\\gl_texture.h	/^    GLuint m_id = 0;$/;"	m	class:GLTexture2D	typeref:typename:GLuint
 m_idx_ext	tt\\util\\filename.h	/^    std::string::size_type m_idx_fname, m_idx_ext;$/;"	m	class:tt::FileName	typeref:typename:std::string::size_type
 m_idx_fname	tt\\util\\filename.h	/^    std::string::size_type m_idx_fname, m_idx_ext;$/;"	m	class:tt::FileName	typeref:typename:std::string::size_type
-m_image	tt\\gfx\\imagex.h	/^    ImageBase* m_image = 0;$/;"	m	class:tt::ImageX	typeref:typename:ImageBase *
+m_image	tt\\gfx\\imagex.h	/^    ImageBasePtr m_image = nullptr;$/;"	m	class:tt::ImageX	typeref:typename:ImageBasePtr
 m_max_size	tt\\util\\stat.h	/^    size_t m_max_size;$/;"	m	class:tt::Statistics	typeref:typename:size_t
 m_message	tt\\util\\time.h	/^    std::string m_message;$/;"	m	class:tt::Time	typeref:typename:std::string
 m_orig	tt\\util\\filename.h	/^    std::string m_orig, m_path;$/;"	m	class:tt::FileName	typeref:typename:std::string
@@ -411,13 +437,13 @@ suffix	tt\\util\\filename.cpp	/^std::string FileName::suffix(int n) const {$/;"	
 toColor4uc	tt\\util\\type.h	/^    inline Color4uc toColor4uc(const Color4f& c) {$/;"	f	namespace:tt	typeref:typename:Color4uc
 toGlmVec2	tt\\gl\\glm_util.h	/^inline glm::vec2 toGlmVec2(const tt::Vec2i& v) {$/;"	f	typeref:typename:glm::vec2
 toImVec2	tt\\imgui\\imgui_util.h	/^inline ImVec2 toImVec2(const tt::Vec2i& v) {$/;"	f	typeref:typename:ImVec2
-toImage1ucPtr	tt\\gfx\\imagex.h	/^inline tt::Image1uc* toImage1ucPtr(tt::ImageX& img) { return dynamic_cast<tt::Image1uc*>(img.get/;"	f	namespace:tt	typeref:typename:tt::Image1uc *
+toImage1ucPtr	tt\\gfx\\imagex.h	/^inline tt::Image1ucPtr toImage1ucPtr(tt::ImageX& img) { return std::dynamic_pointer_cast<tt::Ima/;"	f	namespace:tt	typeref:typename:tt::Image1ucPtr
 toImage1ucRef	tt\\gfx\\imagex.h	/^inline tt::Image1uc& toImage1ucRef(tt::ImageX& img) { return dynamic_cast<tt::Image1uc&>(*(img.g/;"	f	namespace:tt	typeref:typename:tt::Image1uc &
-toImage1usPtr	tt\\gfx\\imagex.h	/^inline tt::Image1us* toImage1usPtr(tt::ImageX& img) { return dynamic_cast<tt::Image1us*>(img.get/;"	f	namespace:tt	typeref:typename:tt::Image1us *
+toImage1usPtr	tt\\gfx\\imagex.h	/^inline tt::Image1usPtr toImage1usPtr(tt::ImageX& img) { return std::dynamic_pointer_cast<tt::Ima/;"	f	namespace:tt	typeref:typename:tt::Image1usPtr
 toImage1usRef	tt\\gfx\\imagex.h	/^inline tt::Image1us& toImage1usRef(tt::ImageX& img) { return dynamic_cast<tt::Image1us&>(*(img.g/;"	f	namespace:tt	typeref:typename:tt::Image1us &
-toImage3ucPtr	tt\\gfx\\imagex.h	/^inline tt::Image3uc* toImage3ucPtr(tt::ImageX& img) { return dynamic_cast<tt::Image3uc*>(img.get/;"	f	namespace:tt	typeref:typename:tt::Image3uc *
+toImage3ucPtr	tt\\gfx\\imagex.h	/^inline tt::Image3ucPtr toImage3ucPtr(tt::ImageX& img) { return std::dynamic_pointer_cast<tt::Ima/;"	f	namespace:tt	typeref:typename:tt::Image3ucPtr
 toImage3ucRef	tt\\gfx\\imagex.h	/^inline tt::Image3uc& toImage3ucRef(tt::ImageX& img) { return dynamic_cast<tt::Image3uc&>(*(img.g/;"	f	namespace:tt	typeref:typename:tt::Image3uc &
-toImage4ucPtr	tt\\gfx\\imagex.h	/^inline tt::Image4uc* toImage4ucPtr(tt::ImageX& img) { return dynamic_cast<tt::Image4uc*>(img.get/;"	f	namespace:tt	typeref:typename:tt::Image4uc *
+toImage4ucPtr	tt\\gfx\\imagex.h	/^inline tt::Image4ucPtr toImage4ucPtr(tt::ImageX& img) { return std::dynamic_pointer_cast<tt::Ima/;"	f	namespace:tt	typeref:typename:tt::Image4ucPtr
 toImage4ucRef	tt\\gfx\\imagex.h	/^inline tt::Image4uc& toImage4ucRef(tt::ImageX& img) { return dynamic_cast<tt::Image4uc&>(*(img.g/;"	f	namespace:tt	typeref:typename:tt::Image4uc &
 tstring	tt\\util\\path.h	/^typedef std::basic_string<TCHAR> tstring;$/;"	t	typeref:typename:std::basic_string<TCHAR>
 tt	tt\\gfx\\image.h	/^namespace tt {$/;"	n

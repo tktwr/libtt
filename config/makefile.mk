@@ -117,17 +117,17 @@ install.vs2019.Release:
 	mycmake-build.sh vs2019 Release --target install
 
 #------------------------------------------------------
-.PHONY: tags
-tags:
+tags.all:
 	ctags -R .
 
-gtags:
+gtags.all:
 	gtags -v
 
-format:
+format.all:
 	clang-format -i *.h *.cpp
 
 help:
+	@echo 'make build'
 	@echo 'make all'
 	@echo 'make all.clean'
 	@echo "--"
@@ -168,8 +168,8 @@ help:
 	@echo "make clean.vs2019.RelWithDebInfo"
 	@echo "make install.vs2019.Release"
 	@echo "--"
-	@echo "make tags"
-	@echo "make gtags"
-	@echo "make format"
+	@echo "make tags.all"
+	@echo "make gtags.all"
+	@echo "make format.all"
 	@echo "make help"
 
