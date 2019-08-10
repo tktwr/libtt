@@ -102,7 +102,7 @@ void ImageX::load_bin(const std::string& fname) {
     create(m_type, w, h);
 
     char* data = (char*)(m_image->void_ptr());
-    int size = m_image->size() * m_image->sizeOfDataType();
+    std::size_t size = m_image->size() * m_image->sizeOfDataType();
     ifs.read(data, size);
 }
 
@@ -114,7 +114,7 @@ void ImageX::save_bin(const std::string& fname) const {
     ofs.write(reinterpret_cast<const char*>(&h), sizeof(int));
 
     char* data = (char*)(m_image->void_ptr());
-    int size = m_image->size() * m_image->sizeOfDataType();
+    std::size_t size = m_image->size() * m_image->sizeOfDataType();
     ofs.write(data, size);
 }
 
@@ -133,26 +133,26 @@ void ImageX::load_mat(const std::string& fname) {
     }
 
     unsigned char* data = (unsigned char*)(m_image->void_ptr());
-    int size = m_image->size() * m_image->sizeOfDataType();
+    std::size_t size = m_image->size() * m_image->sizeOfDataType();
     memcpy(data, mat.data, size);
 }
 
 void ImageX::save_mat(const std::string& fname) const {
     int w = m_image->w();
     int h = m_image->h();
-    std::unique_ptr<cv::Mat> mat;
+    std::shared_ptr<cv::Mat> mat;
     if (m_type == "i1uc") {
-        mat = std::make_unique<cv::Mat1b>(h, w);
+        mat = std::make_shared<cv::Mat1b>(h, w);
     } else if (m_type == "i1us") {
-        mat = std::make_unique<cv::Mat1w>(h, w);
+        mat = std::make_shared<cv::Mat1w>(h, w);
     } else if (m_type == "i3uc") {
-        mat = std::make_unique<cv::Mat3b>(h, w);
+        mat = std::make_shared<cv::Mat3b>(h, w);
     } else if (m_type == "i4uc") {
-        mat = std::make_unique<cv::Mat4b>(h, w);
+        mat = std::make_shared<cv::Mat4b>(h, w);
     }
 
     char* data = (char*)(m_image->void_ptr());
-    int size = m_image->size() * m_image->sizeOfDataType();
+    std::size_t size = m_image->size() * m_image->sizeOfDataType();
     memcpy(mat->data, data, size);
 
     if (m_type == "i3uc") {

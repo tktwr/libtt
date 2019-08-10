@@ -2,6 +2,7 @@
 #include <nfd.h>
 #include <stdio.h>
 #include <string>
+#include <tt/imgui/imgui_util.h>
 
 std::string f_open_file() {
     nfdchar_t *outPath = NULL;
@@ -164,7 +165,7 @@ void GLApp::shutdown() {
 }
 
 void GLApp::registerCommands() {
-    int sz = m_commands.size();
+    std::size_t sz = m_commands.size();
     for (int i=0; i<sz; i++) {
         Command& cmd = m_commands[i];
         m_console.addCommand(cmd.name);
@@ -184,7 +185,7 @@ void GLApp::cmd_clear() {
 }
 
 void GLApp::cmd_help() {
-    int sz = m_commands.size();
+    std::size_t sz = m_commands.size();
     for (int i=0; i<sz; i++) {
         Command& cmd = m_commands[i];
         m_console.output("%s %s ... %s", cmd.name.c_str(), cmd.args.c_str(), cmd.desc.c_str());
@@ -213,7 +214,7 @@ void GLApp::exec(const std::string& line) {
 }
 
 void GLApp::drawGuiConsolePanel() {
-    ImGui::SetNextWindowSize(ImVec2(m_console_size[0], m_console_size[1]), ImGuiCond_FirstUseEver);
+    ImGui::SetNextWindowSize(toImVec2(m_console_size), ImGuiCond_FirstUseEver);
     ImGui::SetNextWindowPos(ImVec2(0, 0), ImGuiCond_FirstUseEver);
     ImGui::Begin("Console", &m_show_console_panel);
     m_console.draw();

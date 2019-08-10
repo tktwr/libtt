@@ -47,7 +47,7 @@ private:
     std::vector<std::string> m_commands;
     std::vector<std::string> m_text;
     std::vector<std::string> m_history;
-    int m_history_pos;
+    std::size_t m_history_pos;
     bool m_scroll_to_bottom;
 };
 
@@ -60,7 +60,7 @@ inline void Console::draw() {
     const float footer_height_to_reserve = ImGui::GetStyle().ItemSpacing.y + ImGui::GetFrameHeightWithSpacing(); // 1 separator, 1 input text
     ImGui::BeginChild("ScrollingRegion", ImVec2(0, -footer_height_to_reserve), false, ImGuiWindowFlags_HorizontalScrollbar); // Leave room for 1 separator + 1 InputText
         ImGui::PushStyleVar(ImGuiStyleVar_ItemSpacing, ImVec2(4,1)); // Tighten spacing
-        int sz = m_text.size();
+        std::size_t sz = m_text.size();
         for (int i=0; i<sz; i++) {
             ImGui::TextUnformatted(m_text[i].c_str());
         }
@@ -182,7 +182,7 @@ inline int Console::TextEditCallback(ImGuiTextEditCallbackData* data) {
         }
     case ImGuiInputTextFlags_CallbackHistory:
         {
-            const int prev_history_pos = m_history_pos;
+            const std::size_t prev_history_pos = m_history_pos;
             if (data->EventKey == ImGuiKey_UpArrow) {
                 if (m_history_pos == -1)
                     m_history_pos = m_history.size() - 1;
@@ -213,7 +213,7 @@ inline void Console::shell(std::string cmd) {
         std::string dir = "~";
         istr >> dir;
 
-        int r = chdir(dir.c_str());
+        int r = _chdir(dir.c_str());
         if (r) {
             output("sh: cd: %s: No such file or directory\n", dir.c_str());
         }

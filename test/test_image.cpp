@@ -12,7 +12,7 @@
 
 using namespace std;
 
-void f_image_save(const char* fname, std::size_t w, std::size_t h, int comp, const float* data) {
+void f_image_save(const char* fname, int w, int h, int comp, const float* data) {
     unsigned char* dst_data = new unsigned char[w * h * 3];
     unsigned char* dst = dst_data;
     const float* src = data;
@@ -30,8 +30,8 @@ void f_image() {
     tt::Time t;
     tt::TimeCollection tc;
     std::vector<int> nthreads{0, 1, 2, 4, -1};
-    std::size_t width = 4000;
-    std::size_t height = 4000;
+    int width = 4000;
+    int height = 4000;
     cout << "hardware_concurrency: " << std::thread::hardware_concurrency() << endl;
 
     for (int i=0; i<3; i++) {

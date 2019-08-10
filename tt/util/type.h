@@ -190,7 +190,7 @@ template<typename T, std::size_t N>
 inline std::array<T, N> operator*(const std::array<T, N>& a1, float s) {
     std::array<T, N> a0;
     for (int i=0; i<N; i++) {
-        a0[i] = tt::mul<float>(a1[i], s);
+        a0[i] = static_cast<T>(tt::mul<float>(a1[i], s));
     }
     return a0;
 }
@@ -199,7 +199,7 @@ template<typename T, std::size_t N>
 inline std::array<T, N> operator*(float s, const std::array<T, N>& a1) {
     std::array<T, N> a0;
     for (int i=0; i<N; i++) {
-        a0[i] = tt::mul<float>(s, a1[i]);
+        a0[i] = static_cast<T>(tt::mul<float>(s, a1[i]));
     }
     return a0;
 }

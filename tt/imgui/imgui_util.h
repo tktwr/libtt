@@ -12,7 +12,7 @@ public:
     ~ArrayOfString() { destroy(); }
 
     char** getArray() { return m_array; }
-    int size() { return m_size; }
+    std::size_t size() { return m_size; }
 
 private:
     void setVector(const std::vector<std::string>& vec) {
@@ -33,7 +33,7 @@ private:
     }
 
     char** m_array = 0;
-    int m_size = 0;
+    std::size_t m_size = 0;
 };
 
 inline void ShowHelpTip(const char* desc) {
@@ -45,7 +45,7 @@ inline void ShowHelpTip(const char* desc) {
 }
 
 inline ImVec2 toImVec2(const tt::Vec2i& v) {
-    return ImVec2(v[0], v[1]);
+    return ImVec2(static_cast<float>(v[0]), static_cast<float>(v[1]));
 }
 
 #endif  // imgui_util_h
