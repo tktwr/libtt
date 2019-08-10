@@ -25,6 +25,7 @@ include_directories(${LIBTT})
 set(LIBTT_SRCS
   ${LIBTT}/tt/util/filename.cpp
   ${LIBTT}/tt/util/path.cpp
+  ${LIBTT}/tt/util/log.cpp
   ${LIBTT}/tt/gfx/imagex.cpp
   ${LIBTT}/tt/gfx/image_util.cpp
   ${LIBTT}/tt/gl/gl_fbo.cpp
