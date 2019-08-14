@@ -2,7 +2,7 @@
 # stb
 #-------------------------------------------------
 
-set(STB $ENV{MY_OPT_WIN}/stb)
+set(STB ${OPT_DIR}/stb)
 
 include_directories(${STB})
 

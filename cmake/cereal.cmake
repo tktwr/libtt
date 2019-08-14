@@ -2,7 +2,7 @@
 # cereal
 #-------------------------------------------------
 
-set(CEREAL $ENV{MY_OPT_WIN}/cereal)
+set(CEREAL ${OPT_DIR}/cereal)
 
 include_directories(${CEREAL}/include)
 

@@ -5,11 +5,13 @@
 !_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
 !_TAG_PROGRAM_VERSION	0.0.0	/5728abe4/
+AppBase	tt\\app\\app_base.h	/^class AppBase {$/;"	c
 Array	tt\\util\\array.h	/^    Array() : m_data_char(0), m_data(0), m_size(0) {}$/;"	f	class:tt::Array
 Array	tt\\util\\array.h	/^    Array(std::size_t size) : m_data_char(0), m_data(0), m_size(0) { resize(size); }$/;"	f	class:tt::Array
 Array	tt\\util\\array.h	/^class Array {$/;"	c	namespace:tt
 ArrayOfString	tt\\imgui\\imgui_util.h	/^    ArrayOfString(const std::vector<std::string>& vec) { setVector(vec); }$/;"	f	class:ArrayOfString
 ArrayOfString	tt\\imgui\\imgui_util.h	/^class ArrayOfString {$/;"	c
+BUF_SIZE	tt\\util\\log.cpp	/^#define BUF_SIZE /;"	d	file:
 BytesToGB	tt\\util\\util.h	/^inline float BytesToGB(std::size_t bytes) {$/;"	f	namespace:tt	typeref:typename:float
 BytesToKB	tt\\util\\util.h	/^inline float BytesToKB(std::size_t bytes) {$/;"	f	namespace:tt	typeref:typename:float
 BytesToMB	tt\\util\\util.h	/^inline float BytesToMB(std::size_t bytes) {$/;"	f	namespace:tt	typeref:typename:float
@@ -29,7 +31,7 @@ Command	tt\\app\\gl_app.h	/^    struct Command {$/;"	s	class:GLApp
 Console	tt\\imgui\\imgui_console.h	/^    Console() {$/;"	f	class:Console
 Console	tt\\imgui\\imgui_console.h	/^class Console {$/;"	c
 DataType	tt\\gfx\\imagex.h	/^    enum DataType {$/;"	g	class:tt::ImageX
-E	tt\\util\\log.h	/^    static void E(const char* fmt, ...) {$/;"	f	class:tt::Log	typeref:typename:void
+E	tt\\util\\log.cpp	/^void Log::E(const char* fmt, ...) {$/;"	f	class:tt::Log	typeref:typename:void
 FileName	tt\\util\\filename.h	/^    FileName() {}$/;"	f	class:tt::FileName
 FileName	tt\\util\\filename.h	/^    FileName(const char* _path) { path(_path); }$/;"	f	class:tt::FileName
 FileName	tt\\util\\filename.h	/^    FileName(const std::string& _path) { path(_path); }$/;"	f	class:tt::FileName
@@ -49,7 +51,7 @@ GLTexture2D	tt\\gl\\gl_texture.h	/^    GLTexture2D() {}$/;"	f	class:GLTexture2D
 GLTexture2D	tt\\gl\\gl_texture.h	/^class GLTexture2D {$/;"	c
 GLVAO	tt\\gl\\gl_vao.h	/^    GLVAO() {}$/;"	f	class:GLVAO
 GLVAO	tt\\gl\\gl_vao.h	/^class GLVAO {$/;"	c
-I	tt\\util\\log.h	/^    static void I(const char* fmt, ...) {$/;"	f	class:tt::Log	typeref:typename:void
+I	tt\\util\\log.cpp	/^void Log::I(const char* fmt, ...) {$/;"	f	class:tt::Log	typeref:typename:void
 I_16UC1	tt\\gfx\\imagex.h	/^        I_16UC1,$/;"	e	enum:tt::ImageX::DataType
 I_16UC2	tt\\gfx\\imagex.h	/^        I_16UC2,$/;"	e	enum:tt::ImageX::DataType
 I_16UC3	tt\\gfx\\imagex.h	/^        I_16UC3,$/;"	e	enum:tt::ImageX::DataType
@@ -107,7 +109,6 @@ ImageBaseConstPtr	tt\\gfx\\image.h	/^using ImageBaseConstPtr = std::shared_ptr<c
 ImageBasePtr	tt\\gfx\\image.h	/^using ImageBasePtr = std::shared_ptr<ImageBase>;$/;"	t	namespace:tt	typeref:typename:std::shared_ptr<ImageBase>
 ImageX	tt\\gfx\\imagex.h	/^    ImageX() {$/;"	f	class:tt::ImageX
 ImageX	tt\\gfx\\imagex.h	/^class ImageX {$/;"	c	namespace:tt
-Log	tt\\util\\log.h	/^    Log() {}$/;"	f	class:tt::Log
 Log	tt\\util\\log.h	/^class Log {$/;"	c	namespace:tt
 NOMINMAX	tt\\gl\\gl.h	/^#define NOMINMAX /;"	d
 STB_IMAGE_IMPLEMENTATION	tt\\gfx\\image_util.cpp	/^#define STB_IMAGE_IMPLEMENTATION$/;"	d	file:
@@ -157,7 +158,6 @@ args	tt\\app\\gl_app.h	/^        std::string args;$/;"	m	struct:GLApp::Command	t
 bind	tt\\gl\\gl_fbo.cpp	/^void GLFBO::bind() {$/;"	f	class:GLFBO	typeref:typename:void
 bind	tt\\gl\\gl_program.cpp	/^void GLProgram::bind() {$/;"	f	class:GLProgram	typeref:typename:void
 bind	tt\\gl\\gl_texture.cpp	/^void GLTexture2D::bind() {$/;"	f	class:GLTexture2D	typeref:typename:void
-buf_size	tt\\util\\log.h	/^    static const int buf_size = 1024;$/;"	m	class:tt::Log	typeref:typename:const int
 c_str	tt\\util\\filename.h	/^    const char* c_str()           const { return m_path.c_str(); }$/;"	f	class:tt::FileName	typeref:typename:const char *
 check	tt\\gl\\gl_fbo.cpp	/^void GLFBO::check() {$/;"	f	class:GLFBO	typeref:typename:void
 clamp	tt\\util\\type.h	/^    inline T clamp(T v, T l, T h) {$/;"	f	namespace:tt	typeref:typename:T
@@ -183,6 +183,7 @@ dirname	tt\\util\\filename.cpp	/^std::string FileName::dirname() const {$/;"	f	c
 div	tt\\util\\type.h	/^    inline T      div(const T& v1, const T& v2) { return v1 \/ v2; }$/;"	f	namespace:tt	typeref:typename:T
 div	tt\\util\\type.h	/^    inline uchar  div(const uchar& v1, const uchar& v2) { return uint2uchar(v1 \/ v2); }$/;"	f	namespace:tt	typeref:typename:uchar
 div	tt\\util\\type.h	/^    inline ushort div(const ushort& v1, const ushort& v2) { return uint2ushort(v1 \/ v2); }$/;"	f	namespace:tt	typeref:typename:ushort
+draw	tt\\app\\app_base.h	/^    virtual void draw() {}$/;"	f	class:AppBase	typeref:typename:void
 draw	tt\\app\\gl_app.h	/^    virtual void draw() {}$/;"	f	class:GLApp	typeref:typename:void
 draw	tt\\gl\\gl_frame.h	/^    virtual void draw() {}$/;"	f	class:GLFrame	typeref:typename:void
 draw	tt\\gl\\gl_frame_display.cpp	/^void GLFrameDisplay::draw() {$/;"	f	class:GLFrameDisplay	typeref:typename:void
@@ -282,6 +283,7 @@ image_util_h	tt\\gfx\\image_util.h	/^#define image_util_h$/;"	d
 imagex_h	tt\\gfx\\imagex.h	/^#define imagex_h$/;"	d
 imgui_console_h	tt\\imgui\\imgui_console.h	/^#define imgui_console_h$/;"	d
 imgui_util_h	tt\\imgui\\imgui_util.h	/^#define imgui_util_h$/;"	d
+init	tt\\app\\app_base.h	/^    virtual void init() {}$/;"	f	class:AppBase	typeref:typename:void
 init	tt\\app\\gl_app.h	/^    virtual void init() {}$/;"	f	class:GLApp	typeref:typename:void
 init	tt\\gl\\gl_frame.h	/^    virtual void init() {}$/;"	f	class:GLFrame	typeref:typename:void
 init	tt\\gl\\gl_frame_display.cpp	/^void GLFrameDisplay::init() {$/;"	f	class:GLFrameDisplay	typeref:typename:void
@@ -314,7 +316,7 @@ m_h	tt\\gfx\\image.h	/^    int m_w, m_h;$/;"	m	class:tt::Image	typeref:typename:
 m_h	tt\\gl\\gl_fbo.h	/^	int m_h = 0;$/;"	m	class:GLFBO	typeref:typename:int
 m_h	tt\\gl\\gl_texture.h	/^    int m_h = 0;$/;"	m	class:GLTexture2D	typeref:typename:int
 m_history	tt\\imgui\\imgui_console.h	/^    std::vector<std::string> m_history;$/;"	m	class:Console	typeref:typename:std::vector<std::string>
-m_history_pos	tt\\imgui\\imgui_console.h	/^    int m_history_pos;$/;"	m	class:Console	typeref:typename:int
+m_history_pos	tt\\imgui\\imgui_console.h	/^    std::size_t m_history_pos;$/;"	m	class:Console	typeref:typename:std::size_t
 m_icon_file	tt\\app\\gl_app.h	/^    std::string m_icon_file;$/;"	m	class:GLApp	typeref:typename:std::string
 m_id	tt\\gl\\gl_fbo.h	/^	GLuint m_id = 0;$/;"	m	class:GLFBO	typeref:typename:GLuint
 m_id	tt\\gl\\gl_texture.h	/^    GLuint m_id = 0;$/;"	m	class:GLTexture2D	typeref:typename:GLuint
@@ -330,7 +332,7 @@ m_prog_id	tt\\gl\\gl_program.h	/^    GLuint m_prog_id = 0;$/;"	m	class:GLProgram
 m_scale	tt\\gl\\gl_frame_display.h	/^    float m_scale = 1.0f;$/;"	m	class:GLFrameDisplay	typeref:typename:float
 m_scroll_to_bottom	tt\\imgui\\imgui_console.h	/^    bool m_scroll_to_bottom;$/;"	m	class:Console	typeref:typename:bool
 m_show_console_panel	tt\\app\\gl_app.h	/^    bool m_show_console_panel = true;$/;"	m	class:GLApp	typeref:typename:bool
-m_size	tt\\imgui\\imgui_util.h	/^    int m_size = 0;$/;"	m	class:ArrayOfString	typeref:typename:int
+m_size	tt\\imgui\\imgui_util.h	/^    std::size_t m_size = 0;$/;"	m	class:ArrayOfString	typeref:typename:std::size_t
 m_size	tt\\util\\array.h	/^    std::size_t m_size;$/;"	m	class:tt::Array	typeref:typename:std::size_t
 m_start	tt\\util\\time.h	/^    std::chrono::system_clock::time_point m_start, m_end;$/;"	m	class:tt::Time	typeref:typename:std::chrono::system_clock::time_point
 m_tex	tt\\gl\\gl_frame_display.h	/^    GLTexture2D m_tex;$/;"	m	class:GLFrameDisplay	typeref:typename:GLTexture2D
@@ -385,6 +387,7 @@ read	tt\\util\\type.h	/^    inline std::istream& read(std::istream& is, T& v) { 
 read	tt\\util\\type.h	/^    inline std::istream& read(std::istream& is, uchar& v) {$/;"	f	namespace:tt	typeref:typename:std::istream &
 registerCommands	tt\\app\\gl_app.cpp	/^void GLApp::registerCommands() {$/;"	f	class:GLApp	typeref:typename:void
 release	tt\\gl\\gl_texture.cpp	/^void GLTexture2D::release() {$/;"	f	class:GLTexture2D	typeref:typename:void
+resize	tt\\app\\app_base.h	/^    virtual void resize(int width, int height) {}$/;"	f	class:AppBase	typeref:typename:void
 resize	tt\\gfx\\image.h	/^    void resize(int w, int h) {$/;"	f	class:tt::Image	typeref:typename:void
 resize	tt\\gfx\\imagex.h	/^    void resize(int w, int h) { return m_image->resize(w, h); }$/;"	f	class:tt::ImageX	typeref:typename:void
 resize	tt\\util\\array.h	/^    void resize(std::size_t size) {$/;"	f	class:tt::Array	typeref:typename:void
@@ -423,7 +426,7 @@ shell	tt\\imgui\\imgui_console.h	/^inline void Console::shell(std::string cmd) {
 shutdown	tt\\app\\gl_app.cpp	/^void GLApp::shutdown() {$/;"	f	class:GLApp	typeref:typename:void
 size	tt\\gfx\\image.h	/^    std::size_t size() const { return m_data.size(); }$/;"	f	class:tt::Image	typeref:typename:std::size_t
 size	tt\\gfx\\imagex.h	/^    std::size_t size() const { return m_image->size(); }$/;"	f	class:tt::ImageX	typeref:typename:std::size_t
-size	tt\\imgui\\imgui_util.h	/^    int size() { return m_size; }$/;"	f	class:ArrayOfString	typeref:typename:int
+size	tt\\imgui\\imgui_util.h	/^    std::size_t size() { return m_size; }$/;"	f	class:ArrayOfString	typeref:typename:std::size_t
 size	tt\\util\\array.h	/^    std::size_t size() const { return m_size; }$/;"	f	class:tt::Array	typeref:typename:std::size_t
 sizeOfDataType	tt\\gfx\\image.h	/^    std::size_t sizeOfDataType() const { return m_data.sizeOfDataType(); }$/;"	f	class:tt::Image	typeref:typename:std::size_t
 sizeOfDataType	tt\\gfx\\imagex.h	/^    std::size_t sizeOfDataType() const { return m_image->sizeOfDataType(); }$/;"	f	class:tt::ImageX	typeref:typename:std::size_t
@@ -453,6 +456,7 @@ tt	tt\\gfx\\imagex.h	/^namespace tt {$/;"	n
 tt	tt\\util\\array.h	/^namespace tt {$/;"	n
 tt	tt\\util\\filename.cpp	/^namespace tt {$/;"	n	file:
 tt	tt\\util\\filename.h	/^namespace tt {$/;"	n
+tt	tt\\util\\log.cpp	/^namespace tt {$/;"	n	file:
 tt	tt\\util\\log.h	/^namespace tt {$/;"	n
 tt	tt\\util\\path.cpp	/^namespace tt { namespace win {$/;"	n	file:
 tt	tt\\util\\path.h	/^namespace tt { namespace win {$/;"	n
@@ -463,7 +467,6 @@ tt	tt\\util\\util.h	/^namespace tt {$/;"	n
 tt_array_h	tt\\util\\array.h	/^#define tt_array_h$/;"	d
 tt_filename_h	tt\\util\\filename.h	/^#define tt_filename_h$/;"	d
 tt_image_h	tt\\gfx\\image.h	/^#define tt_image_h$/;"	d
-tt_log_h	tt\\util\\log.h	/^#define tt_log_h$/;"	d
 tt_stat_h	tt\\util\\stat.h	/^#define tt_stat_h$/;"	d
 tt_time_h	tt\\util\\time.h	/^#define tt_time_h$/;"	d
 tt_type_h	tt\\util\\type.h	/^#define tt_type_h$/;"	d

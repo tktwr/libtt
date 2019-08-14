@@ -2,7 +2,7 @@
 # glfw
 #-------------------------------------------------
 
-set(GLFW $ENV{MY_OPT_WIN}/glfw)
+set(GLFW ${OPT_DIR}/glfw)
 
 if(MSVC)
   include_directories(${GLFW}/include)

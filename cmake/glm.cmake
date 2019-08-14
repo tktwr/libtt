@@ -2,7 +2,7 @@
 # glm
 #-------------------------------------------------
 
-set(GLM $ENV{MY_OPT_WIN}/glm)
+set(GLM ${OPT_DIR}/glm)
 
 include_directories(${GLM})
 

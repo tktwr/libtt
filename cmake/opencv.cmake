@@ -2,6 +2,8 @@
 # OpenCV
 #-------------------------------------------------
 
+message(STATUS "OpenCV_DIR=${OpenCV_DIR}")
+
 if(MSVC)
   file(GLOB OpenCV_DLLS ${OpenCV_DIR}/x64/vc15/bin/*.dll)
 endif()
@@ -9,7 +11,6 @@ endif()
 find_package(OpenCV REQUIRED)
 include_directories(${OpenCV_INCLUDE_DIRS})
 
-message(STATUS "OpenCV_DIR=${OpenCV_DIR}")
 message(STATUS "OpenCV_VERSION=${OpenCV_VERSION}")
 message(STATUS "OpenCV_INCLUDE_DIRS=${OpenCV_INCLUDE_DIRS}")
 message(STATUS "OpenCV_LIBS=${OpenCV_LIBS}")

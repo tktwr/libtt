@@ -2,7 +2,7 @@
 # spdlog
 #-------------------------------------------------
 
-set(SPDLOG $ENV{MY_OPT_WIN}/spdlog)
+set(SPDLOG ${OPT_DIR}/spdlog)
 
 include_directories(${SPDLOG}/include)
 

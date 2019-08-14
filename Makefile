@@ -1,4 +1,4 @@
-include config/makefile.mk
+include makefile.mk
 
 tags: tags.libtt
 
