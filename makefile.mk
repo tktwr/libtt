@@ -5,6 +5,9 @@ LANG=C
 -include local.mk
 
 #------------------------------------------------------
+BUILD_DIR=build.vs2019
+BUILD_CONFIG=RelWithDebInfo
+
 #build: build.ninja.Debug
 build: build.vs2019.RelWithDebInfo
 

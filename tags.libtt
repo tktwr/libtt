@@ -290,6 +290,9 @@ init	tt\\gl\\gl_frame_display.cpp	/^void GLFrameDisplay::init() {$/;"	f	class:GL
 init	tt\\gl\\gl_vao.cpp	/^void GLVAO::init() {$/;"	f	class:GLVAO	typeref:typename:void
 isAbsPath	tt\\util\\filename.cpp	/^bool FileName::isAbsPath() const {$/;"	f	class:tt::FileName	typeref:typename:bool
 isType	tt\\gfx\\imagex.cpp	/^bool ImageX::isType(const std::string& ext) const {$/;"	f	class:tt::ImageX	typeref:typename:bool
+keyDown	tt\\app\\app_base.h	/^    virtual void keyDown(int key) {}$/;"	f	class:AppBase	typeref:typename:void
+keyRepeat	tt\\app\\app_base.h	/^    virtual void keyRepeat(int key) {}$/;"	f	class:AppBase	typeref:typename:void
+keyUp	tt\\app\\app_base.h	/^    virtual void keyUp(int key) {}$/;"	f	class:AppBase	typeref:typename:void
 len	tt\\util\\type.h	/^    inline T      len(const T& v1, const T& v2) { return (v1 > v2) ? v1 - v2 : v2 - v1; }$/;"	f	namespace:tt	typeref:typename:T
 link	tt\\gl\\gl_program.cpp	/^void GLProgram::link() {$/;"	f	class:GLProgram	typeref:typename:void
 load	tt\\gfx\\imagex.cpp	/^void ImageX::load(const std::string& fname) {$/;"	f	class:tt::ImageX	typeref:typename:void
@@ -448,6 +451,9 @@ toImage3ucPtr	tt\\gfx\\imagex.h	/^inline tt::Image3ucPtr toImage3ucPtr(tt::Image
 toImage3ucRef	tt\\gfx\\imagex.h	/^inline tt::Image3uc& toImage3ucRef(tt::ImageX& img) { return dynamic_cast<tt::Image3uc&>(*(img.g/;"	f	namespace:tt	typeref:typename:tt::Image3uc &
 toImage4ucPtr	tt\\gfx\\imagex.h	/^inline tt::Image4ucPtr toImage4ucPtr(tt::ImageX& img) { return std::dynamic_pointer_cast<tt::Ima/;"	f	namespace:tt	typeref:typename:tt::Image4ucPtr
 toImage4ucRef	tt\\gfx\\imagex.h	/^inline tt::Image4uc& toImage4ucRef(tt::ImageX& img) { return dynamic_cast<tt::Image4uc&>(*(img.g/;"	f	namespace:tt	typeref:typename:tt::Image4uc &
+touchDown	tt\\app\\app_base.h	/^    virtual void touchDown(float x, float y) {}$/;"	f	class:AppBase	typeref:typename:void
+touchMove	tt\\app\\app_base.h	/^    virtual void touchMove(float dx, float dy) {}$/;"	f	class:AppBase	typeref:typename:void
+touchUp	tt\\app\\app_base.h	/^    virtual void touchUp(float x, float y) {}$/;"	f	class:AppBase	typeref:typename:void
 tstring	tt\\util\\path.h	/^typedef std::basic_string<TCHAR> tstring;$/;"	t	typeref:typename:std::basic_string<TCHAR>
 tt	tt\\gfx\\image.h	/^namespace tt {$/;"	n
 tt	tt\\gfx\\image_util.h	/^namespace tt {$/;"	n
