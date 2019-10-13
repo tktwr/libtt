@@ -5,14 +5,13 @@ LANG=C
 -include local.mk
 
 #------------------------------------------------------
-BUILD_DIR=build.vs2019
+BUILD_CC=vs2019
 BUILD_CONFIG=RelWithDebInfo
+BUILD_DIR=build.$(BUILD_CC)
 
-#build: build.ninja.Debug
-build: build.vs2019.RelWithDebInfo
+build: build.$(BUILD_CC).$(BUILD_CONFIG)
 
-#all: all.ninja.Debug
-all: all.vs2019.RelWithDebInfo
+all: all.$(BUILD_CC).$(BUILD_CONFIG)
 
 all.clean:
 	rm -rf build.ninja build.vs2017 build.vs2019

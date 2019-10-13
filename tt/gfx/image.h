@@ -133,52 +133,52 @@ void f_image_copy(Image<T>& dst, const Image<T>& src) {
     memcpy(dst.data(), src.data(), src.size() * src.sizeOfDataType());
 }
 
-typedef Image<Color1uc> Image1uc;
-typedef Image<Color1us> Image1us;
-typedef Image<Color1f>  Image1f;
+using Image1uc = Image<Color1uc>;
+using Image1us = Image<Color1us>;
+using Image1f  = Image<Color1f>;
 
-typedef Image<Color2uc> Image2uc;
-typedef Image<Color2us> Image2us;
-typedef Image<Color2f>  Image2f;
+using Image2uc = Image<Color2uc>;
+using Image2us = Image<Color2us>;
+using Image2f  = Image<Color2f>;
 
-typedef Image<Color3uc> Image3uc;
-typedef Image<Color3us> Image3us;
-typedef Image<Color3f>  Image3f;
+using Image3uc = Image<Color3uc>;
+using Image3us = Image<Color3us>;
+using Image3f  = Image<Color3f>;
 
-typedef Image<Color4uc> Image4uc;
-typedef Image<Color4us> Image4us;
-typedef Image<Color4f>  Image4f;
+using Image4uc = Image<Color4uc>;
+using Image4us = Image<Color4us>;
+using Image4f  = Image<Color4f>;
 
-using ImageBasePtr = std::shared_ptr<ImageBase>;
+using ImageBasePtr      = std::shared_ptr<ImageBase>;
 using ImageBaseConstPtr = std::shared_ptr<const ImageBase>;
 
-using Image1ucPtr = std::shared_ptr<Image1uc>;
-using Image1ucConstPtr = std::shared_ptr<const Image1uc>;
-using Image1usPtr = std::shared_ptr<Image1us>;
-using Image1usConstPtr = std::shared_ptr<const Image1us>;
-using Image1fPtr = std::shared_ptr<Image1f>;
-using Image1fConstPtr = std::shared_ptr<const Image1f>;
+using Image1ucPtr       = std::shared_ptr<Image1uc>;
+using Image1ucConstPtr  = std::shared_ptr<const Image1uc>;
+using Image1usPtr       = std::shared_ptr<Image1us>;
+using Image1usConstPtr  = std::shared_ptr<const Image1us>;
+using Image1fPtr        = std::shared_ptr<Image1f>;
+using Image1fConstPtr   = std::shared_ptr<const Image1f>;
 
-using Image2ucPtr = std::shared_ptr<Image2uc>;
-using Image2ucConstPtr = std::shared_ptr<const Image2uc>;
-using Image2usPtr = std::shared_ptr<Image2us>;
-using Image2usConstPtr = std::shared_ptr<const Image2us>;
-using Image2fPtr = std::shared_ptr<Image2f>;
-using Image2fConstPtr = std::shared_ptr<const Image2f>;
+using Image2ucPtr       = std::shared_ptr<Image2uc>;
+using Image2ucConstPtr  = std::shared_ptr<const Image2uc>;
+using Image2usPtr       = std::shared_ptr<Image2us>;
+using Image2usConstPtr  = std::shared_ptr<const Image2us>;
+using Image2fPtr        = std::shared_ptr<Image2f>;
+using Image2fConstPtr   = std::shared_ptr<const Image2f>;
 
-using Image3ucPtr = std::shared_ptr<Image3uc>;
-using Image3ucConstPtr = std::shared_ptr<const Image3uc>;
-using Image3usPtr = std::shared_ptr<Image3us>;
-using Image3usConstPtr = std::shared_ptr<const Image3us>;
-using Image3fPtr = std::shared_ptr<Image3f>;
-using Image3fConstPtr = std::shared_ptr<const Image3f>;
+using Image3ucPtr       = std::shared_ptr<Image3uc>;
+using Image3ucConstPtr  = std::shared_ptr<const Image3uc>;
+using Image3usPtr       = std::shared_ptr<Image3us>;
+using Image3usConstPtr  = std::shared_ptr<const Image3us>;
+using Image3fPtr        = std::shared_ptr<Image3f>;
+using Image3fConstPtr   = std::shared_ptr<const Image3f>;
 
-using Image4ucPtr = std::shared_ptr<Image4uc>;
-using Image4ucConstPtr = std::shared_ptr<const Image4uc>;
-using Image4usPtr = std::shared_ptr<Image4us>;
-using Image4usConstPtr = std::shared_ptr<const Image4us>;
-using Image4fPtr = std::shared_ptr<Image4f>;
-using Image4fConstPtr = std::shared_ptr<const Image4f>;
+using Image4ucPtr       = std::shared_ptr<Image4uc>;
+using Image4ucConstPtr  = std::shared_ptr<const Image4uc>;
+using Image4usPtr       = std::shared_ptr<Image4us>;
+using Image4usConstPtr  = std::shared_ptr<const Image4us>;
+using Image4fPtr        = std::shared_ptr<Image4f>;
+using Image4fConstPtr   = std::shared_ptr<const Image4f>;
 
 }  // namespace tt
 

@@ -59,7 +59,6 @@ public:
 private:
     std::string getExt(const tt::FileName& fname) const;
     std::string getType(const std::string& ext) const;
-    std::string getType(int cv_type) const;
     bool isType(const std::string& ext) const;
 
     void destroy() {
@@ -71,8 +70,6 @@ private:
     }
     void load_bin(const std::string& fname);
     void save_bin(const std::string& fname) const;
-    void load_mat(const std::string& fname);
-    void save_mat(const std::string& fname) const;
 
     ImageBasePtr m_image = nullptr;
     std::string m_type;
@@ -83,6 +80,11 @@ inline tt::Image1ucPtr toImage1ucPtr(tt::ImageX& img) { return std::dynamic_poin
 inline tt::Image1usPtr toImage1usPtr(tt::ImageX& img) { return std::dynamic_pointer_cast<tt::Image1us>(img.getImageBasePtr()); }
 inline tt::Image3ucPtr toImage3ucPtr(tt::ImageX& img) { return std::dynamic_pointer_cast<tt::Image3uc>(img.getImageBasePtr()); }
 inline tt::Image4ucPtr toImage4ucPtr(tt::ImageX& img) { return std::dynamic_pointer_cast<tt::Image4uc>(img.getImageBasePtr()); }
+
+inline tt::Image1ucConstPtr toImage1ucConstPtr(const tt::ImageX& img) { return std::dynamic_pointer_cast<const tt::Image1uc>(img.getImageBaseConstPtr()); }
+inline tt::Image1usConstPtr toImage1usConstPtr(const tt::ImageX& img) { return std::dynamic_pointer_cast<const tt::Image1us>(img.getImageBaseConstPtr()); }
+inline tt::Image3ucConstPtr toImage3ucConstPtr(const tt::ImageX& img) { return std::dynamic_pointer_cast<const tt::Image3uc>(img.getImageBaseConstPtr()); }
+inline tt::Image4ucConstPtr toImage4ucConstPtr(const tt::ImageX& img) { return std::dynamic_pointer_cast<const tt::Image4uc>(img.getImageBaseConstPtr()); }
 
 inline tt::Image1uc& toImage1ucRef(tt::ImageX& img) { return dynamic_cast<tt::Image1uc&>(*(img.getImageBasePtr())); }
 inline tt::Image1us& toImage1usRef(tt::ImageX& img) { return dynamic_cast<tt::Image1us&>(*(img.getImageBasePtr())); }

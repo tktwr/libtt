@@ -2,8 +2,6 @@
 #define image_util_h
 
 #include <string>
-#include <opencv2/opencv.hpp>
-#include <tt/gl/gl.h>
 #include "image.h"
 
 bool   f_load_image(const std::string& fname, tt::Image4uc& image);
@@ -13,10 +11,6 @@ void   f_fill_rect(tt::Image4uc& image, const tt::Vec2i& o, const tt::Vec2i& siz
 void   f_create_vstripe_image(tt::Image4uc& image, int nw, const tt::Color4uc& color0, const tt::Color4uc& color1);
 void   f_create_hstripe_image(tt::Image4uc& image, int nh, const tt::Color4uc& color0, const tt::Color4uc& color1);
 void   f_create_checker_image(tt::Image4uc& image, int nw, int nh, const tt::Color4uc& color0, const tt::Color4uc& color1);
-GLuint f_create_texture(const tt::Image4uc& image);
-GLuint f_create_texture(GLsizei width, GLsizei height, const GLvoid* data);
-void   f_image_to_cvmat(const tt::Image4uc& image, cv::Mat& mat);
-void   f_cvmat_to_image(const cv::Mat& mat, tt::Image4uc& image);
 
 namespace tt {
 

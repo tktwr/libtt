@@ -10,7 +10,7 @@
 #include <tt/gfx/image_util.h>
 #include <tt/gl/gl.h>
 #include <imgui.h>
-#include <tt/imgui/imgui_console.h>
+#include <tt/ext/imgui/imgui_console.h>
 
 class GLApp {
 public:

@@ -25,3 +25,9 @@ add_executable(test_util
     )
 target_link_libraries(test_util)
 
+add_executable(test_type
+    test/test_type.cpp
+    ${LIBTT}/tt/util/log.cpp
+    )
+target_link_libraries(test_type)
+
