@@ -1,5 +1,4 @@
-#ifndef glm_util_h
-#define glm_util_h
+#pragma once
 
 inline glm::vec2 toGlmVec2(const tt::Vec2i& v) {
     return glm::vec2(v[0], v[1]);
@@ -21,6 +20,4 @@ inline glm::mat4 make_mat(glm::vec2 src_size, glm::vec2 dst_size, float& scale, 
 
     return mat;
 }
-
-#endif  // glm_util_h
 

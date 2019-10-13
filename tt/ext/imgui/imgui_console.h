@@ -1,5 +1,4 @@
-#ifndef imgui_console_h
-#define imgui_console_h
+#pragma once
 
 #include <imgui.h>
 #include <functional>
@@ -231,6 +230,4 @@ inline void Console::shell(std::string cmd) {
     }
     pclose(fp);
 }
-
-#endif  // imgui_console_h
 

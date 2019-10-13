@@ -1,5 +1,4 @@
-#ifndef gl_texture_h
-#define gl_texture_h
+#pragma once
 
 #include "gl.h"
 #include <tt/gfx/image.h>
@@ -23,6 +22,4 @@ private:
     int m_h = 0;
     GLuint m_id = 0;
 };
-
-#endif  // gl_texture_h
 

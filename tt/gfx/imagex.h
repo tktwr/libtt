@@ -1,5 +1,4 @@
-#ifndef imagex_h
-#define imagex_h
+#pragma once
 
 #include <string>
 #include <tt/gfx/image.h>
@@ -92,6 +91,4 @@ inline tt::Image3uc& toImage3ucRef(tt::ImageX& img) { return dynamic_cast<tt::Im
 inline tt::Image4uc& toImage4ucRef(tt::ImageX& img) { return dynamic_cast<tt::Image4uc&>(*(img.getImageBasePtr())); }
 
 }  // namespace tt
-
-#endif  // imagex_h
 

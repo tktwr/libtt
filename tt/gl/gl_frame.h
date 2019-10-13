@@ -1,5 +1,4 @@
-#ifndef gl_frame_h
-#define gl_frame_h
+#pragma once
 
 #include "gl.h"
 #include "gl_program.h"
@@ -30,6 +29,4 @@ protected:
     tt::Color4f m_clear_color = {0.2f, 0.2f, 0.2f, 1.0f};
     tt::Vec2i m_screen_size = {0, 0};
 };
-
-#endif  // gl_frame_h
 

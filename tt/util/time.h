@@ -1,5 +1,4 @@
-#ifndef tt_time_h
-#define tt_time_h
+#pragma once
 
 #include <chrono>
 #include <string>
@@ -35,6 +34,4 @@ private:
 };
 
 }
-
-#endif  // tt_time_h
 

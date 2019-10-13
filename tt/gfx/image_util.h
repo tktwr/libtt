@@ -1,16 +1,17 @@
-#ifndef image_util_h
-#define image_util_h
+#pragma once
 
 #include <string>
 #include "image.h"
 
-bool   f_load_image(const std::string& fname, tt::Image4uc& image);
-void   f_save_image(const std::string& fname, const tt::Image4uc& image);
-void   f_draw_rect(tt::Image4uc& image, const tt::Vec2i& o, const tt::Vec2i& size, const tt::Color4uc& color);
-void   f_fill_rect(tt::Image4uc& image, const tt::Vec2i& o, const tt::Vec2i& size, const tt::Color4uc& color);
-void   f_create_vstripe_image(tt::Image4uc& image, int nw, const tt::Color4uc& color0, const tt::Color4uc& color1);
-void   f_create_hstripe_image(tt::Image4uc& image, int nh, const tt::Color4uc& color0, const tt::Color4uc& color1);
-void   f_create_checker_image(tt::Image4uc& image, int nw, int nh, const tt::Color4uc& color0, const tt::Color4uc& color1);
+bool f_load_image(const std::string& fname, tt::Image4uc& image);
+void f_save_image(const std::string& fname, const tt::Image4uc& image);
+void f_save_image(const std::string& fname, const tt::Image3uc& image);
+
+void f_draw_rect(tt::Image4uc& image, const tt::Vec2i& o, const tt::Vec2i& size, const tt::Color4uc& color);
+void f_fill_rect(tt::Image4uc& image, const tt::Vec2i& o, const tt::Vec2i& size, const tt::Color4uc& color);
+void f_create_vstripe_image(tt::Image4uc& image, int nw, const tt::Color4uc& color0, const tt::Color4uc& color1);
+void f_create_hstripe_image(tt::Image4uc& image, int nh, const tt::Color4uc& color0, const tt::Color4uc& color1);
+void f_create_checker_image(tt::Image4uc& image, int nw, int nh, const tt::Color4uc& color0, const tt::Color4uc& color1);
 
 namespace tt {
 
@@ -68,6 +69,4 @@ void f_image_vgrad(Image<T>& img, const tt::Color4uc& co1, const tt::Color4uc& c
 }
 
 }  // namespace tt
-
-#endif  // image_util_h
 

@@ -1,5 +1,4 @@
-#ifndef imgui_util_h
-#define imgui_util_h
+#pragma once
 
 #include <vector>
 #include <string>
@@ -47,6 +46,4 @@ inline void ShowHelpTip(const char* desc) {
 inline ImVec2 toImVec2(const tt::Vec2i& v) {
     return ImVec2(static_cast<float>(v[0]), static_cast<float>(v[1]));
 }
-
-#endif  // imgui_util_h
 

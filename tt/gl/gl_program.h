@@ -1,5 +1,4 @@
-#ifndef gl_program_h
-#define gl_program_h
+#pragma once
 
 #include "gl.h"
 
@@ -24,6 +23,4 @@ private:
     std::string m_vertex_shader;
     std::string m_fragment_shader;
 };
-
-#endif  // gl_program_h
 

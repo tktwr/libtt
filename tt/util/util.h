@@ -1,5 +1,4 @@
-#ifndef tt_util_h
-#define tt_util_h
+#pragma once
 
 #include <string>
 
@@ -26,6 +25,4 @@ inline void f_replace(std::string& str, const std::string& src, const std::strin
 }
 
 }
-
-#endif  // tt_util_h
 

@@ -1,5 +1,4 @@
-#ifndef gl_frame_display_h
-#define gl_frame_display_h
+#pragma once
 
 #include "gl_frame.h"
 #include "gl_texture.h"
@@ -27,6 +26,4 @@ private:
     float m_scale = 1.0f;
     bool m_fit = true;
 };
-
-#endif  // gl_frame_display_h
 

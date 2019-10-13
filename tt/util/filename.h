@@ -1,5 +1,4 @@
-#ifndef tt_filename_h
-#define tt_filename_h
+#pragma once
 
 #include <string>
 #include <iostream>
@@ -60,6 +59,4 @@ public:
 };
 
 }
-
-#endif  // tt_filename_h
 

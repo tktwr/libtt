@@ -1,5 +1,4 @@
-#ifndef tt_array_h
-#define tt_array_h
+#pragma once
 
 namespace tt {
 
@@ -69,6 +68,4 @@ private:
 };
 
 }
-
-#endif  // tt_array_h
 

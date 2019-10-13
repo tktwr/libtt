@@ -1,5 +1,4 @@
-#ifndef gl_fbo_h
-#define gl_fbo_h
+#pragma once
 
 #include "gl.h"
 
@@ -26,6 +25,4 @@ private:
 	GLuint m_tex_color0 = 0;
 	GLuint m_tex_depth = 0;
 };
-
-#endif  // gl_fbo_h
 

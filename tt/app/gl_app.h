@@ -1,5 +1,4 @@
-#ifndef gl_app_h
-#define gl_app_h
+#pragma once
 
 #include <string>
 #include <vector>
@@ -83,6 +82,4 @@ protected:
 
 std::string f_open_file();
 std::string f_save_file();
-
-#endif  // gl_app_h
 

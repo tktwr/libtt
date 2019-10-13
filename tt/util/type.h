@@ -1,5 +1,4 @@
-#ifndef tt_type_h
-#define tt_type_h
+#pragma once
 
 #include <iostream>
 #include <array>
@@ -212,6 +211,4 @@ inline std::array<T, N> operator/(const std::array<T, N>& a1, const std::array<T
     }
     return a0;
 }
-
-#endif  // tt_type_h
 

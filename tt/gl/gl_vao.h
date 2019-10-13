@@ -1,5 +1,4 @@
-#ifndef gl_vao_h
-#define gl_vao_h
+#pragma once
 
 #include "gl.h"
 
@@ -18,6 +17,4 @@ private:
     GLuint m_vbo_uv;
     GLuint m_ebo;
 };
-
-#endif  // gl_vao_h
 

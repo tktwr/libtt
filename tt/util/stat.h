@@ -1,5 +1,4 @@
-#ifndef tt_stat_h
-#define tt_stat_h
+#pragma once
 
 #include <queue>
 #include <stddef.h>
@@ -32,6 +31,4 @@ private:
 };
 
 }
-
-#endif  // tt_stat_h
 

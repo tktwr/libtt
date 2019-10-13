@@ -1,31 +1,31 @@
 // *memo_cpp.image*
-#define STB_IMAGE_IMPLEMENTATION
-#define STB_IMAGE_WRITE_IMPLEMENTATION
-#include <stb_image.h>
-#include <stb_image_write.h>
-#include <glm/glm.hpp>
 #include <iostream>
+#include <glm/glm.hpp>
 #include <tt/util/util.h>
 #include <tt/util/time.h>
 #include <tt/util/log.h>
 #include <tt/gfx/image.h>
+#include <tt/gfx/image_util.h>
 
 using namespace std;
 
-void f_image_save(const char* fname, int w, int h, int comp, const float* data) {
-    unsigned char* dst_data = new unsigned char[w * h * 3];
-    unsigned char* dst = dst_data;
-    const float* src = data;
-
-    for (int i=0; i<w*h*3; i++) {
-        dst[i] = (unsigned char)(src[i] * 255);
-    }
-    stbi_write_png(fname, w, h, 3, dst_data, 0);
-
-    delete [] dst_data;
+void f_image_conv(tt::Image4uc& dst, const tt::Image<glm::vec3>& src) {
+    dst.alloc(src.w(), src.h());
+    tt::f_image_conv(dst, src, [&](tt::Color4uc& dval, const glm::vec3& sval) {
+        glm::vec3 v = sval * 255.f;
+        dval = {uchar(v[0]), uchar(v[1]), uchar(v[2]), 255};
+    });
 }
 
-void f_image() {
+void f_image_conv(tt::Image3uc& dst, const tt::Image<glm::vec3>& src) {
+    dst.alloc(src.w(), src.h());
+    tt::f_image_conv(dst, src, [&](tt::Color3uc& dval, const glm::vec3& sval) {
+        glm::vec3 v = sval * 255.f;
+        dval = {uchar(v[0]), uchar(v[1]), uchar(v[2])};
+    });
+}
+
+void f_test_image() {
     tt::Image<glm::vec3> image;
     tt::Time t;
     tt::TimeCollection tc;
@@ -63,29 +63,35 @@ void f_image() {
         for (auto j : nthreads) {
             t.start();
             image.foreach([&](glm::vec3& val, int x, int y) {
-                val = glm::vec3(float(x)/width, float(y)/height, 1);
+                val = glm::vec3(float(x)/width, float(y)/height, 0);
             }, j);
             t.end();
             tt::Log::I("Image<glm::vec3>::foreach(): nthreads=%d %.1f ms\n", j, t.getElapsedMSec());
         }
 
-        f_image_save("out.png", image.w(), image.h(), 3, (float*)(image.data()));
-
         t.start();
         glm::vec3* p = image.data();
-        for (int y=0; y<image.h(); y++) {
-            for (int x=0; x<image.h(); x++) {
-                *p = glm::vec3(x, y, 1);
+        for (int y=0; y<height; y++) {
+            for (int x=0; x<width; x++) {
+                *p = glm::vec3(float(x)/width, float(y)/height, 0);
                 p++;
             }
         }
         t.end();
         tt::Log::I("loop: %.1f ms\n", t.getElapsedMSec());
     }
+
+    tt::Image4uc i4uc;
+    f_image_conv(i4uc, image);
+    f_save_image("out_i4uc.png", i4uc);
+
+    tt::Image3uc i3uc;
+    f_image_conv(i3uc, image);
+    f_save_image("out_i3uc.png", i3uc);
 }
 
 int main(int argc, char *argv[]) {
-    f_image();
+    f_test_image();
 
     return 0;
 }

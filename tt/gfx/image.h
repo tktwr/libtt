@@ -1,5 +1,4 @@
-#ifndef tt_image_h
-#define tt_image_h
+#pragma once
 
 #include <iostream>
 #include <vector>
@@ -133,6 +132,13 @@ void f_image_copy(Image<T>& dst, const Image<T>& src) {
     memcpy(dst.data(), src.data(), src.size() * src.sizeOfDataType());
 }
 
+template<class Td, class Ts, class F>
+void f_image_conv(tt::Image<Td>& dst, const tt::Image<Ts>& src, const F& conv) {
+    dst.foreach([&](Td& dval, int x, int y) {
+        conv(dval, src.getValue(x, y));
+    });
+}
+
 using Image1uc = Image<Color1uc>;
 using Image1us = Image<Color1us>;
 using Image1f  = Image<Color1f>;
@@ -181,6 +187,4 @@ using Image4fPtr        = std::shared_ptr<Image4f>;
 using Image4fConstPtr   = std::shared_ptr<const Image4f>;
 
 }  // namespace tt
-
-#endif  // tt_image_h
 

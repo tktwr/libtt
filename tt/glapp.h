@@ -8,8 +8,8 @@
 #include "gl/gl_texture.h"
 #include "app/gl_app.h"
 #include <imgui.h>
-#include "imgui/imgui_console.h"
-#include "imgui/imgui_util.h"
+#include "ext/imgui/imgui_console.h"
+#include "ext/imgui/imgui_util.h"
 
 #endif  // glapp_h
 
