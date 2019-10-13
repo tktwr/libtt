@@ -1,5 +1,4 @@
-#ifndef glapp_h
-#define glapp_h
+#pragma once
 
 #include "gl/gl.h"
 #include "gl/gl_fbo.h"
@@ -10,6 +9,4 @@
 #include <imgui.h>
 #include "ext/imgui/imgui_console.h"
 #include "ext/imgui/imgui_util.h"
-
-#endif  // glapp_h
 
