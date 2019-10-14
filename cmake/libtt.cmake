@@ -2,6 +2,10 @@
 # libtt
 #-------------------------------------------------
 
+add_definitions(-DNOMINMAX)
+add_definitions(-D_USE_MATH_DEFINES)
+add_definitions(-DUSE_GLAD)
+
 include_directories(${LIBTT})
 set(LIBTT_SRCS
   ${LIBTT}/tt/util/filename.cpp
