@@ -1,5 +1,10 @@
 #pragma once
 
+#include <tt/math.h>
+#include <tt/util/type.h>
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+
 inline glm::vec2 toGlmVec2(const tt::Vec2i& v) {
     return glm::vec2(v[0], v[1]);
 }
@@ -19,5 +24,21 @@ inline glm::mat4 make_mat(glm::vec2 src_size, glm::vec2 dst_size, float& scale, 
     mat = glm::scale(mat, glm::vec3(1, -1, 1));
 
     return mat;
+}
+
+inline void f_print_mat3_row(const std::string& s, const glm::mat3& m) {
+    f_print_mat3_row(s, &(m[0][0]));
+}
+
+inline void f_print_mat3_col(const std::string& s, const glm::mat3& m) {
+    f_print_mat3_col(s, &(m[0][0]));
+}
+
+inline void f_print_mat4_row(const std::string& s, const glm::mat4& m) {
+    f_print_mat4_row(s, &(m[0][0]));
+}
+
+inline void f_print_mat4_col(const std::string& s, const glm::mat4& m) {
+    f_print_mat4_col(s, &(m[0][0]));
 }
 

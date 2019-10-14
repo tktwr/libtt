@@ -1,6 +1,5 @@
-#include <glm/gtc/matrix_transform.hpp>
 #include "gl_frame_display.h"
-#include "glm_util.h"
+#include <tt/ext/glm/glm_util.h>
 
 static const std::string s_vshader = R"#(
 #version 410

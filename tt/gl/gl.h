@@ -1,6 +1,7 @@
 #pragma once
 
 #define NOMINMAX 1
+#define _USE_MATH_DEFINES
 
 #include <GL/gl3w.h>
 #include <GLFW/glfw3.h>

@@ -3,7 +3,6 @@
 #include <string>
 #include <vector>
 #include <array>
-#include <glm/glm.hpp>
 #include <tt/util/type.h>
 #include <tt/gfx/image.h>
 #include <tt/gfx/image_util.h>
