@@ -8,7 +8,10 @@
 #include <tt/gfx/image_util.h>
 #include <tt/gl/gl.h>
 #include <imgui.h>
+#include <imgui_impl_glfw.h>
+#include <imgui_impl_opengl3.h>
 #include <tt/ext/imgui/imgui_console.h>
+#include <tt/ext/imgui/imgui_util.h>
 
 class GLApp {
 public:

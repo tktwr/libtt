@@ -2,7 +2,6 @@
 #include <nfd.h>
 #include <stdio.h>
 #include <string>
-#include <tt/ext/imgui/imgui_util.h>
 
 std::string f_open_file() {
     nfdchar_t *outPath = NULL;
@@ -108,7 +107,9 @@ void GLApp::setup() {
     m_window = glfwCreateWindow(m_window_size[0], m_window_size[1], m_window_title.c_str(), NULL, NULL);
     glfwMakeContextCurrent(m_window);
     glfwSwapInterval(1); // Enable vsync
-    gl3wInit();
+
+    //gl3wInit();
+    gladLoadGL();
 
     // Setup Dear ImGui binding
     IMGUI_CHECKVERSION();

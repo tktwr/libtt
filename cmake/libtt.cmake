@@ -14,6 +14,8 @@ set(LIBTT_SRCS
   ${LIBTT}/tt/gl/gl_program.cpp
   ${LIBTT}/tt/gl/gl_texture.cpp
   ${LIBTT}/tt/gl/gl_vao.cpp
+)
+set(LIBTT_PC_SRCS
   ${LIBTT}/tt/ext/pc/gl_app.cpp
   ${LIBTT}/tt/ext/opencv/opencv_util.cpp
   ${LIBTT}/tt/ext/win/path.cpp

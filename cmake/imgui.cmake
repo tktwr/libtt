@@ -4,6 +4,8 @@
 
 set(IMGUI ${OPT_DIR}/imgui)
 
+add_definitions(-DIMGUI_IMPL_OPENGL_LOADER_GLAD)
+
 include_directories(${IMGUI})
 include_directories(${IMGUI}/examples)
 
