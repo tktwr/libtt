@@ -2,7 +2,6 @@
 
 #include <memory>
 #include <vector>
-#include <tt/util/array.h>
 #include "math.h"
 #include "bbox.h"
 
@@ -57,14 +56,14 @@ public:
 
 	BBox m_bbox;
 
-	Array<gfx::Vec3f> m_P;
-	Array<gfx::Vec3f> m_N;
-	Array<gfx::Vec2f> m_T;
-	Array<gfx::Vec4f> m_A;
+    std::vector<gfx::Vec3f> m_P;
+    std::vector<gfx::Vec3f> m_N;
+    std::vector<gfx::Vec2f> m_T;
+    std::vector<gfx::Vec4f> m_A;
 
-	Array<gfx::Vec3i> m_idxP;
-	Array<gfx::Vec3i> m_idxN;
-	Array<gfx::Vec3i> m_idxT;
+    std::vector<gfx::Vec3i> m_idxP;
+    std::vector<gfx::Vec3i> m_idxN;
+    std::vector<gfx::Vec3i> m_idxT;
 
 	float m_smooth_angle;
 
