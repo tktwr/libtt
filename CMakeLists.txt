@@ -1,21 +1,11 @@
-cmake_minimum_required(VERSION 3.8)
+cmake_minimum_required(VERSION 3.4)
 
-project(libtt CXX)
+project(libtt)
 
 include(config.cmake)
 
 add_library(tt STATIC ${LIBTT_SRCS})
 install(TARGETS tt ARCHIVE DESTINATION lib)
 
-add_executable(test_array test/test_array.cpp)
-target_link_libraries(test_array tt)
-
-add_executable(test_image test/test_image.cpp)
-target_link_libraries(test_image tt)
-
-add_executable(test_util test/test_util.cpp)
-target_link_libraries(test_util tt)
-
-add_executable(test_type test/test_type.cpp)
-target_link_libraries(test_type tt)
+add_subdirectory(test)
 
