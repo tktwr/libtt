@@ -42,3 +42,11 @@ inline void f_print_mat4_col(const std::string& s, const glm::mat4& m) {
     f_print_mat4_col(s, &(m[0][0]));
 }
 
+inline void f_print_vec3(const std::string& s, const glm::vec3& v) {
+    f_print_vec3(s, &(v[0]));
+}
+
+inline void f_print_vec4(const std::string& s, const glm::vec4& v) {
+    f_print_vec4(s, &(v[0]));
+}
+

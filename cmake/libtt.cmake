@@ -12,6 +12,7 @@ set(LIBTT_SRCS
   ${LIBTT}/tt/util/log.cpp
   ${LIBTT}/tt/gfx/imagex.cpp
   ${LIBTT}/tt/gfx/image_util.cpp
+  ${LIBTT}/tt/gfx/mesh.cpp
   ${LIBTT}/tt/gl/gl_fbo.cpp
   ${LIBTT}/tt/gl/gl_frame.cpp
   ${LIBTT}/tt/gl/gl_frame_display.cpp

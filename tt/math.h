@@ -40,3 +40,13 @@ inline void f_print_mat4_col(const std::string& s, const float* m) {
     printf("%f %f %f %f\n", m[3], m[7], m[11], m[15]);
 }
 
+inline void f_print_vec3(const std::string& s, const float* m) {
+    std::cout << s << std::endl;
+    printf("%f %f %f\n", m[0],  m[1],  m[2]);
+}
+
+inline void f_print_vec4(const std::string& s, const float* m) {
+    std::cout << s << std::endl;
+    printf("%f %f %f %f\n", m[0],  m[1],  m[2],  m[3]);
+}
+

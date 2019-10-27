@@ -21,3 +21,11 @@ inline void f_print_mat4_col(const std::string& s, const Eigen::Matrix4f& m) {
     f_print_mat4_col(s, m.data());
 }
 
+inline void f_print_vec3(const std::string& s, const Eigen::Vector3f& v) {
+    f_print_vec3(s, v.data());
+}
+
+inline void f_print_vec4(const std::string& s, const Eigen::Vector4f& v) {
+    f_print_vec4(s, v.data());
+}
+
