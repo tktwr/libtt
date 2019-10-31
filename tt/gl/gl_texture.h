@@ -17,6 +17,8 @@ public:
     void bind();
     void unbind();
 
+    void setFilter(int type);
+
 private:
     int m_w = 0;
     int m_h = 0;

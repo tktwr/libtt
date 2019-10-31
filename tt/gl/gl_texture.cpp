@@ -21,6 +21,12 @@ void GLTexture2D::setImage(GLsizei w, GLsizei h, const GLvoid* data) {
     glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, w, h, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
 }
 
+void GLTexture2D::setFilter(int type) {
+    glBindTexture(GL_TEXTURE_2D, m_id);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, type);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, type);
+}
+
 void GLTexture2D::release() {
     if (m_id) {
         glDeleteTextures(1, &m_id);
