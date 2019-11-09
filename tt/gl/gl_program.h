@@ -4,6 +4,8 @@
 
 class GLProgram {
 public:
+    static const std::string glsl_header;
+
     GLProgram() {}
     ~GLProgram() {}
 

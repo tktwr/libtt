@@ -1,58 +1,130 @@
 #include "gl_vao.h"
+#include <vector>
+#include <tt/gfx/math.h>
+#include <tt/util/log.h>
 
 void GLVAO::init() {
-    GLfloat vertices[] = {
-        0, 0, 0,
-        1, 0, 0,
-        1, 1, 0,
-        0, 1, 0
-    };
-    GLfloat colors[] = {
-        0, 0, 0, 1,
-        1, 0, 0, 1,
-        1, 1, 0, 1,
-        0, 1, 0, 1
-    };
-    GLfloat uv[] = {
-        0, 0,
-        1, 0,
-        1, 1,
-        0, 1
-    };
-    int indices[] = {0, 1, 2, 0, 2, 3};
+    std::vector<tt::gfx::Vec3f> m_pos;
+    std::vector<tt::gfx::Vec3f> m_nml;
+    std::vector<tt::gfx::Vec2f> m_uv;
+    std::vector<tt::gfx::Vec4f> m_col;
+    std::vector<int> m_idx;
 
+    m_pos = {
+        {0, 0, 0},
+        {1, 0, 0},
+        {1, 1, 0},
+        {0, 1, 0}
+    };
+    m_nml = {
+        {0, 0, 1},
+        {0, 0, 1},
+        {0, 0, 1},
+        {0, 0, 1}
+    };
+    m_uv = {
+        {0, 0},
+        {1, 0},
+        {1, 1},
+        {0, 1}
+    };
+    m_col = {
+        {0, 0, 0, 1},
+        {1, 0, 0, 1},
+        {1, 1, 0, 1},
+        {0, 1, 0, 1}
+    };
+    m_idx = {0, 1, 2, 0, 2, 3};
+
+    setPos(sizeof(tt::gfx::Vec3f) * m_pos.size(), (float*)(m_pos.data()));
+    setNml(sizeof(tt::gfx::Vec3f) * m_nml.size(), (float*)(m_nml.data()));
+    setUv (sizeof(tt::gfx::Vec2f) * m_uv.size(),  (float*)(m_uv.data()));
+    setCol(sizeof(tt::gfx::Vec4f) * m_col.size(), (float*)(m_col.data()));
+    setIdx(sizeof(int) * m_idx.size(), (int*)(m_idx.data()));
+    setVBO();
+}
+
+void GLVAO::setPos(size_t size, float* data) {
+    m_pos_size = size;
+    m_pos_data = data;
+}
+
+void GLVAO::setNml(size_t size, float* data) {
+    m_nml_size = size;
+    m_nml_data = data;
+}
+
+void GLVAO::setUv(size_t size, float* data) {
+    m_uv_size = size;
+    m_uv_data = data;
+}
+
+void GLVAO::setCol(size_t size, float* data) {
+    m_col_size = size;
+    m_col_data = data;
+}
+
+void GLVAO::setIdx(size_t size, int* data) {
+    m_idx_size = size;
+    m_idx_data = data;
+}
+
+void GLVAO::setVBO() {
     glGenVertexArrays(1, &m_vao);
     glGenBuffers(1, &m_vbo_pos);
-    glGenBuffers(1, &m_vbo_color);
+    glGenBuffers(1, &m_vbo_nml);
     glGenBuffers(1, &m_vbo_uv);
+    glGenBuffers(1, &m_vbo_col);
     glGenBuffers(1, &m_ebo);
+
+    tt::Log::I("m_vao=%d\n", m_vao);
+    tt::Log::I("m_vbo_pos=%d\n", m_vbo_pos);
+    tt::Log::I("m_vbo_nml=%d\n", m_vbo_nml);
+    tt::Log::I("m_vbo_uv=%d\n", m_vbo_uv);
+    tt::Log::I("m_vbo_col=%d\n", m_vbo_col);
+    tt::Log::I("m_ebo=%d\n", m_ebo);
 
     glBindVertexArray(m_vao);
 
-    // Position attribute
-    glBindBuffer(GL_ARRAY_BUFFER, m_vbo_pos);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
-    GLint loc_pos = 0;
-    glEnableVertexAttribArray(loc_pos);
-    glVertexAttribPointer(loc_pos, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(GLfloat), (GLvoid*)0);
+    if (m_vbo_pos) {
+        // Position attribute
+        glBindBuffer(GL_ARRAY_BUFFER, m_vbo_pos);
+        glBufferData(GL_ARRAY_BUFFER, m_pos_size, m_pos_data, GL_STATIC_DRAW);
+        GLint loc_pos = 0;
+        glEnableVertexAttribArray(loc_pos);
+        glVertexAttribPointer(loc_pos, 3, GL_FLOAT, GL_FALSE, 0, (GLvoid*)0);
+    }
 
-    // Color attribute
-    glBindBuffer(GL_ARRAY_BUFFER, m_vbo_color);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(colors), colors, GL_STATIC_DRAW);
-    GLint loc_color = 1;
-    glEnableVertexAttribArray(loc_color);
-    glVertexAttribPointer(loc_color, 4, GL_FLOAT, GL_FALSE, 4 * sizeof(GLfloat), (GLvoid*)0);
+    if (m_vbo_nml) {
+        // Normal attribute
+        glBindBuffer(GL_ARRAY_BUFFER, m_vbo_nml);
+        glBufferData(GL_ARRAY_BUFFER, m_nml_size, m_nml_data, GL_STATIC_DRAW);
+        GLint loc_nml = 1;
+        glEnableVertexAttribArray(loc_nml);
+        glVertexAttribPointer(loc_nml, 3, GL_FLOAT, GL_FALSE, 0, (GLvoid*)0);
+    }
 
-    // UV attribute
-    glBindBuffer(GL_ARRAY_BUFFER, m_vbo_uv);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(uv), uv, GL_STATIC_DRAW);
-    GLint loc_uv = 2;
-    glEnableVertexAttribArray(loc_uv);
-    glVertexAttribPointer(loc_uv, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(GLfloat), (GLvoid*)0);
+    if (m_vbo_uv) {
+        // UV attribute
+        glBindBuffer(GL_ARRAY_BUFFER, m_vbo_uv);
+        glBufferData(GL_ARRAY_BUFFER, m_uv_size, m_uv_data, GL_STATIC_DRAW);
+        GLint loc_uv = 2;
+        glEnableVertexAttribArray(loc_uv);
+        glVertexAttribPointer(loc_uv, 2, GL_FLOAT, GL_FALSE, 0, (GLvoid*)0);
+    }
+
+    if (m_vbo_col) {
+        // Color attribute
+        glBindBuffer(GL_ARRAY_BUFFER, m_vbo_col);
+        glBufferData(GL_ARRAY_BUFFER, m_col_size, m_col_data, GL_STATIC_DRAW);
+        GLint loc_col = 3;
+        glEnableVertexAttribArray(loc_col);
+        glVertexAttribPointer(loc_col, 4, GL_FLOAT, GL_FALSE, 0, (GLvoid*)0);
+    }
 
     // Element Array Buffer
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_ebo);
-    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, m_idx_size, m_idx_data, GL_STATIC_DRAW);
 
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindVertexArray(0);
@@ -60,7 +132,7 @@ void GLVAO::init() {
 
 void GLVAO::draw() {
     glBindVertexArray(m_vao);
-    glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+    glDrawElements(GL_TRIANGLES, m_idx_size, GL_UNSIGNED_INT, 0);
     glBindVertexArray(0);
 }
 

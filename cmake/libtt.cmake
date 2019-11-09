@@ -20,6 +20,7 @@ set(LIBTT_SRCS
   ${LIBTT}/tt/gl/gl_program.cpp
   ${LIBTT}/tt/gl/gl_texture.cpp
   ${LIBTT}/tt/gl/gl_vao.cpp
+  ${LIBTT}/tt/gl/gl_vao_mesh.cpp
 )
 set(LIBTT_PC_SRCS
   ${LIBTT}/tt/ext/pc/gl_app.cpp

@@ -17,7 +17,7 @@ namespace tt {
 
 class Index3 {
 public:
-    Index3() {}
+    Index3() : idx3(0, 0, 0) {}
     Index3(int v) : idx3(v, v, v) {}
     Index3(int v, int vt, int vn) : idx3(v, vt, vn) {}
     Index3(const gfx::Vec3i &x) : idx3(x) {}
