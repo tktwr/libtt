@@ -35,11 +35,11 @@ inline float gmAbs(float f) {
 }
 
 inline float gmSign(float f) {
-  return (f < 0) ? -1 : 1;
+  return (f < 0) ? -1.f : 1.f;
 }
 
 inline float gmZSign(float f) {
-  return (f > 0) ? 1 : (f < 0) ? -1 : 0;
+  return (f > 0) ? 1.f : (f < 0) ? -1.f : 0.f;
 }
 
 //=========================================================================
@@ -53,7 +53,7 @@ inline float gmCube(float f) {
 }
 
 inline float gmInv(float f) {
-  return 1. / f;
+  return 1.f / f;
 }
 
 //=========================================================================
@@ -81,11 +81,11 @@ inline float gmCeil(float f) {
 //=========================================================================
 
 inline float gmDegrees(float f) {
-  return f * gmRADTODEG;
+  return float(f * gmRADTODEG);
 }
 
 inline float gmRadians(float f) {
-  return f * gmDEGTORAD;
+  return float(f * gmDEGTORAD);
 }
 
 //=========================================================================
@@ -154,7 +154,7 @@ inline float gmLerp(float f, float l, float h) {
 }
 
 inline float gmSmooth(float f) {
-  return (3. - 2. * f) * f * f;
+  return (3.f - 2.f * f) * f * f;
 }
 
 //=========================================================================

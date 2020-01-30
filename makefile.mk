@@ -5,13 +5,13 @@ LANG=C
 -include local.mk
 
 #------------------------------------------------------
-BUILD_CC=vs2019
+BUILD_SYS=vs2019
 BUILD_CONFIG=RelWithDebInfo
-BUILD_DIR=build.$(BUILD_CC)
+BUILD_DIR=build.$(BUILD_SYS)
 
-build: build.$(BUILD_CC).$(BUILD_CONFIG)
+build: build.$(BUILD_SYS).$(BUILD_CONFIG)
 
-all: all.$(BUILD_CC).$(BUILD_CONFIG)
+all: all.$(BUILD_SYS).$(BUILD_CONFIG)
 
 all.clean:
 	rm -rf build.ninja build.vs2017 build.vs2019
@@ -34,19 +34,19 @@ cmake.ninja.Release:
 	mycmake.sh ninja Release
 
 build.ninja.Debug:
-	mycmake-build.sh ninja Debug
+	mycmake.sh --build ninja Debug
 
 build.ninja.Release:
-	mycmake-build.sh ninja Release
+	mycmake.sh --build ninja Release
 
 clean.ninja.Debug:
-	mycmake-build.sh ninja Debug --target clean
+	mycmake.sh --build ninja Debug --target clean
 
 clean.ninja.Release:
-	mycmake-build.sh ninja Release --target clean
+	mycmake.sh --build ninja Release --target clean
 
 install.ninja.Release:
-	mycmake-build.sh ninja Release --target install
+	mycmake.sh --build ninja Release --target install
 
 #------------------------------------------------------
 # vs2017
@@ -63,25 +63,25 @@ cmake.vs2017:
 	mycmake.sh vs2017
 
 build.vs2017.Debug:
-	mycmake-build.sh vs2017 Debug
+	mycmake.sh --build vs2017 Debug
 
 build.vs2017.Release:
-	mycmake-build.sh vs2017 Release
+	mycmake.sh --build vs2017 Release
 
 build.vs2017.RelWithDebInfo:
-	mycmake-build.sh vs2017 RelWithDebInfo
+	mycmake.sh --build vs2017 RelWithDebInfo
 
 clean.vs2017.Debug:
-	mycmake-build.sh vs2017 Debug --target clean
+	mycmake.sh --build vs2017 Debug --target clean
 
 clean.vs2017.Release:
-	mycmake-build.sh vs2017 Release --target clean
+	mycmake.sh --build vs2017 Release --target clean
 
 clean.vs2017.RelWithDebInfo:
-	mycmake-build.sh vs2017 RelWithDebInfo --target clean
+	mycmake.sh --build vs2017 RelWithDebInfo --target clean
 
 install.vs2017.Release:
-	mycmake-build.sh vs2017 Release --target install
+	mycmake.sh --build vs2017 Release --target install
 
 #------------------------------------------------------
 # vs2019
@@ -98,25 +98,25 @@ cmake.vs2019:
 	mycmake.sh vs2019
 
 build.vs2019.Debug:
-	mycmake-build.sh vs2019 Debug
+	mycmake.sh --build vs2019 Debug
 
 build.vs2019.Release:
-	mycmake-build.sh vs2019 Release
+	mycmake.sh --build vs2019 Release
 
 build.vs2019.RelWithDebInfo:
-	mycmake-build.sh vs2019 RelWithDebInfo
+	mycmake.sh --build vs2019 RelWithDebInfo
 
 clean.vs2019.Debug:
-	mycmake-build.sh vs2019 Debug --target clean
+	mycmake.sh --build vs2019 Debug --target clean
 
 clean.vs2019.Release:
-	mycmake-build.sh vs2019 Release --target clean
+	mycmake.sh --build vs2019 Release --target clean
 
 clean.vs2019.RelWithDebInfo:
-	mycmake-build.sh vs2019 RelWithDebInfo --target clean
+	mycmake.sh --build vs2019 RelWithDebInfo --target clean
 
 install.vs2019.Release:
-	mycmake-build.sh vs2019 Release --target install
+	mycmake.sh --build vs2019 Release --target install
 
 #------------------------------------------------------
 tags.all:

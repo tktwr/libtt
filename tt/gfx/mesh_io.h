@@ -4,7 +4,8 @@ namespace tt {
 
 class TriMesh;
 
-struct TriMeshInfo {
+class TriMeshInfo {
+public:
 	int vtx_size;
 	int tex_size;
 	int nml_size;

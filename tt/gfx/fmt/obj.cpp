@@ -220,9 +220,9 @@ int obj_load(TriMesh *mesh, const char *fname, const char *opt) {
     }
 
     // finalize material groups
-    int ngrp = mesh->nGroups();
+    size_t ngrp = mesh->nGroups();
     for (int i = 0; i < ngrp; i++) {
-        int end;
+        size_t end;
         if (i == ngrp - 1) {
             end = mesh->m_idxP.size();
         } else {
@@ -248,11 +248,11 @@ int obj_save(const TriMesh *mesh, const char *fname, const char *opt) {
     int save_vt = 0;
     int save_vn = 0;
 
-    int nvtx = mesh->nVertices();
-    int nnml = mesh->nNormals();
-    int ntex = mesh->nTexCoords();
-    int ntri = mesh->nTriangles();
-    int ngrp = mesh->nGroups();
+    size_t nvtx = mesh->nVertices();
+    size_t nnml = mesh->nNormals();
+    size_t ntex = mesh->nTexCoords();
+    size_t ntri = mesh->nTriangles();
+    size_t ngrp = mesh->nGroups();
 
     os << "# Wavefront obj format" << endl;
     os << endl;

@@ -10,10 +10,10 @@ namespace tt {
 struct TriMeshGroup {
 	TriMeshGroup() : m_first(0), m_last(0) {}
 
-	int nTriangles() { return m_last - m_first + 1; }
+	size_t nTriangles() { return m_last - m_first + 1; }
 
 	std::string m_name;
-	int m_first, m_last;
+	size_t m_first, m_last;
 };
 
 using TriMeshGroupPtr = std::shared_ptr<TriMeshGroup>;
@@ -27,14 +27,14 @@ public:
 	void computeBBox();
 	BBox getBBox() const { return m_bbox; }
 
-	int nVertices()  const { return m_P.size(); }
-	int nNormals()   const { return m_N.size(); }
-	int nTexCoords() const { return m_T.size(); }
-	int nAmbients()  const { return m_A.size(); }
+	size_t nVertices()  const { return m_P.size(); }
+	size_t nNormals()   const { return m_N.size(); }
+	size_t nTexCoords() const { return m_T.size(); }
+	size_t nAmbients()  const { return m_A.size(); }
 
-	int nTriangles() const { return m_idxP.size(); }
-	int nGroups()    const { return m_groups.size(); }
-	int nMaterials() const { return m_groups.size(); }
+	size_t nTriangles() const { return m_idxP.size(); }
+	size_t nGroups()    const { return m_groups.size(); }
+	size_t nMaterials() const { return m_groups.size(); }
 
 	// per vertex methods
 	const gfx::Vec3f& P(int tid, int n) const { return m_P[m_idxP[tid][n]]; }

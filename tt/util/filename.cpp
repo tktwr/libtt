@@ -16,21 +16,31 @@ std::string filename_expand_path(std::string path);
 std::string::size_type filename_find_fname(const std::string& path);
 std::string::size_type filename_find_ext(const std::string& path);
 
+std::string getenv_s(const char* varname) {
+    char *pValue;
+    size_t len;
+    errno_t err = _dupenv_s(&pValue, &len, varname);
+    if (err) return std::string();
+    std::string str(pValue);
+    free(pValue);
+    return str;
+}
+
 // expand '~', "~usr_name"
 std::string filename_expand_homedir(std::string path) {
 	if (path[0] == '~') {
 		if (path.size() == 1 || path[1] == '/') {
 			// expand '~'
 #ifdef WIN32
-			path.replace(0, 1, getenv("USERPROFILE"));
+			path.replace(0, 1, getenv_s("USERPROFILE"));
 #else
 			path.replace(0, 1, getenv("HOME"));
 #endif
 		} else {
 			// expand "~usr_name"
+#ifndef WIN32
 			std::string::size_type i = path.find('/');
 			const std::string& usr_name = path.substr(1, i-1);
-#ifndef WIN32
 			struct passwd* pw = getpwnam(usr_name.c_str());
 			if (pw) path.replace(0, i, pw->pw_dir);
 #endif // !WIN32
@@ -49,7 +59,12 @@ std::string filename_expand_env(std::string path) {
 		i2 = path.find("}");  if (i2 == std::string::npos) break;
 
 		const std::string& s = path.substr(i1+2, i2-i1-2);
-		char* env = getenv(s.c_str());
+#ifdef WIN32
+        const std::string& envstr = getenv_s(s.c_str());
+		const char* env = envstr.c_str();
+#else
+		const char* env = getenv(s.c_str());
+#endif
 		if (env) path.replace(i1, i2-i1+1, env);
 		else     path.replace(i1, i2-i1+1, "");
 	}
@@ -186,7 +201,7 @@ std::string FrameName::fname(int nr) const {
 std::string FrameName::name(int nr) const {
 	char buf[256];
     std::string orgname = FileName::name();
-	sprintf(buf, orgname.c_str(), nr);
+	sprintf_s(buf, 256, orgname.c_str(), nr);
 	return std::string(buf);
 }
 
