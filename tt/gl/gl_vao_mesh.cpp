@@ -8,7 +8,7 @@ void GLVAOMesh::draw() {
     GLVAO::draw();
 }
 
-void GLVAOMesh::setMesh(tt::TriMesh* mesh) {
+void GLVAOMesh::setMesh(const tt::TriMesh* mesh) {
     setPos(sizeof(tt::gfx::Vec3f) * mesh->nVertices(),  (float*)(mesh->m_P.data()));
     setNml(sizeof(tt::gfx::Vec3f) * mesh->nNormals(),   (float*)(mesh->m_N.data()));
     setUv (sizeof(tt::gfx::Vec2f) * mesh->nTexCoords(), (float*)(mesh->m_T.data()));

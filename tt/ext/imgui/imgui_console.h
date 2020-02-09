@@ -8,7 +8,7 @@
 #include <stdio.h>
 #include <sstream>
 
-#if defined(WIN32)
+#if defined(_WIN32)
 #include <direct.h>
 #define popen _popen
 #define pclose _pclose

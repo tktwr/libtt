@@ -34,6 +34,22 @@ public:
         KEY_Z = 90,
     };
 
+    AppBase() {}
+    virtual ~AppBase() {}
+
+    virtual void Init() {
+        if (!m_init) return;
+        init();
+        m_init = false;
+    }
+    virtual void Resize(int width, int height) {
+        resize(width, height);
+    }
+    virtual void Draw() {
+        if (m_init) Init();
+        draw();
+    }
+
     virtual void init() {}
     virtual void resize(int width, int height) {}
     virtual void draw() {}
@@ -47,5 +63,10 @@ public:
     virtual void touchDown(float x, float y) {}
     virtual void touchUp(float x, float y) {}
     virtual void touchMove(float dx, float dy) {}
+
+    void setInit(bool b) { m_init = b; }
+
+protected:
+    bool m_init = true;
 };
 

@@ -15,9 +15,13 @@ public:
     void setUv (size_t size, float* data);
     void setCol(size_t size, float* data);
     void setIdx(size_t size, int* data);
+
+    void setQuad();
     void setVBO();
 
 private:
+    void unsetVBO();
+
     GLuint m_vao = 0;
     GLuint m_vbo_pos = 0;
     GLuint m_vbo_nml = 0;

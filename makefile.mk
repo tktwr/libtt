@@ -4,119 +4,26 @@ LANG=C
 
 -include local.mk
 
-#------------------------------------------------------
-BUILD_SYS=vs2019
-BUILD_CONFIG=RelWithDebInfo
-BUILD_DIR=build.$(BUILD_SYS)
-
-build: build.$(BUILD_SYS).$(BUILD_CONFIG)
-
-all: all.$(BUILD_SYS).$(BUILD_CONFIG)
-
-all.clean:
-	rm -rf build.ninja build.vs2017 build.vs2019
-	rm -rf tags GPATH GRTAGS GTAGS
-	rm -f _*.png
+BUILD_SYS=$(shell mycmake.sh --build-sys)
+BUILD_CONFIG=$(shell mycmake.sh --build-config)
+BUILD_DIR=$(shell mycmake.sh --build-dir)
 
 #------------------------------------------------------
-# ninja
-#------------------------------------------------------
-all.ninja: all.ninja.Debug all.ninja.Release
+build:
+	time mycmake.sh --build
 
-all.ninja.Debug: cmake.ninja.Debug build.ninja.Debug
+cmake:
+	time mycmake.sh
 
-all.ninja.Release: cmake.ninja.Release build.ninja.Release
+clean:
+	time mycmake.sh --build $(BUILD_SYS) $(BUILD_CONFIG) --target clean
 
-cmake.ninja.Debug:
-	mycmake.sh ninja Debug
-
-cmake.ninja.Release:
-	mycmake.sh ninja Release
-
-build.ninja.Debug:
-	mycmake.sh --build ninja Debug
-
-build.ninja.Release:
-	mycmake.sh --build ninja Release
-
-clean.ninja.Debug:
-	mycmake.sh --build ninja Debug --target clean
-
-clean.ninja.Release:
-	mycmake.sh --build ninja Release --target clean
-
-install.ninja.Release:
-	mycmake.sh --build ninja Release --target install
+install:
+	time mycmake.sh --build $(BUILD_SYS) $(BUILD_CONFIG) --target install
 
 #------------------------------------------------------
-# vs2017
-#------------------------------------------------------
-all.vs2017: all.vs2017.Debug all.vs2017.Release all.vs2017.RelWithDebInfo
-
-all.vs2017.Debug: cmake.vs2017 build.vs2017.Debug
-
-all.vs2017.Release: cmake.vs2017 build.vs2017.Release
-
-all.vs2017.RelWithDebInfo: cmake.vs2017 build.vs2017.RelWithDebInfo
-
-cmake.vs2017:
-	mycmake.sh vs2017
-
-build.vs2017.Debug:
-	mycmake.sh --build vs2017 Debug
-
-build.vs2017.Release:
-	mycmake.sh --build vs2017 Release
-
-build.vs2017.RelWithDebInfo:
-	mycmake.sh --build vs2017 RelWithDebInfo
-
-clean.vs2017.Debug:
-	mycmake.sh --build vs2017 Debug --target clean
-
-clean.vs2017.Release:
-	mycmake.sh --build vs2017 Release --target clean
-
-clean.vs2017.RelWithDebInfo:
-	mycmake.sh --build vs2017 RelWithDebInfo --target clean
-
-install.vs2017.Release:
-	mycmake.sh --build vs2017 Release --target install
-
-#------------------------------------------------------
-# vs2019
-#------------------------------------------------------
-all.vs2019: all.vs2019.Debug all.vs2019.Release all.vs2019.RelWithDebInfo
-
-all.vs2019.Debug: cmake.vs2019 build.vs2019.Debug
-
-all.vs2019.Release: cmake.vs2019 build.vs2019.Release
-
-all.vs2019.RelWithDebInfo: cmake.vs2019 build.vs2019.RelWithDebInfo
-
-cmake.vs2019:
-	mycmake.sh vs2019
-
-build.vs2019.Debug:
-	mycmake.sh --build vs2019 Debug
-
-build.vs2019.Release:
-	mycmake.sh --build vs2019 Release
-
-build.vs2019.RelWithDebInfo:
-	mycmake.sh --build vs2019 RelWithDebInfo
-
-clean.vs2019.Debug:
-	mycmake.sh --build vs2019 Debug --target clean
-
-clean.vs2019.Release:
-	mycmake.sh --build vs2019 Release --target clean
-
-clean.vs2019.RelWithDebInfo:
-	mycmake.sh --build vs2019 RelWithDebInfo --target clean
-
-install.vs2019.Release:
-	mycmake.sh --build vs2019 Release --target install
+android:
+	time mycmake-android.sh
 
 #------------------------------------------------------
 tags.all:
@@ -128,50 +35,44 @@ gtags.all:
 format.all:
 	clang-format -i *.h *.cpp
 
+clean.all:
+	rm -rf build.$(BUILD_SYS)
+	rm -rf tags GPATH GRTAGS GTAGS
+	rm -f _*.png
+
+#------------------------------------------------------
+all.all:
+	time mycmake.sh         ninja Release
+	time mycmake.sh --build ninja Release
+	time mycmake.sh         ninja Debug
+	time mycmake.sh --build ninja Debug
+	time mycmake.sh         vs2019
+	time mycmake.sh --build vs2019 Release
+	time mycmake.sh --build vs2019 Debug
+	time mycmake.sh --build vs2019 RelWithDebInfo
+	time mycmake-android.sh
+
+all.clean:
+	rm -rf build.ninja
+	rm -rf build.vs2019
+	rm -rf build.android
+
+#------------------------------------------------------
 help:
 	@echo 'make build'
-	@echo 'make all'
-	@echo 'make all.clean'
+	@echo 'make cmake'
+	@echo 'make clean'
+	@echo 'make install'
 	@echo "--"
-	@echo "make all.ninja"
-	@echo "make all.ninja.Debug"
-	@echo "make all.ninja.Release"
-	@echo "make cmake.ninja.Debug"
-	@echo "make cmake.ninja.Release"
-	@echo "make build.ninja.Debug"
-	@echo "make build.ninja.Release"
-	@echo "make clean.ninja.Debug"
-	@echo "make clean.ninja.Release"
-	@echo "make install.ninja.Release"
-	@echo "--"
-	@echo "make all.vs2017"
-	@echo "make all.vs2017.Debug"
-	@echo "make all.vs2017.Release"
-	@echo "make all.vs2017.RelWithDebInfo"
-	@echo "make cmake.vs2017"
-	@echo "make build.vs2017.Debug"
-	@echo "make build.vs2017.Release"
-	@echo "make build.vs2017.RelWithDebInfo"
-	@echo "make clean.vs2017.Debug"
-	@echo "make clean.vs2017.Release"
-	@echo "make clean.vs2017.RelWithDebInfo"
-	@echo "make install.vs2017.Release"
-	@echo "--"
-	@echo "make all.vs2019"
-	@echo "make all.vs2019.Debug"
-	@echo "make all.vs2019.Release"
-	@echo "make all.vs2019.RelWithDebInfo"
-	@echo "make cmake.vs2019"
-	@echo "make build.vs2019.Debug"
-	@echo "make build.vs2019.Release"
-	@echo "make build.vs2019.RelWithDebInfo"
-	@echo "make clean.vs2019.Debug"
-	@echo "make clean.vs2019.Release"
-	@echo "make clean.vs2019.RelWithDebInfo"
-	@echo "make install.vs2019.Release"
+	@echo 'make android'
 	@echo "--"
 	@echo "make tags.all"
 	@echo "make gtags.all"
 	@echo "make format.all"
+	@echo 'make clean.all'
+	@echo "--"
+	@echo 'make all.all'
+	@echo 'make all.clean'
+	@echo "--"
 	@echo "make help"
 

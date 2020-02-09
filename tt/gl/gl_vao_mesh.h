@@ -11,7 +11,7 @@ public:
     void init();
     void draw();
 
-    void setMesh(tt::TriMesh* mesh);
+    void setMesh(const tt::TriMesh* mesh);
 
 private:
 };
