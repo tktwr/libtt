@@ -30,7 +30,6 @@ public:
 	size_t nVertices()  const { return m_P.size(); }
 	size_t nNormals()   const { return m_N.size(); }
 	size_t nTexCoords() const { return m_T.size(); }
-	size_t nAmbients()  const { return m_A.size(); }
 
 	size_t nTriangles() const { return m_idxP.size(); }
 	size_t nGroups()    const { return m_groups.size(); }
@@ -41,7 +40,6 @@ public:
 	const gfx::Vec3f& N(int tid, int n) const { return m_N[m_idxN[tid][n]]; }
           gfx::Vec3f& N(int tid, int n)       { return m_N[m_idxN[tid][n]]; }
 	const gfx::Vec2f& T(int tid, int n) const { return m_T[m_idxT[tid][n]]; }
-	const gfx::Vec4f& A(int tid, int n) const { return m_A[m_idxP[tid][n]]; }
 
 	// per triangle methods
     gfx::Vec3f fN(int tid) const;
@@ -59,7 +57,6 @@ public:
     std::vector<gfx::Vec3f> m_P;
     std::vector<gfx::Vec3f> m_N;
     std::vector<gfx::Vec2f> m_T;
-    std::vector<gfx::Vec4f> m_A;
 
     std::vector<gfx::Vec3i> m_idxP;
     std::vector<gfx::Vec3i> m_idxN;

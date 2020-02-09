@@ -1,11 +1,23 @@
 #pragma once
 
+#include <tt/util/time.h>
+
 class AppBase {
 public:
     enum Key {
         KEY_SPACE = 32,
         KEY_ESCAPE = 256,
         KEY_ENTER = 257,
+        KEY_0 = 48,
+        KEY_1 = 49,
+        KEY_2 = 50,
+        KEY_3 = 51,
+        KEY_4 = 52,
+        KEY_5 = 53,
+        KEY_6 = 54,
+        KEY_7 = 55,
+        KEY_8 = 56,
+        KEY_9 = 57,
         KEY_A = 65,
         KEY_B = 66,
         KEY_C = 67,
@@ -39,15 +51,21 @@ public:
 
     virtual void Init() {
         if (!m_init) return;
+        m_tm_init.start();
         init();
+        m_tm_init.end();
         m_init = false;
     }
     virtual void Resize(int width, int height) {
+        m_tm_resize.start();
         resize(width, height);
+        m_tm_resize.end();
     }
     virtual void Draw() {
         if (m_init) Init();
+        m_tm_draw.start();
         draw();
+        m_tm_draw.end();
     }
 
     virtual void init() {}
@@ -66,7 +84,18 @@ public:
 
     void setInit(bool b) { m_init = b; }
 
+    void  setTime(float msec) { m_time = msec; }
+    float getTime() const { return m_time; }
+
+    float getInitTime()    const { return m_tm_init.getElapsedMSec(); }
+    float getResizeTime()  const { return m_tm_resize.getElapsedMSec(); }
+    float getDrawTime()    const { return m_tm_draw.getElapsedMSec(); }
+
 protected:
     bool m_init = true;
+    float m_time = 0.0f;
+    tt::Time m_tm_init;
+    tt::Time m_tm_resize;
+    tt::Time m_tm_draw;
 };
 
