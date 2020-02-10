@@ -82,6 +82,3 @@ protected:
     bool m_show_console_panel = true;
 };
 
-std::string f_open_file();
-std::string f_save_file();
-

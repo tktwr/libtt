@@ -23,8 +23,12 @@ set(LIBTT_SRCS
   ${LIBTT}/tt/gl/gl_vao_mesh.cpp
 )
 set(LIBTT_PC_SRCS
-  ${LIBTT}/tt/ext/pc/gl_app.cpp
+  ${LIBTT}/tt/window/window_base.cpp
+  ${LIBTT}/tt/ext/nfd/nfd_util.cpp
+)
+set(LIBTT_PC_EXT_SRCS
   ${LIBTT}/tt/ext/opencv/opencv_util.cpp
+  ${LIBTT}/tt/ext/pc/gl_app.cpp
   ${LIBTT}/tt/ext/win/path.cpp
 )
 
