@@ -56,11 +56,6 @@ public:
         m_tm_init.end();
         m_init = false;
     }
-    virtual void Resize(int width, int height) {
-        m_tm_resize.start();
-        resize(width, height);
-        m_tm_resize.end();
-    }
     virtual void Draw() {
         if (m_init) Init();
         m_tm_draw.start();
@@ -69,8 +64,12 @@ public:
     }
 
     virtual void init() {}
-    virtual void resize(int width, int height) {}
     virtual void draw() {}
+
+    virtual void setScreenSize(int width, int height) {
+        m_screen_size[0] = width;
+        m_screen_size[1] = height;
+    }
 
     // for pc
     virtual void keyDown(int key) {}
@@ -82,7 +81,7 @@ public:
     virtual void touchUp(float x, float y) {}
     virtual void touchMove(float dx, float dy) {}
 
-    void setInit(bool b) { m_init = b; }
+    void needInit(bool b) { m_init = b; }
 
     void  setTime(float msec) { m_time = msec; }
     float getTime() const { return m_time; }
@@ -93,6 +92,8 @@ public:
 
 protected:
     bool m_init = true;
+    int m_screen_size[2] = {400, 800};
+
     float m_time = 0.0f;
     tt::Time m_tm_init;
     tt::Time m_tm_resize;

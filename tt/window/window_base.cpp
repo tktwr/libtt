@@ -8,7 +8,7 @@
 std::shared_ptr<AppBase> g_app = nullptr;
 
 void window_size_callback(GLFWwindow* window, int width, int height) {
-    if (g_app) g_app->resize(width, height);
+    if (g_app) g_app->setScreenSize(width, height);
 }
 
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods) {
