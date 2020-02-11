@@ -7,12 +7,18 @@
 
 std::shared_ptr<AppBase> g_app = nullptr;
 
+void drop_callback(GLFWwindow* window, int count, const char** paths) {
+    std::vector<std::string> fnames;
+    for (int i = 0; i < count; i++) fnames.push_back(paths[i]);
+    if (g_app) g_app->dropFiles(fnames);
+}
+
 void window_size_callback(GLFWwindow* window, int width, int height) {
     if (g_app) g_app->setScreenSize(width, height);
 }
 
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods) {
-    tt::Log::I("key_callback: key=%d scancode=%d action=%d mods=%d\n", key, scancode, action, mods);
+    //tt::Log::I("key_callback: key=%d scancode=%d action=%d mods=%d\n", key, scancode, action, mods);
 
     switch (action) {
         case GLFW_PRESS:
@@ -37,7 +43,7 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
 }
 
 void mouse_button_callback(GLFWwindow* window, int button, int action, int mods) {
-    tt::Log::I("mouse_button_callback: button=%d action=%d mods=%d\n", button, action, mods);
+    //tt::Log::I("mouse_button_callback: button=%d action=%d mods=%d\n", button, action, mods);
 
     if (button != GLFW_MOUSE_BUTTON_LEFT) return;
 
@@ -60,7 +66,7 @@ void mouse_button_callback(GLFWwindow* window, int button, int action, int mods)
 }
 
 void cursor_position_callback(GLFWwindow* window, double x, double y) {
-    tt::Log::I("cursor_position_callback: x=%lf y=%lf\n", x, y);
+    //tt::Log::I("cursor_position_callback: x=%lf y=%lf\n", x, y);
 
     static double prev_x = -1;
     static double prev_y = -1;
@@ -100,6 +106,7 @@ int WindowBase::create(const std::string& window_title, int width, int height) {
         return -1;
     }
 
+    glfwSetDropCallback(m_window, drop_callback);
     glfwSetWindowSizeCallback(m_window, window_size_callback);
     glfwSetKeyCallback(m_window, key_callback);
     glfwSetMouseButtonCallback(m_window, mouse_button_callback);

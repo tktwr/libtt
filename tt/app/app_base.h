@@ -1,6 +1,8 @@
 #pragma once
 
 #include <tt/util/time.h>
+#include <vector>
+#include <string>
 
 class AppBase {
 public:
@@ -70,6 +72,7 @@ public:
         m_screen_size[0] = width;
         m_screen_size[1] = height;
     }
+    virtual void dropFiles(const std::vector<std::string>& fnames) {}
 
     // for pc
     virtual void keyDown(int key) {}
