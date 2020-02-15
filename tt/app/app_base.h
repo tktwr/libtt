@@ -7,9 +7,12 @@
 class AppBase {
 public:
     enum Key {
-        KEY_SPACE = 32,
-        KEY_ESCAPE = 256,
-        KEY_ENTER = 257,
+        KEY_SPACE            = 32,
+        KEY_APOSTROPHE       = 39,  /* ' */
+        KEY_COMMA            = 44,  /* , */
+        KEY_MINUS            = 45,  /* - */
+        KEY_PERIOD           = 46,  /* . */
+        KEY_SLASH            = 47,  /* / */
         KEY_0 = 48,
         KEY_1 = 49,
         KEY_2 = 50,
@@ -20,6 +23,8 @@ public:
         KEY_7 = 55,
         KEY_8 = 56,
         KEY_9 = 57,
+        KEY_SEMICOLON        = 59,  /* ; */
+        KEY_EQUAL            = 61,  /* = */
         KEY_A = 65,
         KEY_B = 66,
         KEY_C = 67,
@@ -46,6 +51,16 @@ public:
         KEY_X = 88,
         KEY_Y = 89,
         KEY_Z = 90,
+        KEY_ESCAPE           = 256,
+        KEY_ENTER            = 257,
+        KEY_TAB              = 258,
+        KEY_BACKSPACE        = 259,
+        KEY_INSERT           = 260,
+        KEY_DELETE           = 261,
+        KEY_RIGHT            = 262,
+        KEY_LEFT             = 263,
+        KEY_DOWN             = 264,
+        KEY_UP               = 265,
     };
 
     AppBase() {}
@@ -73,6 +88,7 @@ public:
         m_screen_size[1] = height;
     }
     virtual void dropFiles(const std::vector<std::string>& fnames) {}
+    virtual bool command(const std::string& line) { return false; }
 
     // for pc
     virtual void keyDown(int key) {}

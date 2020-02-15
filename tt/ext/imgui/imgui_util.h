@@ -43,6 +43,10 @@ inline void ShowHelpTip(const char* desc) {
     }
 }
 
+inline ImVec2 toImVec2(const int v[2]) {
+    return ImVec2(static_cast<float>(v[0]), static_cast<float>(v[1]));
+}
+
 inline ImVec2 toImVec2(const tt::Vec2i& v) {
     return ImVec2(static_cast<float>(v[0]), static_cast<float>(v[1]));
 }

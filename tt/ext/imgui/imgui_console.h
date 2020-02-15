@@ -22,9 +22,7 @@ public:
         m_history_pos = -1;
         m_scroll_to_bottom = true;
     }
-    void setFunc(const std::function<void(const std::string& line)>& func) {
-        m_func = func;
-    }
+
     void draw();
 
     void output(const char* fmt, ...) IM_FMTARGS(2);
@@ -37,6 +35,9 @@ public:
 
     void addCommand(const std::string& cmd) {
         m_commands.push_back(cmd);
+    }
+    void setFunc(const std::function<void(const std::string& line)>& func) {
+        m_func = func;
     }
 
     int TextEditCallback(ImGuiTextEditCallbackData* data);
@@ -218,7 +219,7 @@ inline void Console::shell(std::string cmd) {
         }
 
         return;
-    } else if (token == "ls") {
+    } else if (cmd == "ls") {
         cmd += " -CF -T 0";
     }
 
