@@ -1,8 +1,8 @@
 #pragma once
 
 #include <string>
-#include <tt/app/app_base.h>
 #include <memory>
+#include <tt/app/app_base.h>
 
 class GLFWwindow;
 

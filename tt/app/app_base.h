@@ -1,8 +1,9 @@
 #pragma once
 
-#include <tt/util/time.h>
 #include <vector>
 #include <string>
+#include <tt/util/type.h>
+#include <tt/util/time.h>
 
 class AppBase {
 public:
@@ -106,16 +107,15 @@ public:
     float getTime() const { return m_time; }
 
     float getInitTime()    const { return m_tm_init.getElapsedMSec(); }
-    float getResizeTime()  const { return m_tm_resize.getElapsedMSec(); }
     float getDrawTime()    const { return m_tm_draw.getElapsedMSec(); }
 
 protected:
     bool m_init = true;
     int m_screen_size[2] = {400, 800};
+    tt::Color4f m_clear_color = {0.2f, 0.2f, 0.2f, 1.0f};
 
     float m_time = 0.0f;
     tt::Time m_tm_init;
-    tt::Time m_tm_resize;
     tt::Time m_tm_draw;
 };
 

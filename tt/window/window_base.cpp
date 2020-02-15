@@ -119,23 +119,36 @@ int WindowBase::create(const std::string& window_title, int width, int height) {
     return 0;
 }
 
-void WindowBase::close() {
-    glfwDestroyWindow(m_window);
-    glfwTerminate();
-}
-
 void WindowBase::run(std::shared_ptr<AppBase> app) {
     if (!app) return;
 
     g_app = app;
-    if (g_app) g_app->Init();
+    if (g_app) {
+        int framebuffer_size[2];
+        glfwGetFramebufferSize(m_window, &framebuffer_size[0], &framebuffer_size[1]);
+
+        g_app->Init();
+        g_app->setScreenSize(framebuffer_size[0], framebuffer_size[1]);
+    }
+
+    tt::Time tm;
+    tm.start();
 
     while (!glfwWindowShouldClose(m_window)) {
         glfwPollEvents();
 
-        if (g_app) g_app->Draw();
+        if (g_app) {
+            tm.end();
+            g_app->setTime(tm.getElapsedMSec());
+            g_app->Draw();
+        }
 
         glfwSwapBuffers(m_window);
     }
+}
+
+void WindowBase::close() {
+    glfwDestroyWindow(m_window);
+    glfwTerminate();
 }
 
