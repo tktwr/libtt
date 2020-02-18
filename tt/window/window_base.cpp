@@ -113,8 +113,9 @@ int WindowBase::create(const std::string& window_title, int width, int height) {
     glfwSetCursorPosCallback(m_window, cursor_position_callback);
 
     glfwMakeContextCurrent(m_window);
-    gladLoadGL();
     glfwSwapInterval(1);
+
+    gladLoadGL();
 
     return 0;
 }
