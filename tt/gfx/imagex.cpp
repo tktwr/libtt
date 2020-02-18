@@ -42,7 +42,9 @@ void ImageX::create(const std::string& type, int w, int h) {
     } else if (type == "i3uc") {
         m_image = std::make_shared<Image3uc>(w, h);
     } else if (type == "i4uc") {
-        m_image = std::make_shared<Image4uc>(w, h);
+        tt::Image4ucPtr p = std::make_shared<Image4uc>(w, h);
+        p->fill({0, 0, 0, 255});
+        m_image = p;
     }
     m_type = type;
     m_fname = "";

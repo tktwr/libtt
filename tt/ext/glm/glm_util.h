@@ -9,7 +9,7 @@ inline glm::vec2 toGlmVec2(const tt::Vec2i& v) {
     return glm::vec2(v[0], v[1]);
 }
 
-inline glm::mat4 make_mat(glm::vec2 src_size, glm::vec2 dst_size, float& scale, bool fit) {
+inline glm::mat4 f_make_scale_mat(glm::vec2 src_size, glm::vec2 dst_size, float& scale, bool fit) {
     if (fit) {
         glm::vec2 scale_size = dst_size / src_size;
         scale = std::min(scale_size[0], scale_size[1]);

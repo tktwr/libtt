@@ -34,7 +34,7 @@ public:
 template<class T>
 class Image : public ImageBase {
 public:
-    Image() : m_w(0), m_h(0) {}
+    Image() {}
     Image(int w, int h) { resize(w, h); }
 
     void resize(int w, int h) {
@@ -108,7 +108,8 @@ private:
         }
     }
 
-    int m_w, m_h;
+    int m_w = 0;
+    int m_h = 0;
     Array<T> m_data;
 };
 

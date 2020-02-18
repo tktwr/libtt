@@ -7,8 +7,8 @@ class Array {
 public:
     typedef T data_type;
 
-    Array() : m_data_char(0), m_data(0), m_size(0) {}
-    Array(std::size_t size) : m_data_char(0), m_data(0), m_size(0) { resize(size); }
+    Array() {}
+    Array(std::size_t size) { resize(size); }
     virtual ~Array() { destroy(); }
 
     void resize(std::size_t size) {
@@ -62,9 +62,9 @@ private:
         m_size = 0;
     }
 
-    char* m_data_char;
-    T* m_data;
-    std::size_t m_size;
+    char* m_data_char = nullptr;
+    T* m_data = nullptr;
+    std::size_t m_size = 0;
 };
 
 }
