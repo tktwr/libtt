@@ -24,6 +24,7 @@ set(LIBTT_SRCS
 )
 set(LIBTT_PC_SRCS
   ${LIBTT}/tt/window/window_base.cpp
+  ${LIBTT}/tt/window/StandardWindow/StandardWindow.cpp
   ${LIBTT}/tt/ext/nfd/nfd_util.cpp
 )
 set(LIBTT_PC_EXT_SRCS

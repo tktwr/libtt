@@ -5,6 +5,8 @@
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 
+namespace tt {
+
 inline glm::vec2 toGlmVec2(const tt::Vec2i& v) {
     return glm::vec2(v[0], v[1]);
 }
@@ -48,5 +50,7 @@ inline void f_print_vec3(const std::string& s, const glm::vec3& v) {
 
 inline void f_print_vec4(const std::string& s, const glm::vec4& v) {
     f_print_vec4(s, &(v[0]));
+}
+
 }
 

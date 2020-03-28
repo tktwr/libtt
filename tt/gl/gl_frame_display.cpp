@@ -49,7 +49,7 @@ void GLFrameDisplay::draw() {
     glClearColor4f(m_clear_color.data());
     glClear(GL_COLOR_BUFFER_BIT);
 
-    glm::mat4 mat = f_make_scale_mat(toGlmVec2(m_image_size), toGlmVec2(m_screen_size), m_scale, m_fit);
+    glm::mat4 mat = tt::f_make_scale_mat(tt::toGlmVec2(m_image_size), tt::toGlmVec2(m_screen_size), m_scale, m_fit);
 
     m_prog.bind();
     m_prog.setUniformMatrix4("transform", &(mat[0][0]));

@@ -84,10 +84,11 @@ public:
     virtual void init() {}
     virtual void draw() {}
 
-    virtual void setScreenSize(int width, int height) {
-        m_screen_size[0] = width;
-        m_screen_size[1] = height;
-    }
+    virtual void setScreenSize(int width, int height) { m_screen_size = {width, height}; }
+    //virtual tt::Vec2i getScreenSize() const { return m_screen_size; }
+    int getWidth() const { return m_screen_size[0]; }
+    int getHeight() const { return m_screen_size[1]; }
+
     virtual void dropFiles(const std::vector<std::string>& fnames) {}
     virtual bool command(const std::string& line) { return false; }
 
@@ -106,12 +107,12 @@ public:
     void  setTime(float msec) { m_time = msec; }
     float getTime() const { return m_time; }
 
-    float getInitTime()    const { return m_tm_init.getElapsedMSec(); }
-    float getDrawTime()    const { return m_tm_draw.getElapsedMSec(); }
+    float getInitTime() const { return m_tm_init.getElapsedMSec(); }
+    float getDrawTime() const { return m_tm_draw.getElapsedMSec(); }
 
 protected:
     bool m_init = true;
-    int m_screen_size[2] = {400, 800};
+    tt::Vec2i m_screen_size = {400, 800};
     tt::Color4f m_clear_color = {0.2f, 0.2f, 0.2f, 1.0f};
 
     float m_time = 0.0f;

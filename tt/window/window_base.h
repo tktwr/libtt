@@ -15,6 +15,8 @@ public:
     virtual void run(std::shared_ptr<AppBase> app);
     virtual void close();
 
+    std::shared_ptr<AppBase> app();
+
 protected:
     GLFWwindow* m_window = nullptr;
 };

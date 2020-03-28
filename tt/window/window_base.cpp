@@ -7,6 +7,10 @@
 
 std::shared_ptr<AppBase> g_app = nullptr;
 
+std::shared_ptr<AppBase> WindowBase::app() {
+    return g_app;
+}
+
 void drop_callback(GLFWwindow* window, int count, const char** paths) {
     std::vector<std::string> fnames;
     for (int i = 0; i < count; i++) fnames.push_back(paths[i]);

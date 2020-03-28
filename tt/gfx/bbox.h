@@ -42,7 +42,7 @@ public:
 		if (z) p[2] = max[2];
 		return p;
 	}
-    gfx::Vec3f center() const { return .5 * (min + max); }
+    gfx::Vec3f center() const { return .5f * (min + max); }
     gfx::Vec3f size() const { return max - min; }
 	float xsize() const { return max[0] - min[0]; }
 	float ysize() const { return max[1] - min[1]; }

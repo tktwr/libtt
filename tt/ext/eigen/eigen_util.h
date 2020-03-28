@@ -5,6 +5,8 @@
 #include <cstdio>
 #include <iostream>
 
+namespace tt {
+
 inline void f_print_mat3_row(const std::string& s, const Eigen::Matrix3f& m) {
     f_print_mat3_row(s, m.data());
 }
@@ -27,5 +29,7 @@ inline void f_print_vec3(const std::string& s, const Eigen::Vector3f& v) {
 
 inline void f_print_vec4(const std::string& s, const Eigen::Vector4f& v) {
     f_print_vec4(s, v.data());
+}
+
 }
 

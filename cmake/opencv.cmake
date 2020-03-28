@@ -2,6 +2,14 @@
 # OpenCV
 #-------------------------------------------------
 
+if(NOT DEFINED OpenCV_DIR)
+    if(ANDROID)
+        set(OpenCV_DIR ${OPT_DIR}/opencv-4.1.0-android/sdk/native/jni)
+    elseif(MSVC)
+        set(OpenCV_DIR ${OPT_DIR}/opencv-4.1.0/build)
+    endif()
+endif()
+
 message(STATUS "OpenCV_DIR=${OpenCV_DIR}")
 
 if(MSVC)
