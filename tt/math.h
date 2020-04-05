@@ -1,6 +1,8 @@
 #pragma once
 
 #include <cmath>
+#include <cstdio>
+#include <iostream>
 
 #if !defined(M_PI)
 #define M_PI		3.14159265358979323846
@@ -71,6 +73,21 @@ inline void f_print_vec3(const std::string& s, const float* m) {
 inline void f_print_vec4(const std::string& s, const float* m) {
     std::cout << s << std::endl;
     printf("%f %f %f %f\n", m[0], m[1], m[2], m[3]);
+}
+
+inline void f_print_vec2i(const std::string& s, const int* m) {
+    std::cout << s << std::endl;
+    printf("%d %d\n", m[0], m[1]);
+}
+
+inline void f_print_vec3i(const std::string& s, const int* m) {
+    std::cout << s << std::endl;
+    printf("%d %d %d\n", m[0], m[1], m[2]);
+}
+
+inline void f_print_vec4i(const std::string& s, const int* m) {
+    std::cout << s << std::endl;
+    printf("%d %d %d %d\n", m[0], m[1], m[2], m[3]);
 }
 
 }

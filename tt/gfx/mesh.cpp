@@ -6,7 +6,7 @@ namespace tt {
 
 // counter clock-wise order
 gfx::Vec3f f_triangle_normal(const gfx::Vec3f& p0, const gfx::Vec3f& p1, const gfx::Vec3f& p2) {
-    return ((p1-p0).cross(p2-p0)).normalized();
+    return gfx::normalize(gfx::cross((p1-p0), (p2-p0)));
 }
 
 //=========================================================================

@@ -48,7 +48,7 @@ public:
 	float ysize() const { return max[1] - min[1]; }
 	float zsize() const { return max[2] - min[2]; }
 	float length(int axis) const { return max[axis] - min[axis]; }
-	float diameter() const { return (max - min).norm(); }
+	float diameter() const { return gfx::distance(min, max); }
 	int getMaxAxis(float& length) const {
         gfx::Vec3f len = size();
 		int axis = gmMaxAxis(len[0], len[1], len[2]);
