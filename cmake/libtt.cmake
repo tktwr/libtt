@@ -29,7 +29,6 @@ set(LIBTT_PC_SRCS
 )
 set(LIBTT_PC_EXT_SRCS
   ${LIBTT}/tt/ext/opencv/opencv_util.cpp
-  ${LIBTT}/tt/ext/pc/gl_app.cpp
   ${LIBTT}/tt/ext/win/path.cpp
 )
 
