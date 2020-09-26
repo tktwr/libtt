@@ -46,7 +46,8 @@ format.all:
 
 clean.all:
 	rm -rf build.$(BUILD_SYS)
-	rm -rf tags GPATH GRTAGS GTAGS
+	rm -f tags GPATH GRTAGS GTAGS
+	rm -f compile_commands.json
 	rm -f _*.png
 
 #------------------------------------------------------
