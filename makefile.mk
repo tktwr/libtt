@@ -70,20 +70,16 @@ all.clean:
 
 #------------------------------------------------------
 help:
-	@echo 'make cmake'
-	@echo 'make build'
-	@echo 'make clean'
-	@echo 'make install'
-	@echo "--"
-	@echo 'make android'
-	@echo "--"
-	@echo "make tags.all"
-	@echo "make gtags.all"
-	@echo "make format.all"
-	@echo 'make clean.all'
-	@echo "--"
-	@echo 'make all.all'
-	@echo 'make all.clean'
-	@echo "--"
-	@echo "make help"
+	@echo 'cmake'
+	@echo 'build'
+	@echo 'clean'
+	@echo 'install'
+	@echo 'android'
+	@echo "tags.all"
+	@echo "gtags.all"
+	@echo "format.all"
+	@echo 'clean.all'
+	@echo 'all.all'
+	@echo 'all.clean'
+	@echo "help"
 
