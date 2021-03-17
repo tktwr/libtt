@@ -13,6 +13,9 @@ if(MINGW)
     set(CMAKE_CXX_FLAGS "-Wall")
 endif()
 
+# export compile_commands.json
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 #-------------------------------------------------
 # status
 #-------------------------------------------------

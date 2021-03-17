@@ -10,29 +10,31 @@ BUILD_DIR=$(shell mycmake.sh --build-dir)
 
 #------------------------------------------------------
 .PHONY: default
-default: build
+default:
+	test -d $(BUILD_DIR) || make cmake
+	make build
 
 #------------------------------------------------------
 .PHONY: cmake
 cmake:
-	time mycmake.sh
+	mycmake.sh
 
 .PHONY: build
 build:
-	time mycmake.sh --build
+	mycmake.sh --build
 
 .PHONY: clean
 clean:
-	time mycmake.sh --build $(BUILD_SYS) $(BUILD_CONFIG) --target clean
+	mycmake.sh --build $(BUILD_SYS) $(BUILD_CONFIG) --target clean
 
 .PHONY: install
 install:
-	time mycmake.sh --build $(BUILD_SYS) $(BUILD_CONFIG) --target install
+	mycmake.sh --build $(BUILD_SYS) $(BUILD_CONFIG) --target install
 
 #------------------------------------------------------
 .PHONY: android
 android:
-	time mycmake-android.sh
+	mycmake-android.sh
 
 #------------------------------------------------------
 tags.all:
@@ -52,15 +54,15 @@ clean.all:
 
 #------------------------------------------------------
 all.all:
-	time mycmake.sh         make Release
-	time mycmake.sh --build make Release
-	time mycmake.sh         make Debug
-	time mycmake.sh --build make Debug
-	time mycmake.sh         vs2019
-	time mycmake.sh --build vs2019 Release
-	time mycmake.sh --build vs2019 Debug
-	time mycmake.sh --build vs2019 RelWithDebInfo
-	time mycmake-android.sh
+	mycmake.sh         make Release
+	mycmake.sh --build make Release
+	mycmake.sh         make Debug
+	mycmake.sh --build make Debug
+	mycmake.sh         vs2019
+	mycmake.sh --build vs2019 Release
+	mycmake.sh --build vs2019 Debug
+	mycmake.sh --build vs2019 RelWithDebInfo
+	mycmake-android.sh
 
 all.clean:
 	rm -rf build.make
