@@ -40,7 +40,7 @@ public:
         m_func = func;
     }
 
-    int TextEditCallback(ImGuiTextEditCallbackData* data);
+    int TextEditCallback(ImGuiInputTextCallbackData* data);
 
 private:
     std::function<void(const std::string& line)> m_func;
@@ -51,7 +51,7 @@ private:
     bool m_scroll_to_bottom;
 };
 
-inline int TextEditCallbackStub(ImGuiTextEditCallbackData* data) {
+inline int TextEditCallbackStub(ImGuiInputTextCallbackData* data) {
     Console* console = (Console*)data->UserData;
     return console->TextEditCallback(data);
 }
@@ -64,8 +64,8 @@ inline void Console::draw() {
         for (int i=0; i<sz; i++) {
             ImGui::TextUnformatted(m_text[i].c_str());
         }
-        if (m_scroll_to_bottom)
-            ImGui::SetScrollHere(1.0f);
+        //if (m_scroll_to_bottom)
+        //    ImGui::SetScrollHere(1.0f);
         m_scroll_to_bottom = false;
         ImGui::PopStyleVar();
     ImGui::EndChild();
@@ -108,7 +108,7 @@ inline int   Strnicmp(const char* str1, const char* str2, int n) { int d = 0; wh
 inline char* Strdup(const char *str)                             { size_t len = strlen(str) + 1; void* buff = malloc(len); return (char*)memcpy(buff, (const void*)str, len); }
 inline void  Strtrim(char* str)                                  { char* str_end = str + strlen(str); while (str_end > str && str_end[-1] == ' ') str_end--; *str_end = 0; }
 
-inline int Console::TextEditCallback(ImGuiTextEditCallbackData* data) {
+inline int Console::TextEditCallback(ImGuiInputTextCallbackData* data) {
     switch (data->EventFlag) {
     case ImGuiInputTextFlags_CallbackCompletion:
         {

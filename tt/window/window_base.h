@@ -4,7 +4,7 @@
 #include <memory>
 #include <tt/app/app_base.h>
 
-class GLFWwindow;
+struct GLFWwindow;
 
 class WindowBase {
 public:
