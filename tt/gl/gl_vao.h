@@ -10,17 +10,19 @@ public:
     void init();
     void draw();
 
+    // set/unset data
     void setPos(size_t size, float* data);
     void setNml(size_t size, float* data);
     void setUv (size_t size, float* data);
     void setCol(size_t size, float* data);
     void setIdx(size_t size, int* data);
+    void unsetData();
 
-    void setQuad();
+    // set/unset VBO
     void setVBO();
+    void unsetVBO();
 
 private:
-    void unsetVBO();
 
     GLuint m_vao = 0;
     GLuint m_vbo_pos = 0;

@@ -3,50 +3,7 @@
 #include <tt/gfx/math.h>
 #include <tt/util/log.h>
 
-void GLVAO::setQuad() {
-    std::vector<tt::gfx::Vec3f> m_pos;
-    std::vector<tt::gfx::Vec3f> m_nml;
-    std::vector<tt::gfx::Vec2f> m_uv;
-    std::vector<tt::gfx::Vec4f> m_col;
-    std::vector<int> m_idx;
-
-    m_pos = {
-        {0.0f, 0.0f, 0.0f},
-        {1.0f, 0.0f, 0.0f},
-        {1.0f, 1.0f, 0.0f},
-        {0.0f, 1.0f, 0.0f}
-    };
-    m_nml = {
-        {0.0f, 0.0f, 1.0f},
-        {0.0f, 0.0f, 1.0f},
-        {0.0f, 0.0f, 1.0f},
-        {0.0f, 0.0f, 1.0f}
-    };
-    m_uv = {
-        {0.0f, 0.0f},
-        {1.0f, 0.0f},
-        {1.0f, 1.0f},
-        {0.0f, 1.0f}
-    };
-    m_col = {
-        {0.0f, 0.0f, 0.0f, 1.0f},
-        {1.0f, 0.0f, 0.0f, 1.0f},
-        {1.0f, 1.0f, 0.0f, 1.0f},
-        {0.0f, 1.0f, 0.0f, 1.0f}
-    };
-    m_idx = {0, 1, 2, 0, 2, 3};
-
-    setPos(sizeof(tt::gfx::Vec3f) * m_pos.size(), (float*)(m_pos.data()));
-    setNml(sizeof(tt::gfx::Vec3f) * m_nml.size(), (float*)(m_nml.data()));
-    setUv (sizeof(tt::gfx::Vec2f) * m_uv.size(),  (float*)(m_uv.data()));
-    setCol(sizeof(tt::gfx::Vec4f) * m_col.size(), (float*)(m_col.data()));
-    setIdx(sizeof(int) * m_idx.size(), (int*)(m_idx.data()));
-
-    setVBO();
-}
-
 void GLVAO::init() {
-    setQuad();
 }
 
 void GLVAO::setPos(size_t size, float* data) {
@@ -138,21 +95,52 @@ void GLVAO::setVBO() {
 }
 
 void GLVAO::unsetVBO() {
-    glDeleteBuffers(1, &m_vbo_pos);
-    m_vbo_pos = 0;
-    glDeleteBuffers(1, &m_vbo_nml);
-    m_vbo_nml = 0;
-    glDeleteBuffers(1, &m_vbo_uv);
-    m_vbo_uv = 0;
-    glDeleteBuffers(1, &m_vbo_col);
-    m_vbo_col = 0;
-    glDeleteBuffers(1, &m_ebo);
-    m_ebo = 0;
-    glDeleteVertexArrays(1, &m_vao);
-    m_vao = 0;
+    if (m_vbo_pos) {
+        glDeleteBuffers(1, &m_vbo_pos);
+        m_vbo_pos = 0;
+    }
+    if (m_vbo_nml) {
+        glDeleteBuffers(1, &m_vbo_nml);
+        m_vbo_nml = 0;
+    }
+    if (m_vbo_uv) {
+        glDeleteBuffers(1, &m_vbo_uv);
+        m_vbo_uv = 0;
+    }
+    if (m_vbo_col) {
+        glDeleteBuffers(1, &m_vbo_col);
+        m_vbo_col = 0;
+    }
+    if (m_ebo) {
+        glDeleteBuffers(1, &m_ebo);
+        m_ebo = 0;
+    }
+    if (m_vao) {
+        glDeleteVertexArrays(1, &m_vao);
+        m_vao = 0;
+    }
+}
+
+void GLVAO::unsetData() {
+    m_pos_size = 0;
+    m_pos_data = 0;
+
+    m_nml_size = 0;
+    m_nml_data = 0;
+
+    m_uv_size = 0;
+    m_uv_data = 0;
+
+    m_col_size = 0;
+    m_col_data = 0;
+
+    m_idx_size = 0;
+    m_idx_data = 0;
 }
 
 void GLVAO::draw() {
+    if (!m_vao) return;
+
     glBindVertexArray(m_vao);
     glDrawElements(GL_TRIANGLES, m_idx_size / sizeof(int), GL_UNSIGNED_INT, 0);
     glBindVertexArray(0);
