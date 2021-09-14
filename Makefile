@@ -31,3 +31,6 @@ test_vs:
 tags.libtt:
 	ctags -f tags.libtt -R tt
 
+clang-format:
+	clang-format-all.sh tt
+
