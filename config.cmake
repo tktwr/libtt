@@ -57,7 +57,11 @@ message(STATUS "USERPROFILE=$ENV{USERPROFILE}")
 # opt
 #-------------------------------------------------
 
-set(OPT_DIR Z:/opt)
+if(WIN32)
+  set(OPT_DIR $ENV{MY_OPT_WIN})
+else()
+  set(OPT_DIR $ENV{MY_OPT})
+endif()
 
 #-------------------------------------------------
 # libtt

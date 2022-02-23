@@ -72,16 +72,16 @@ all.clean:
 
 #------------------------------------------------------
 help:
-	@echo 'cmake'
-	@echo 'build'
-	@echo 'clean'
-	@echo 'install'
-	@echo 'android'
-	@echo "tags.all"
-	@echo "gtags.all"
-	@echo "format.all"
-	@echo 'clean.all'
-	@echo 'all.all'
-	@echo 'all.clean'
-	@echo "help"
+	@echo 'cmake      ... '
+	@echo 'build      ... '
+	@echo 'clean      ... '
+	@echo 'install    ... '
+	@echo 'android    ... '
+	@echo 'tags.all   ... '
+	@echo 'gtags.all  ... '
+	@echo 'format.all ... format *.h *.cpp in the current dir'
+	@echo 'clean.all  ... clean all config'
+	@echo 'all.all    ... build all compiler and config'
+	@echo 'all.clean  ... clean all compiler and config'
+	@echo 'help       ... print help'
 
