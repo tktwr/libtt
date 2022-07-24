@@ -1,4 +1,4 @@
-# makefile.mk
+# default.mk
 
 LANG=C
 

@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.6)
 
 project(libtt)
 
-include(config.cmake)
+include(default.cmake)
 
 add_library(tt STATIC ${LIBTT_SRCS})
 

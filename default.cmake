@@ -1,4 +1,4 @@
-# config.cmake
+# default.cmake
 
 if (NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE Release)
@@ -58,9 +58,9 @@ message(STATUS "USERPROFILE=$ENV{USERPROFILE}")
 #-------------------------------------------------
 
 if(WIN32)
-  set(OPT_DIR $ENV{MY_OPT_WIN})
+    set(OPT_DIR $ENV{MY_OPT_WIN})
 else()
-  set(OPT_DIR $ENV{MY_OPT})
+    set(OPT_DIR $ENV{MY_OPT})
 endif()
 
 #-------------------------------------------------

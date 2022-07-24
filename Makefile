@@ -1,4 +1,4 @@
-include makefile.mk
+include default.mk
 
 all: cmake build
 
