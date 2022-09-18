@@ -12,6 +12,7 @@
 #include <direct.h>
 #define popen _popen
 #define pclose _pclose
+#define chdir _chdir
 #else
 #include <unistd.h>
 #endif
@@ -213,7 +214,7 @@ inline void Console::shell(std::string cmd) {
         std::string dir = "~";
         istr >> dir;
 
-        int r = _chdir(dir.c_str());
+        int r = chdir(dir.c_str());
         if (r) {
             output("sh: cd: %s: No such file or directory\n", dir.c_str());
         }

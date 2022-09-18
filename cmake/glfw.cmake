@@ -6,7 +6,7 @@ set(GLFW ${OPT_DIR}/glfw)
 
 if(MSVC)
   include_directories(${GLFW}/include)
-  link_directories(${GLFW}/build.vs2019/src/Release)
+  link_directories(${GLFW}/build.vs2022/src/Release)
 endif()
 
 set(GLFW_LIBS glfw3)

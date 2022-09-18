@@ -58,16 +58,16 @@ all.all:
 	mycmake.sh --build make Release
 	mycmake.sh         make Debug
 	mycmake.sh --build make Debug
-	mycmake.sh         vs2019
-	mycmake.sh --build vs2019 Release
-	mycmake.sh --build vs2019 Debug
-	mycmake.sh --build vs2019 RelWithDebInfo
+	mycmake.sh         vs2022
+	mycmake.sh --build vs2022 Release
+	mycmake.sh --build vs2022 Debug
+	mycmake.sh --build vs2022 RelWithDebInfo
 	mycmake-android.sh
 
 all.clean:
 	rm -rf build.make
 	rm -rf build.ninja
-	rm -rf build.vs2019
+	rm -rf build.vs2022
 	rm -rf build.android
 
 #------------------------------------------------------

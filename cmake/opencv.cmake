@@ -6,14 +6,14 @@ if(NOT DEFINED OpenCV_DIR)
     if(ANDROID)
         set(OpenCV_DIR ${OPT_DIR}/opencv-4.1.0-android/sdk/native/jni)
     elseif(MSVC)
-        set(OpenCV_DIR ${OPT_DIR}/opencv-4.1.0/build)
+        set(OpenCV_DIR ${OPT_DIR}/opencv/build.vs2022)
     endif()
 endif()
 
 message(STATUS "OpenCV_DIR=${OpenCV_DIR}")
 
 if(MSVC)
-  file(GLOB OpenCV_DLLS ${OpenCV_DIR}/x64/vc15/bin/*.dll)
+  file(GLOB OpenCV_DLLS ${OpenCV_DIR}/bin/Release/*.dll)
 endif()
 
 find_package(OpenCV REQUIRED)

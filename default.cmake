@@ -8,7 +8,7 @@ set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_INSTALL_PREFIX ${PROJECT_SOURCE_DIR})
 #set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
-if(MINGW)
+if(NOT MSVC)
     set(CMAKE_C_FLAGS "-Wall")
     set(CMAKE_CXX_FLAGS "-Wall")
 endif()
@@ -63,6 +63,8 @@ else()
     set(OPT_DIR $ENV{MY_OPT})
 endif()
 
+message(STATUS "OPT_DIR=${OPT_DIR}")
+
 #-------------------------------------------------
 # libtt
 #-------------------------------------------------
@@ -92,11 +94,11 @@ include(${LIBTT}/cmake/spdlog.cmake)
 
 if(ANDROID)
     include(${LIBTT}/cmake/gl3stub.cmake)
-elseif(WIN32)
+else()
     include(${LIBTT}/cmake/opengl.cmake)
     include(${LIBTT}/cmake/glfw.cmake)
     include(${LIBTT}/cmake/gl3w.cmake)
     include(${LIBTT}/cmake/imgui.cmake)
-    include(${LIBTT}/cmake/nativefiledialog.cmake)
+    include(${LIBTT}/cmake/nfd.cmake)
 endif()
 

@@ -4,7 +4,7 @@ glm \
 eigen \
 stb \
 imgui \
-nativefiledialog \
+nfd \
 json11"
 
 graph:
@@ -22,7 +22,7 @@ tags:
 	ctags -f tags.eigen -R eigen
 	ctags -f tags.stb -R stb
 	ctags -f tags.imgui -R imgui
-	ctags -f tags.nativefiledialog -R nativefiledialog/src
+	ctags -f tags.nfd -R nfd/src
 	ctags -f tags.json11 -R json11
 	ctags -f - -R /c/msys64/mingw64/x86_64-w64-mingw32/include | sed 's+C:/msys64+/c/msys64+' > tags.win
 
@@ -33,7 +33,7 @@ clone:
 	git clone https://github.com/eigenteam/eigen-git-mirror.git eigen
 	git clone https://github.com/nothings/stb.git
 	git clone https://github.com/ocornut/imgui.git
-	git clone https://github.com/mlabbe/nativefiledialog.git
+	git clone https://github.com/mlabbe/nativefiledialog.git nfd
 	git clone https://github.com/dropbox/json11.git
 
 clone-opt:
