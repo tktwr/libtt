@@ -31,6 +31,10 @@ clean:
 install:
 	mycmake.sh --build $(BUILD_SYS) $(BUILD_CONFIG) --target install
 
+.PHONY: db
+db:
+	mycmake-db.sh
+
 #------------------------------------------------------
 .PHONY: android
 android:
@@ -72,13 +76,14 @@ all.clean:
 
 #------------------------------------------------------
 help:
-	@echo 'cmake      ... '
-	@echo 'build      ... '
-	@echo 'clean      ... '
-	@echo 'install    ... '
-	@echo 'android    ... '
-	@echo 'tags.all   ... '
-	@echo 'gtags.all  ... '
+	@echo 'cmake      ... cmake'
+	@echo 'build      ... build'
+	@echo 'clean      ... clean'
+	@echo 'install    ... install'
+	@echo 'db         ... generate compile_commands.json'
+	@echo 'android    ... android'
+	@echo 'tags.all   ... tags.all'
+	@echo 'gtags.all  ... gtags.all'
 	@echo 'format.all ... format *.h *.cpp in the current dir'
 	@echo 'clean.all  ... clean all config'
 	@echo 'all.all    ... build all compiler and config'
