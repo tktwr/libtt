@@ -71,8 +71,8 @@ message(STATUS "OPT_DIR=${OPT_DIR}")
 
 set(LIBTT ${CMAKE_CURRENT_LIST_DIR})
 
-if(EXISTS ${LIBTT}/local.cmake)
-    include(${LIBTT}/local.cmake)
+if(EXISTS ${LIBTT}/local_default.cmake)
+    include(${LIBTT}/local_default.cmake)
 endif()
 
 include(${LIBTT}/cmake/libtt.cmake)

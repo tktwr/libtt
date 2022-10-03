@@ -2,7 +2,7 @@
 
 LANG=C
 
--include local.mk
+-include local_default.mk
 
 BUILD_SYS=$(shell mycmake.sh --build-sys)
 BUILD_CONFIG=$(shell mycmake.sh --build-config)
@@ -75,7 +75,7 @@ all.clean:
 	rm -rf build.android
 
 #------------------------------------------------------
-help:
+base.help:
 	@echo 'cmake      ... cmake'
 	@echo 'build      ... build'
 	@echo 'clean      ... clean'
