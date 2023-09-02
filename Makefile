@@ -14,6 +14,8 @@ endif
 
 tags: tags.libtt
 
+f_tags: tags
+
 #------------------------------------------------------
 test_make:
 	cd $(BUILD_DIR) && $(BUILD_CONFIG)/test/test_array.exe
