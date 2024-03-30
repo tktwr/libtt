@@ -28,6 +28,9 @@ test_vs:
 f_tags:
 	ctags -f tags.libtt -R tt
 
+doxygen:
+	mkdir -p _doxygen && doxygen
+
 clang-format:
 	clang-format-all.sh tt
 
