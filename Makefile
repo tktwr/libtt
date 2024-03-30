@@ -12,10 +12,6 @@ else
 	make test_vs
 endif
 
-tags: tags.libtt
-
-f_tags: tags
-
 #------------------------------------------------------
 test_make:
 	cd $(BUILD_DIR) && $(BUILD_CONFIG)/test/test_array.exe
@@ -29,8 +25,7 @@ test_vs:
 	cd $(BUILD_DIR) && test/$(BUILD_CONFIG)/test_util.exe
 	cd $(BUILD_DIR) && test/$(BUILD_CONFIG)/test_type.exe
 
-.PHONY: tags.libtt
-tags.libtt:
+f_tags:
 	ctags -f tags.libtt -R tt
 
 clang-format:
