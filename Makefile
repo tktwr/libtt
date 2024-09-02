@@ -26,7 +26,7 @@ test_vs:
 	cd $(BUILD_DIR) && test/$(BUILD_CONFIG)/test_type.exe
 
 f_tags:
-	ctags -f tags.libtt -R tt
+	ctags -f tags -R tt
 
 doxygen:
 	mkdir -p _doxygen && doxygen
