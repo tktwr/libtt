@@ -34,3 +34,11 @@ doxygen:
 clang-format:
 	clang-format-all.sh tt
 
+f_fzf_help:
+	@echo "all"
+	@echo "test"
+	@echo "test_make"
+	@echo "test_vs"
+	@echo "f_tags"
+	@echo "doxygen"
+	@echo "clang-format"
